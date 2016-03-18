@@ -1,6 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="savery">
 <head>
+    <base href="/"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Savery</title>
@@ -9,11 +11,13 @@
 
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-    <script src="assets/libs/angular.js"></script>
-    <script src="assets/libs/angular-ui-router.js"></script>
 </head>
 <body>
 
+    <ui-view></ui-view>
+
+    <script src="assets/libs/angular.js"></script>
+    <script src="assets/libs/angular-ui-router.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,5 +1,9 @@
 node_modules
 .idea
+public/main.js
+npm-debug.log
+
+
 
 # User-specific stuff:
 .idea/workspace.xml

@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "makeit": "node_modules/gulp/bin/gulp.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
   "homepage": "https://github.com/dg253/cs491#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-less": "^3.0.5"
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0"
   },
   "dependencies": {
     "express": "^4.13.4"
