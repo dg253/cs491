@@ -12,6 +12,16 @@
                 templateUrl: 'js/components/dashboard/views/dashboard.html'
             })
 
+            .state('login', {
+                url: '/login',
+                templateUrl: 'js/components/login/views/login.html'
+            })
+
+            .state('register', {
+                url: '/register',
+                templateUrl: 'js/components/register/views/register.html'
+            })
+
             .state('savings', {
                 url: '/savings',
                 templateUrl: 'js/components/savings/views/savings.html'
