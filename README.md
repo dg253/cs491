@@ -3,6 +3,6 @@
 * Type `npm install`
 * Type `npm run makeit`
 	* That kicks off the Gulp task runner
-* Go to localhost:8080
+* Go to <http://localhost:8080/>
 
 You may need to use `sudo`
