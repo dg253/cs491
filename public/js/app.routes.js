@@ -7,9 +7,9 @@
 
     function routeConfig ($locationProvider, $urlRouterProvider, $stateProvider) {
         $stateProvider
-            .state('dashboard', {
+            .state('overview', {
                 url: '/',
-                templateUrl: 'js/components/dashboard/views/dashboard.html'
+                templateUrl: 'js/components/overview/views/overview.html'
             })
 
             .state('login', {
