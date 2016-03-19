@@ -24125,7 +24125,7 @@ var ngCloakDirective = ngDirective({
  *     </ul>
  *    </div>
  *   </file>
- *   <file name="app.js">
+ *   <file name="app.module.js">
  *    angular.module('controllerAsExample', [])
  *      .controller('SettingsController1', SettingsController1);
  *
@@ -24208,7 +24208,7 @@ var ngCloakDirective = ngDirective({
  *    </ul>
  *   </div>
  *  </file>
- *  <file name="app.js">
+ *  <file name="app.module.js">
  *   angular.module('controllerExample', [])
  *     .controller('SettingsController2', ['$scope', SettingsController2]);
  *
@@ -25483,7 +25483,7 @@ var ngInitDirective = ngDirective({
  * ### Example with Validation
  *
  * <example name="ngList-directive" module="listExample">
- *   <file name="app.js">
+ *   <file name="app.module.js">
  *      angular.module('listExample', [])
  *        .controller('ExampleController', ['$scope', function($scope) {
  *          $scope.names = ['morpheus', 'neo', 'trinity'];
@@ -26054,7 +26054,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    * input field will be updated with the new model value and any pending operations are cancelled.
    *
    * <example name="ng-model-cancel-update" module="cancel-update-example">
-   *   <file name="app.js">
+   *   <file name="app.module.js">
    *     angular.module('cancel-update-example', [])
    *
    *     .controller('CancelUpdateController', ['$scope', function($scope) {
@@ -26650,7 +26650,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
          <pre>user.name = <span ng-bind="user.name()"></span></pre>
        </div>
      </file>
-     <file name="app.js">
+     <file name="app.module.js">
        angular.module('getterSetterExample', [])
          .controller('ExampleController', ['$scope', function($scope) {
            var _name = 'Brian';
@@ -26792,7 +26792,7 @@ var DEFAULT_REGEXP = /(\s+|^)default(\s+|$)/;
         <pre>user.data = <span ng-bind="user.data"></span></pre>
       </div>
     </file>
-    <file name="app.js">
+    <file name="app.module.js">
       angular.module('optionsExample', [])
         .controller('ExampleController', ['$scope', function($scope) {
           $scope.user = { name: 'John', data: '' };
@@ -26846,7 +26846,7 @@ var DEFAULT_REGEXP = /(\s+|^)default(\s+|$)/;
         <pre>user.name = <span ng-bind="user.name"></span></pre>
       </div>
     </file>
-    <file name="app.js">
+    <file name="app.module.js">
       angular.module('optionsExample', [])
         .controller('ExampleController', ['$scope', function($scope) {
           $scope.user = { name: 'Igor' };
@@ -26869,7 +26869,7 @@ var DEFAULT_REGEXP = /(\s+|^)default(\s+|$)/;
         <pre>user.name = <span ng-bind="user.name()"></span></pre>
       </div>
     </file>
-    <file name="app.js">
+    <file name="app.module.js">
       angular.module('getterSetterExample', [])
         .controller('ExampleController', ['$scope', function($scope) {
           var _name = 'Brian';
@@ -29305,7 +29305,7 @@ var ngSwitchDefaultDirective = ngDirective({
  *      </pane>
  *    </div>
  *   </file>
- *   <file name="app.js">
+ *   <file name="app.module.js">
  *    angular.module('multiSlotTranscludeExample', [])
  *     .directive('pane', function(){
  *        return {
@@ -29658,7 +29658,7 @@ var SelectController =
  *   </form>
  * </div>
  * </file>
- * <file name="app.js">
+ * <file name="app.module.js">
  *  angular.module('staticSelect', [])
  *    .controller('ExampleController', ['$scope', function($scope) {
  *      $scope.data = {
@@ -29688,7 +29688,7 @@ var SelectController =
  *   <tt>repeatSelect = {{data.repeatSelect}}</tt><br/>
  * </div>
  * </file>
- * <file name="app.js">
+ * <file name="app.module.js">
  *  angular.module('ngrepeatSelect', [])
  *    .controller('ExampleController', ['$scope', function($scope) {
  *      $scope.data = {
@@ -29720,7 +29720,7 @@ var SelectController =
  *   <tt>option = {{data.selectedOption}}</tt><br/>
  * </div>
  * </file>
- * <file name="app.js">
+ * <file name="app.module.js">
  *  angular.module('defaultValueSelect', [])
  *    .controller('ExampleController', ['$scope', function($scope) {
  *      $scope.data = {
@@ -29747,7 +29747,7 @@ var SelectController =
  *     </select>
  *     {{ model }}
  *   </file>
- *   <file name="app.js">
+ *   <file name="app.module.js">
  *     angular.module('nonStringSelect', [])
  *       .run(function($rootScope) {
  *         $rootScope.model = { id: 2 };
