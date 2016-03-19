@@ -3,8 +3,12 @@
 @body-color: #EDEDED;
 
 @navbar-body-color: #25272F;
-@navbar-font-color: #CCC7C8;
-@navbar-icon-color: #E3DEDE;
+
+@navbar-font: 'Roboto', sans-serif;
+@navbar-font-color: #E3DEDE;
+@navbar-icon-color: #FFFFFF;
+
+@separator-font-color: rgba(139, 134, 135, 0.67);
 
 
 //import components
@@ -16,22 +20,39 @@
 @import './components/register.less';
 @import './components/savings.less';
 
+.separator-right {
+  border-right: solid 1px @separator-font-color;
+  margin: 0 27px;
+  padding: 12px 0;
+}
+
 
 .nav-wrapper {
   background-color: @navbar-body-color;
 
-  .app-icon {
-    width: 65px;
+  a {
+    color: @navbar-font-color;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .brand-logo {
+    margin-left: 30px;
+
+    .app-icon {
+      width: 50px;
+      margin-top: 14px;
+    }
   }
 
   .navbar-balance {
     font-size: 14px;
-    color: @navbar-font-color;
   }
 }
 
-.account-dropdown {
+.account-dropdown-menu {
   background-color: @navbar-body-color;
+  color: @navbar-font-color;
   min-width: 152px;
 
   .dropdown-option {

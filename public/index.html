@@ -7,24 +7,33 @@
     <meta charset="UTF-8">
     <title>Savery</title>
 
+    <!--Material design icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!--Materialize CSS-->
+    <link rel="stylesheet" href="assets/libs/materialize/css/materialize.min.css">
+
+    <!--Main app CSS file-->
     <link rel="stylesheet" href="assets/style/app.css"/>
 
+    <!--jQuery library-->
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <!--Materialize JS-->
+    <script src="assets/libs/materialize/js/materialize.min.js"></script>
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <nav class="nav-wrapper z-depth-1">
         <a href="/" class="brand-logo">
-            <img class="app-icon left" src="assets/img/icon.png" alt=""/>
-            Aloha, Dave
+            <img class="app-icon left" src="assets/img/icon1.svg" alt="Logo"/>
+            <span class="separator-right"></span>
+            <span>Aloha, Dave</span>
         </a>
         <a class="navbar-balance brand-logo center" href="">$2852 Balance | $418.51 Safe Balance</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="account-dropdown nav-mobile" class="account-dropdown right hide-on-med-and-down">
             <li>
-                <a class="dropdown-button" href="#" data-activates="account-dropdown">
+                <a class="dropdown-button" href="#" data-activates="account-dropdown-menu">
                     Account
                     <i class="material-icons right">arrow_drop_down</i>
                 </a>
@@ -32,8 +41,8 @@
         </ul>
     </nav>
 
-    <!--Dropdown menu for navbar-->
-    <ul id="account-dropdown" class="account-dropdown dropdown-content">
+    <!--Dropdown menu for account-->
+    <ul id="account-dropdown-menu" class="account-dropdown-menu dropdown-content">
         <li class="dropdown-option"><a ui-sref="profile"><i class="material-icons left">account_circle</i>Profile</a></li>
         <li class="dropdown-option"><a href="#!"><i class="material-icons left">settings</i>Preferences</a></li>
         <li class="dropdown-option"><a ui-sref="login"><i class="material-icons left">exit_to_app</i>Logout</a></li>
