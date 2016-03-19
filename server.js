@@ -1,13 +1,11 @@
-'use strict';
-
-let express = require('express'),
+var express = require('express'),
     app = express();
 
-const PORT = 8080;
+var PORT = 8080;
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('*', (req, res) => {
+app.get('*', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 

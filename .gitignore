@@ -2,6 +2,7 @@ node_modules
 .idea
 public/main.js
 npm-debug.log
+public/assets/style/app.css
 
 
 
