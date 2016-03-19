@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>Savery</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style/app.css"/>
 
@@ -15,8 +16,32 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-    <div class="beef">hello world</div>
-    <div ui-view></div>
+    <nav class="nav-wrapper z-depth-1">
+        <a href="/" class="brand-logo">
+            <img class="app-icon left" src="assets/img/icon.png" alt=""/>
+            Aloha, Dave
+        </a>
+        <a class="navbar-balance brand-logo center" href="">$2852 Balance | $418.51 Safe Balance</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <a class="dropdown-button" href="#" data-activates="account-dropdown">
+                    Account
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Dropdown menu for navbar-->
+    <ul id="account-dropdown" class="account-dropdown dropdown-content">
+        <li class="dropdown-option"><a ui-sref="profile"><i class="material-icons left">account_circle</i>Profile</a></li>
+        <li class="dropdown-option"><a href="#!"><i class="material-icons left">settings</i>Preferences</a></li>
+        <li class="dropdown-option"><a ui-sref="login"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+    </ul>
+
+    <div class="main">
+        <div ui-view></div>
+    </div>
 
     <script src="assets/libs/angular.js"></script>
     <script src="assets/libs/angular-ui-router.js"></script>

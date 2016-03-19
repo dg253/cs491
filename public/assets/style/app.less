@@ -1,3 +1,13 @@
+//Global variables
+//If a color is used throughout the app, put it here
+@body-color: #EDEDED;
+
+@navbar-body-color: #25272F;
+@navbar-font-color: #CCC7C8;
+@navbar-icon-color: #E3DEDE;
+
+
+//import components
 @import './components/overview.less';
 @import './components/expenses.less';
 @import './components/friends.less';
@@ -5,3 +15,36 @@
 @import './components/profile.less';
 @import './components/register.less';
 @import './components/savings.less';
+
+
+.nav-wrapper {
+  background-color: @navbar-body-color;
+
+  .app-icon {
+    width: 65px;
+  }
+
+  .navbar-balance {
+    font-size: 14px;
+    color: @navbar-font-color;
+  }
+}
+
+.account-dropdown {
+  background-color: @navbar-body-color;
+  min-width: 152px;
+
+  .dropdown-option {
+    a {
+      font-size: 14px;
+      color: @navbar-font-color;
+      .material-icons {
+        color: @navbar-icon-color;
+      }
+    }
+  }
+}
+
+.main {
+  background-color: @body-color;
+}

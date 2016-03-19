@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 var allModules = './public/js/**/*.module.js',
     appCssPath = './public/assets/style',
-    componentCssPath = './public/assets/style/components/*.less',
+    componentCssPath = './public/assets/style/**/*.less',
     jsPath = './public/js/**/*.js';
 
 gulp.task('compileLess', function () {
