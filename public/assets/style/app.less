@@ -1,6 +1,8 @@
 //Global variables
 //If a color is used throughout the app, put it here
-@body-color: #EDEDED;
+@body-background-color: #EDEDED;
+@base-font-color: #19191C;
+@card-background-color: #FFFFFF;
 
 @navbar-body-color: #25272F;
 
@@ -12,13 +14,19 @@
 
 
 //import components
-@import './components/overview.less';
-@import './components/expenses.less';
-@import './components/friends.less';
-@import './components/login.less';
-@import './components/profile.less';
-@import './components/register.less';
-@import './components/savings.less';
+@import './components/overview';
+@import './components/expenses';
+@import './components/friends';
+@import './components/login';
+@import './components/profile';
+@import './components/register';
+@import './components/savings';
+@import './components/charts';
+
+body {
+  height: 100%;
+  background-color: @body-background-color;
+}
 
 .bold {
   font-weight: 500;
@@ -67,8 +75,4 @@
       }
     }
   }
-}
-
-.main {
-  background-color: @body-color;
 }

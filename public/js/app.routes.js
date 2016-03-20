@@ -9,7 +9,8 @@
         $stateProvider
             .state('overview', {
                 url: '/',
-                templateUrl: 'js/components/overview/views/overview.html'
+                templateUrl: 'js/components/overview/views/overview.html',
+                controller: 'overviewCtrl'
             })
 
             .state('login', {
@@ -29,7 +30,8 @@
 
             .state('expenses', {
                 url: '/expenses',
-                templateUrl: 'js/components/expenses/views/expenses.html'
+                templateUrl: 'js/components/expenses/views/expenses.html',
+                controller: 'expensesCtrl'
             })
 
             .state('profile', {
