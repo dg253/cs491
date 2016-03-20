@@ -11,9 +11,12 @@
         };
 
         function link ($scope, iElm, iAttrs) {
+            //Type of chart to create
+            var chartType = iAttrs.type;
+
             //Data and options from the controller's $scope
-            var chartData = $scope.chartData;
-            var chartOptions = $scope.options;
+            var data = $scope[chartType].data;
+            var options = $scope[chartType].options;
 
             //Get the element
             var el = iElm[0];
@@ -24,7 +27,7 @@
 
             //Create new chart
             var ctx = el.getContext('2d');
-            var newChart = new Chart(ctx)[iAttrs.type](chartData, chartOptions);
+            var newChart = new Chart(ctx)[iAttrs.type](data, options);
         }
 
         return directive;
