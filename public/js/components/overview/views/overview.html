@@ -1,5 +1,5 @@
 <div class="overview row">
-    <div class="card">
+    <div class="card z-depth-2">
         <canvas sv-chart type="Line" class="chart line large-chart"></canvas>
         <div class="chart-sidebar right">
             <select class="change-year" material-select watch>
@@ -11,15 +11,42 @@
     </div>
 
     <div class="col s12 m4">
-        <div class="card small">
-            <canvas sv-chart type="HorizontalBar" class="chart bar small-chart"></canvas>
+        <div class="card small overview savings-progress z-depth-2">
+            <div class="content">
+                <span class="card-title">Savings Progress</span>
+                <span class="secondary-title">TOP THREE GOALS</span>
+
+                <span class="progress-title">Xbox One</span>
+                <div class="progress first">
+                    <div class="determinate"></div>
+                </div>
+
+                <span class="progress-title">Macbook</span>
+                <div class="progress second">
+                    <div class="determinate"></div>
+                </div>
+
+                <span class="progress-title">Motorcycle</span>
+                <div class="progress third">
+                    <div class="determinate"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="col s12 m4">
-        <div class="card small">Savings Progress</div>
+        <div class="card small overview safe-balance z-depth-2">
+            <div class="content">
+                <span class="card-title">Safe Balance</span>
+                <div class="secondary-title">MONTHLY SPENDING LIMIT</div>
+            </div>
+        </div>
     </div>
     <div class="col s12 m4">
-        <div class="card small">Savings Progress</div>
+        <div class="card small overview recent-transactions z-depth-2">
+            <div class="content">
+                <span class="card-title">Recent Transactions</span>
+                <div class="secondary-title">TOP FIVE LARGEST</div>
+            </div>
+        </div>
     </div>
-
 </div>

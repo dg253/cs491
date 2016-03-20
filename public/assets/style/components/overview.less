@@ -8,3 +8,50 @@
     color: @base-font-color;
   }
 }
+
+.overview {
+  .card-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .secondary-title {
+    display: block;
+    margin-top: -30px;
+    font-size: 10px;
+    height: 30px;
+  }
+
+  .progress-title {
+    font-size: 12px;
+  }
+
+  .progress {
+    height: 30px;
+    margin: 0;
+    background-color: @body-background-color;
+    border: solid 3px rgba(213, 207, 207, 0.55);
+
+    &.first {
+      .determinate {
+        width: 100%;
+      }
+    }
+
+    &.second {
+      .determinate {
+        width: 87%;
+      }
+    }
+
+    &.third {
+      .determinate {
+        width: 35%;
+      }
+    }
+
+    .determinate {
+      background: -webkit-linear-gradient(left, #47B8E0, #47B8E0, #47B8E0, #47B8E0, #47B8E0, rgba(71, 184, 224, 0.10));
+    }
+  }
+}
