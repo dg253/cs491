@@ -1,18 +1,16 @@
-<div class="row">
-    <div class="card col s12 l10">
+<div class="overview row">
+    <div class="card">
         <canvas id="testChart" class="chart line large-chart"></canvas>
         <div class="chart-sidebar right">
-            <a class="year dropdown-button btn" href="javascript:void(0);" data-activates="year-dropdown-menu" dropdown>
-                2016 <i class="material-icons right">arrow_drop_down</i>
-            </a>
+            <select class="change-year" material-select watch>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+            </select>
         </div>
     </div>
-</div>
 
-<ul id="year-dropdown-menu" class="year-dropdown-menu dropdown-content">
-    <li>
-        <a href="javascript:void(0);" class="dropdown-option">2016</a>
-        <a href="javascript:void(0);" class="dropdown-option">2015</a>
-        <a href="javascript:void(0)" class="dropdown-option">2014</a>
-    </li>
-</ul>
+    <div class="card">Savings Progress</div>
+    <div class="card">Safe Balance</div>
+    <div class="card">Recent Transactions</div>
+</div>
