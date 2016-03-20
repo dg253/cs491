@@ -3,10 +3,10 @@
         .module('savery')
         .controller('overviewCtrl', overview);
 
-    function overview () {
-        var ctx = document.getElementById('testChart').getContext('2d');
+    overview.$inject = ['$scope'];
 
-        var data = {
+    function overview ($scope) {
+        $scope.chartData = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [
                 {
@@ -42,8 +42,7 @@
             ]
         };
 
-        var options = {
-
+        $scope.options = {
             ///Boolean - Whether grid lines are shown across the chart
             scaleShowGridLines : true,
 
@@ -91,13 +90,7 @@
 
         };
 
-        var myNewChart = new Chart(ctx).Line(data, options);
-
-
-
-
-
-        var ctx2 = document.getElementById('barchart').getContext('2d');
+       // var ctx2 = document.getElementById('barchart').getContext('2d');
         var data2 = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [
@@ -156,6 +149,6 @@
 
         };
 
-        var myBarChart = new Chart(ctx2).HorizontalBar(data2, options2);
+        //var myBarChart = new Chart(ctx2).HorizontalBar(data2, options2);
     }
 }());
