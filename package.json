@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "postinstall": "node_modules/bower/bower install",
+    "postinstall": "node_modules/bower/bin/bower install",
     "makeit": "node_modules/gulp/bin/gulp.js"
   },
   "repository": {
