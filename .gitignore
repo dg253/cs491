@@ -1,6 +1,7 @@
 node_modules
 .idea
 public/main.js
+public/assets/libs
 npm-debug.log
 public/assets/style/app.css
 
