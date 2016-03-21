@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "postinstall": "node_modules/bower/bower",
     "makeit": "node_modules/gulp/bin/gulp.js"
   },
   "repository": {
@@ -24,6 +25,7 @@
     "gulp-sourcemaps": "^1.6.0"
   },
   "dependencies": {
+    "bower": "^1.7.7",
     "express": "^4.13.4"
   }
 }
