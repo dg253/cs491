@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "Chart.js": "^1.0.2",
-    "angular-ui-router": "~0.2.18"
+    "angular-ui-router": "~0.2.18",
+    "foundation-apps": "~1.2.0"
   }
 }

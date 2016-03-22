@@ -6,9 +6,6 @@
     overview.$inject = ['$scope'];
 
     function overview ($scope) {
-        var gauge = new Gauge(document.getElementById('safe-balance-gauge'));
-        gauge.value(0.75);
-
         $scope.Line = {
             data: {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
