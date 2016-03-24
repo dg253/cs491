@@ -10,46 +10,36 @@
     <!--Material design icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <!--flat-ui-->
+    <link rel="stylesheet" href="assets/libs/flat-ui/dist/css/flat-ui-pro.min.css"/>
+
     <!--Main app CSS-->
     <link rel="stylesheet" href="assets/style/app.css"/>
 </head>
 <body>
-    <nav class="nav-wrapper z-depth-1">
-        <a href="/" class="brand-logo">
-            <img class="app-icon left" src="assets/img/icon1.svg" alt="Logo"/>
-            <span class="separator-right"></span>
-            <span>Aloha, Dave</span>
-        </a>
-        <a class="navbar-balance brand-logo center" href="">
-            $2852 <span class="bold">BALANCE</span>
-            <span class="separator-right"></span>
-            $418.51 <span class="bold">SAFE BALANCE</span>
-        </a>
-        <ul id="account-dropdown nav-mobile" class="account-dropdown right hide-on-med-and-down">
-            <li>
-                <a class="dropdown-button" href="#" data-activates="account-dropdown-menu">
-                    Account
-                    <i class="material-icons right">arrow_drop_down</i>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
-    <!--Dropdown menu for account-->
-    <ul id="account-dropdown-menu" class="account-dropdown-menu dropdown-content">
-        <li class="dropdown-option"><a ui-sref="profile"><i class="material-icons left">account_circle</i>Profile</a></li>
-        <li class="dropdown-option"><a href="#!"><i class="material-icons left">settings</i>Preferences</a></li>
-        <li class="dropdown-option"><a ui-sref="login"><i class="material-icons left">exit_to_app</i>Logout</a></li>
-    </ul>
 
     <div class="main">
         <div ui-view></div>
     </div>
 
+    <!--jQuery-->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--flat-ui-->
+    <script src="assets/libs/flat-ui/dist/js/flat-ui-pro.js"></script>
+
     <!--Angular-->
     <script src="assets/libs/angular/angular.js"></script>
+
     <!--UI-Router-->
-    <script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>n
+    <script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
 
     <!--ChartJS-->
     <script src="assets/libs/Chart.js/Chart.js"></script>

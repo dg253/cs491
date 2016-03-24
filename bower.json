@@ -19,6 +19,6 @@
   "dependencies": {
     "Chart.js": "^1.0.2",
     "angular-ui-router": "~0.2.18",
-    "Materialize": "materialize#~0.97.5"
+    "bootstrap": "~3.3.6"
   }
 }
