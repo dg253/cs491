@@ -20,10 +20,22 @@
     <link rel="stylesheet" href="assets/style/app.css"/>
 </head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="navbar-left">left navbar</div>
+            </div>
 
+            <div class="col-md-7">
+                <div class="main">
+                    <div ui-view></div>
+                </div>
+            </div>
 
-    <div class="main">
-        <div ui-view></div>
+            <div class="col-md-3">
+                <div class="navbar-right">Right navbar</div>
+            </div>
+        </div>
     </div>
 
     <!--jQuery-->
@@ -33,7 +45,7 @@
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--flat-ui-->
-    <script src="assets/libs/flat-ui/dist/js/flat-ui-pro.js"></script>
+    <script src="assets/libs/flat-ui/dist/js/flat-ui.min.js"></script>
 
     <!--Angular-->
     <script src="assets/libs/angular/angular.js"></script>
