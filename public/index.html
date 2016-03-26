@@ -62,7 +62,20 @@
                   </div><!-- /.container-fluid -->
               </nav>
 
-              <div ui-view>
+              <!--
+              <div ui-view></div>
+              -->
+
+              <div ng-include="'js/components/overview/views/overview.html'">
+              </div>
+
+              <div ng-include="'js/components/expenses/views/expenses.html'">
+              </div>
+
+              <div ng-include="'js/components/savings/views/savings.html'">
+              </div>
+
+              <div ng-include="'js/components/transactions/views/transactions.html'">
               </div>
 
             </div>
