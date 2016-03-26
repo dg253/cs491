@@ -4,15 +4,26 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     nodemon = require('gulp-nodemon');
 
+var combiner = require('stream-combiner2');
+
 var allModules = './public/js/**/*.module.js',
     appCssPath = './public/assets/style',
     componentCssPath = './public/assets/style/**/*.less',
     jsPath = './public/js/**/*.js';
 
 gulp.task('compileLess', function () {
-    return gulp.src(appCssPath + '/app.less')
+    var combined = combiner.obj([
+        gulp.src(appCssPath + '/app.less'),
+            less(),
+            gulp.dest(appCssPath)
+    ]);
+   /* return gulp.src(appCssPath + '/app.less')
             .pipe(less())
-            .pipe(gulp.dest(appCssPath));
+            .pipe(gulp.dest(appCssPath));*/
+
+    combined.on('error', console.log.bind(console));
+
+    return combined;
 });
 
 gulp.task('watchLess', function () {
