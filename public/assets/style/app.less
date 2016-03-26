@@ -1,3 +1,13 @@
+// Global vars visable to all modules
+@import "global";
+
+// Modules
+@import "components/overview";
+@import "components/expenses";
+@import "components/savings";
+@import "components/transactions";
+
+// Global steezy
 .col-md-2, .col-md-8 {
   border: 1px solid black;
 }
@@ -8,4 +18,8 @@
 }
 .fixed {
     position: fixed;
+}
+
+.main {
+  background-color: @matte;
 }
