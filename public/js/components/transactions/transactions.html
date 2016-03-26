@@ -1,13 +1,22 @@
 Transactions Page
+<!--
+TODO: NEED TO VERTICAL CENTER TRANSACTION AND SEARCH BAR
+TODO: ACTIONS BUTTON RESPONSIVENESS
+TODO: CENTER TABLE DATA
+-->
+<div class="transaction-table container-fluid">
 
-<div class="container-fluid" style="outline: 1px solid black;">
-	<div class="trans-header container-fluid" style="height:53px;">
-		<span>Transactions</span>
+	<div class="trans-header container-fluid">
+		<div class="col-md-10 vcenter"><span>Transactions</span></div>
 
 		<!--SEARCH BAR-->
-		<form class="navbar-right">
-			<input type="search" placeholder="Search" style="border: 0; border-bottom: 1px solid black;">
-			<span class="glyphicon glyphicon-search"></span>
+		<form class="trans-search col-md-2">
+			<form role="form">
+			  <div class="form-group has-feedback">
+			    <input type="text" class="form-control flat" placeholder="Search" />
+			    <i class="form-control-feedback glyphicon glyphicon-search"></i>
+			  </div>
+			</form>
 		</form>
 		<!---->
 
@@ -18,7 +27,7 @@ Transactions Page
 			<th>Name</th>
 			<th>Date</th>
 			<th>Location</th>
-			<th>Amount <span class="glyphicon glyphicon-sort-by-attributes-alt" style="font-size:12px;"></span></th>
+			<th>Amount <!---Filler glyphicon--><span class="glyphicon glyphicon-sort-by-attributes-alt"></span></th>
 			<th></th>
 		</tr>
 
@@ -27,7 +36,18 @@ Transactions Page
 			<td>Bruuh</td>
 			<td>Table Cell</td>
 			<td>Table Cell</td>
-			<td>Table Cell</td>
+			<td>
+				<div class="btn-group">
+  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Action <span class="caret"></span></button>
+			  <ul class="dropdown-menu" role="menu">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+		</td>
 		</tr>
 
 		<tr>
@@ -80,19 +100,5 @@ Transactions Page
 		</tr>
 	</table>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
