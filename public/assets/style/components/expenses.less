@@ -1,72 +1,75 @@
-.spending-chart {
-  background-color: @card-background;
-  height: 234px;
-  color: @matte;
+.expenses-wrapper {
   width: 90%;
   margin: 0 auto;
 
-  .spending-chart-header {
-    background-color: @card-header;
-    padding: 12px;
-    border-bottom: solid 1px white;
+  .spending-chart {
+    background-color: @card-background;
+    color: @matte;
 
-    .time-dropdown {
-      padding: 6px 12px;
-    }
-  }
+    .spending-chart-header {
+      background-color: @card-header;
+      padding: 12px;
+      border-bottom: solid 1px white;
 
-  .spending-chart-body {
-    margin-top: 15px;
-
-    .spending-dist.chart {
-
+      .time-dropdown {
+        padding: 6px 12px;
+      }
     }
 
-    .spending-legend {
+    .spending-chart-body {
+      padding-top: 15px;
 
-      .row {
-        margin: 0 15px;
+      .spending-dist.chart {
 
-        .spend-percent {
-          display: block;
-          font-size: 14px;
-          margin-left: 17px;
-        }
-
-        .spend-name {
-          font-weight: bold;
-        }
-
-        .spend-cost {
-          font-weight: bold;
-        }
       }
 
-      .app-doughnut {
-        margin-right: 2px;
+      .spending-legend {
 
-        &.bills {
-          border-color: @dist-regular-blue;
+        .row {
+          margin: 0 15px;
+          margin-bottom: 15px;
+
+          .spend-percent {
+            display: block;
+            font-size: 14px;
+            margin-left: 17px;
+          }
+
+          .spend-name {
+            font-weight: bold;
+          }
+
+          .spend-cost {
+            font-weight: bold;
+          }
         }
 
-        &.clothes {
-          border-color: @dist-green;
-        }
+        .app-doughnut {
+          margin-right: 2px;
 
-        &.transportation {
-          border-color: @dist-dark-blue;
-        }
+          &.bills {
+            border-color: @dist-regular-blue;
+          }
 
-        &.entertainment {
-          border-color: @dist-yellow;
-        }
+          &.clothes {
+            border-color: @dist-green;
+          }
 
-        &.gasoline {
-          border-color: @dist-pink;
-        }
+          &.transportation {
+            border-color: @dist-dark-blue;
+          }
 
-        &.other {
-          border-color: @dist-violet;
+          &.entertainment {
+            border-color: @dist-yellow;
+          }
+
+          &.gasoline {
+            border-color: @dist-pink;
+          }
+
+          &.other {
+            border-color: @dist-violet;
+          }
         }
       }
     }
