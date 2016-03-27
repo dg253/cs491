@@ -15,7 +15,8 @@
 
             .state('expenses', {
                 url: '/expenses',
-                templateUrl: 'js/components/expenses/expenses.html'
+                templateUrl: 'js/components/expenses/expenses.html',
+                controller: 'expensesCtrl'
             })
 
             .state('savings', {

@@ -1,18 +1,20 @@
-Expenses Page
+<div class="spending-chart">
+    <div class="spending-chart-header">
+        <span>Spending Distribution</span>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        <button class="time-dropdown btn btn-default dropdown-toggle pull-right" type="button" data-toggle="dropdown" aria-expanded="true">
+            This Month <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">This Week</a></li>
+            <li><a href="#">This Month</a></li>
+            <li><a href="#">This Year</a></li>
+        </ul>
+    </div>
+
+    <div class="spending-chart-body">
+        <div style="width: 250px; height: 100px;">
+            <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-legend="showLegend"></canvas>
+        </div>
+    </div>
+</div>
