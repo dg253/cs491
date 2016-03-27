@@ -7,6 +7,11 @@
 @import "components/savings";
 @import "components/transactions";
 
+
+body {
+  color: @text-primary;
+}
+
 // Global steezy
 .container-fluid {
   padding: 0;
@@ -28,9 +33,14 @@
 
 .navbar {
   border-radius: 0;
+  background-color: @sidebar-background;
 
   &.top {
     margin: 0;
+  }
+
+  .navbar-brand {
+    color: black;
   }
 
   .logo {
@@ -38,4 +48,12 @@
     width: 40px;
     margin-right: 5px;
   }
+}
+
+.app-doughnut {
+  border: 3px solid;
+  border-radius: 100px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
 }

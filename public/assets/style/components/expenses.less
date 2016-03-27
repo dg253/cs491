@@ -1,5 +1,6 @@
 .spending-chart {
-  background-color: @primary;
+  background-color: @card-background;
+  height: 234px;
   color: @matte;
   width: 90%;
   margin: 0 auto;
@@ -15,22 +16,50 @@
   }
 
   .spending-chart-body {
-    display: inline-block;
+    //display: inline-block;
 
     .spending-dist.chart {
 
     }
   }
 
-  .legend-container {
-    display: inline-block;
-    width: 40%;
+  .spending-legend {
 
-    .spending-chart-legend {
+    .row {
+      margin: 0 15px;
+      
+      .spend-percent {
+        display: block;
+        font-size: 14px;
+        margin-left: 17px;
+      }
+    }
 
-      .legend-item {
-        display: inline-block;
-        margin: 0 20px;
+    .app-doughnut {
+      margin-right: 2px;
+
+      &.bills {
+        border-color: @dist-regular-blue;
+      }
+
+      &.clothes {
+        border-color: @dist-green;
+      }
+
+      &.transportation {
+        border-color: @dist-dark-blue;
+      }
+
+      &.entertainment {
+        border-color: @dist-yellow;
+      }
+
+      &.gasoline {
+        border-color: @dist-pink;
+      }
+
+      &.other {
+        border-color: @dist-violet;
       }
     }
   }

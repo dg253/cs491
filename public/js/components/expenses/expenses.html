@@ -12,12 +12,48 @@
         </ul>
     </div>
 
-    <div class="spending-chart-body">
+    <div class="spending-chart-body col-md-4">
         <canvas class="spending-dist chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="chartOptions"></canvas>
     </div>
-    <div class="legend-container">
-        <ul class="spending-chart-legend">
-            <li class="legend-item" ng-repeat="l in labels">{{ l }}</li>
-        </ul>
+
+    <div class="spending-legend col-md-4">
+        <div class="row">
+            <span class="app-doughnut bills"></span>
+            <span class="spend-name">Bills</span>
+            <span class="spend-cost pull-right">$486</span>
+            <span class="spend-percent">39%</span>
+        </div>
+        <div class="row">
+            <span class="app-doughnut clothes"></span>
+            <span class="spend-name">Clothes</span>
+            <span class="spend-cost pull-right">$174</span>
+            <span class="spend-percent alt-text">14%</span>
+        </div>
+        <div class="row">
+            <span class="app-doughnut transportation"></span>
+            <span class="spend-name">Transportation</span>
+            <span class="spend-cost pull-right">$162</span>
+            <span class="spend-percent alt-text">13%</span>
+        </div>
+    </div>
+    <div class="spending-legend col-md-4">
+        <div class="row">
+            <span class="app-doughnut entertainment"></span>
+            <span class="spend-name">Entertainment</span>
+            <span class="spend-cost pull-right">$149</span>
+            <span class="spend-percent alt-text">12%</span>
+        </div>
+        <div class="row">
+            <span class="app-doughnut gasoline"></span>
+            <span class="spend-name">Gasoline</span>
+            <span class="spend-cost pull-right">$74</span>
+            <span class="spend-percent alt-text">6%</span>
+        </div>
+        <div class="row">
+            <span class="app-doughnut other"></span>
+            <span class="spend-name">Other</span>
+            <span class="spend-cost pull-right">199</span>
+            <span class="spend-percent alt-text">16%</span>
+        </div>
     </div>
 </div>
