@@ -13,8 +13,11 @@
     </div>
 
     <div class="spending-chart-body">
-        <div style="width: 250px; height: 100px;">
-            <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-legend="showLegend"></canvas>
-        </div>
+        <canvas class="spending-dist chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="chartOptions"></canvas>
+    </div>
+    <div class="legend-container">
+        <ul class="spending-chart-legend">
+            <li class="legend-item" ng-repeat="l in labels">{{ l }}</li>
+        </ul>
     </div>
 </div>

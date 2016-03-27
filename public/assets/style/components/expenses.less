@@ -1,9 +1,11 @@
 .spending-chart {
-  color: white;
+  background-color: @primary;
+  color: @matte;
   width: 90%;
   margin: 0 auto;
 
   .spending-chart-header {
+    background-color: @card-header;
     padding: 12px;
     border-bottom: solid 1px white;
 
@@ -13,8 +15,23 @@
   }
 
   .spending-chart-body {
-    canvas {
+    display: inline-block;
 
+    .spending-dist.chart {
+
+    }
+  }
+
+  .legend-container {
+    display: inline-block;
+    width: 40%;
+
+    .spending-chart-legend {
+
+      .legend-item {
+        display: inline-block;
+        margin: 0 20px;
+      }
     }
   }
 }
