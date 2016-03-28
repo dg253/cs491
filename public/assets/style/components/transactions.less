@@ -1,11 +1,12 @@
 .transaction-table{
-
+ padding: 0;
   background-color: white;
 
   //TRANSACTION TABLE HEADER
   .trans-header{
     height: 75px;
-    
+    outline:0;
+
     .vcenter{
       height: 100%;
 
@@ -13,6 +14,7 @@
     }
 
     .trans-search{
+      height: 75px;
       input{border: 0;}
     }
     //TRANSACTION TABLE HEADER END
@@ -21,6 +23,7 @@
     .table{
       tr{
         td{
+          vertical-align: middle;
           span:nth-child(2){
             opacity: 0.5;
           }
@@ -38,6 +41,12 @@
           }
         }
         height: 75px;
+
+        .btn-group{
+          button{
+            opacity: 0.5;
+          }
+        }
       }
     }
     //TABLE END
