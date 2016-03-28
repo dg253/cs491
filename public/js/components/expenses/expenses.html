@@ -1,20 +1,115 @@
-<div class="spending-chart">
-    <div class="spending-chart-header">
-        <span>Spending Distribution</span>
+<div class="expenses-wrapper">
+    <div class="spending-chart card clearfix">
+        <div class="spending-chart-header card-header">
+            <span>Spending Distribution</span>
 
-        <button class="time-dropdown btn btn-default dropdown-toggle pull-right" type="button" data-toggle="dropdown" aria-expanded="true">
-            This Month <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">This Week</a></li>
-            <li><a href="#">This Month</a></li>
-            <li><a href="#">This Year</a></li>
-        </ul>
-    </div>
+            <button class="time-dropdown btn btn-default dropdown-toggle pull-right" type="button" data-toggle="dropdown" aria-expanded="true">
+                This Month <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">This Week</a></li>
+                <li><a href="#">This Month</a></li>
+                <li><a href="#">This Year</a></li>
+            </ul>
+        </div>
 
-    <div class="spending-chart-body">
-        <div style="width: 250px; height: 100px;">
-            <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-legend="showLegend"></canvas>
+        <div class="spending-chart-body">
+            <div class="chart-container col-md-4">
+                <canvas class="spending-dist chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="chartOptions"></canvas>
+            </div>
+
+            <div class="spending-legend col-md-4">
+                <div class="row">
+                    <span class="app-doughnut bills"></span>
+                    <span class="spend-name">Bills</span>
+                    <span class="spend-cost pull-right">$486</span>
+                    <span class="spend-percent">39%</span>
+                </div>
+                <div class="row">
+                    <span class="app-doughnut clothes"></span>
+                    <span class="spend-name">Clothes</span>
+                    <span class="spend-cost pull-right">$174</span>
+                    <span class="spend-percent alt-text">14%</span>
+                </div>
+                <div class="row">
+                    <span class="app-doughnut transportation"></span>
+                    <span class="spend-name">Transportation</span>
+                    <span class="spend-cost pull-right">$162</span>
+                    <span class="spend-percent alt-text">13%</span>
+                </div>
+            </div>
+            <div class="spending-legend col-md-4">
+                <div class="row">
+                    <span class="app-doughnut entertainment"></span>
+                    <span class="spend-name">Entertainment</span>
+                    <span class="spend-cost pull-right">$149</span>
+                    <span class="spend-percent alt-text">12%</span>
+                </div>
+                <div class="row">
+                    <span class="app-doughnut gasoline"></span>
+                    <span class="spend-name">Gasoline</span>
+                    <span class="spend-cost pull-right">$74</span>
+                    <span class="spend-percent alt-text">6%</span>
+                </div>
+                <div class="row">
+                    <span class="app-doughnut other"></span>
+                    <span class="spend-name">Other</span>
+                    <span class="spend-cost pull-right">199</span>
+                    <span class="spend-percent alt-text">16%</span>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="budget-progress card">
+    <div class="budget-progress card card-header">
+        <span class="card-title">Budgets</span>
+        <span class="left-to-budget">| $240 left to budget</span>
+    </div>
+    <div class="card card-body">
+        <div class="budget-progress-card">
+            <div class="budget-progress card-header">Groceries</div>
+            <div class="budget-progress body">
+                <div id="example-animation-container" style="width: 120px;"></div>
+                <div class="footer">
+                    <span class="amount-spent">$212 of 300</span>
+                    <div class="amount-remaining alt-text">$88 remaining</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="budget-progress-card">
+            <div class="budget-progress card-header">Groceries</div>
+            <div class="budget-progress body">
+                <div id="example-animation-container2" style="width: 120px;"></div>
+                <div class="footer">
+                    <span class="amount-spent">$212 of 300</span>
+                    <div class="amount-remaining alt-text">$88 remaining</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="budget-progress-card">
+            <div class="budget-progress card-header">Groceries</div>
+            <div class="budget-progress body">
+                <div id="example-animation-container3" style="width: 120px;"></div>
+                <div class="footer">
+                    <span class="amount-spent">$212 of 300</span>
+                    <div class="amount-remaining alt-text">$88 remaining</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="budget-progress-card">
+            <div class="budget-progress card-header">Groceries</div>
+            <div class="budget-progress body">
+                <div id="example-animation-container4" style="width: 120px;"></div>
+                <div class="footer">
+                    <span class="amount-spent">$212 of 300</span>
+                    <div class="amount-remaining alt-text">$88 remaining</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
