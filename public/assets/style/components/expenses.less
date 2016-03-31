@@ -74,6 +74,8 @@
   }
 
   .budget-progress {
+    text-align: center;
+    
     .card.card-body {
       padding-bottom: 10px;
     }
@@ -81,6 +83,7 @@
     .budget-progress.title {
       margin-left: 25px;
       padding-top: 5px;
+      text-align: left;
 
       .card-title {
         font-weight: bold;
@@ -95,9 +98,19 @@
     .budget-progress-card {
       font-weight: bold;
       display: inline-block;
-      margin: 10px 14px;
+      margin: 10px 8px;
       border: 1px solid #ddd;
+      width: 22%;
       box-shadow: 0px 0px 5px gray;
+      
+      @media (max-width: 740px) {
+        width: 40%;
+        margin: 10px 20px;
+      }
+
+      @media (max-width: 445px) {
+        width: 75%;
+      }
 
       .budget-progress.card-header {
         background-color: #F6F8FB;
@@ -119,18 +132,25 @@
       }
 
       .budget-progress.body {
-        padding: 0 20px;
+        .progress-circle {
+          margin: 0 auto;
+          width: 70%;
+        }
 
         .footer {
           margin-top: 10px;
           text-align: center;
           border-bottom: solid 4px rgb(201, 113, 217);
 
+          .amount-spent {
+            font-size: 16px;
+          }
+
           .amount-remaining {
             display: block;
           }
         }
       }
+      }
     }
   }
-}
