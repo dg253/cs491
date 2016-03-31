@@ -12,7 +12,7 @@
 
         function link ($scope, iElm, iAttrs) {
             var startColor = iAttrs.startColor || '#FC5B3F';
-            var endColor = iAttrs.endColor || '#295889';
+            var endColor = iAttrs.endColor || '#C144D8';
 
             var beginAt = 0;
             var stopAt = iAttrs.stopat;

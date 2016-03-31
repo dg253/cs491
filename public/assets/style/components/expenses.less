@@ -74,8 +74,63 @@
   }
 
   .budget-progress {
+    .card.card-body {
+      padding-bottom: 10px;
+    }
+
+    .budget-progress.title {
+      margin-left: 25px;
+      padding-top: 5px;
+
+      .card-title {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .left-to-budget {
+        font-size: 12px;
+      }
+    }
+
     .budget-progress-card {
+      font-weight: bold;
       display: inline-block;
+      margin: 10px 14px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 0px 5px gray;
+
+      .budget-progress.card-header {
+        background-color: #F6F8FB;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 5px;
+
+        .glyphicon {
+          line-height: 1.7;
+        }
+
+        .glyphicon-info-sign {
+          float: left;
+        }
+
+        .glyphicon-cog {
+          float: right;
+        }
+      }
+
+      .budget-progress.body {
+        padding: 0 20px;
+
+        .footer {
+          margin-top: 10px;
+          text-align: center;
+          border-bottom: solid 4px rgb(201, 113, 217);
+
+          .amount-remaining {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
