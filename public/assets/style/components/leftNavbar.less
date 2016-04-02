@@ -1,6 +1,7 @@
 .left-nav {
   .profile-area {
     text-align: center;
+    border-bottom: 1px solid @gray;
 
     .top-half {
       .profile-background-img {
@@ -19,6 +20,61 @@
       .user-fullname {
         font-size: 16px;
         font-weight: bold;
+      }
+    }
+  }
+
+  .side-nav.area {
+    margin: 30px auto;
+    width: 90%;
+
+    .nav.nav-list {
+      .nav-header {
+        margin-bottom: 15px;
+        color: @altText;
+      }
+
+      li {
+        a {
+          color: @text-primary;
+        }
+      }
+    }
+
+    .nav-search {
+      border-bottom: 1px solid #bdc3c7;
+      margin: 40px 0;
+
+      input {
+        border: none;
+      }
+
+      span {
+        button {
+          border: none;
+        }
+      }
+    }
+
+    .nav-button-group {
+      color: white;
+      text-align: center;
+
+      button {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .create-goal {
+        background-color: @app-orange;
+      }
+
+      .create-budget {
+        background-color: @blue;
+      }
+
+      .add-bill {
+        background-color: @green;
       }
     }
   }
