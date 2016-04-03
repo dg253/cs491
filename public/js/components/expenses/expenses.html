@@ -173,11 +173,8 @@
                                     Actions <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">Edit</a></li>
+                                    <li><a href="#">Delete</a></li>
                                 </ul>
                             </div>
                             <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
@@ -185,6 +182,33 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div class="pagination">
+                <ul>
+                    <li class="previous"><a href="#fakelink" class="fui-arrow-left"></a></li>
+                    <li class=""><a href="#fakelink">1</a></li>
+                    <li class=""><a href="#fakelink">2</a></li>
+                    <li><a href="#fakelink">3</a></li>
+                    <li class=""><a href="#fakelink">4</a></li>
+                    <li><a href="#fakelink">5</a></li>
+                    <li><a href="#fakelink">6</a></li>
+                    <li><a href="#fakelink">7</a></li>
+                    <li><a href="#fakelink">8</a></li>
+                    <li><a href="#fakelink">9</a></li>
+                    <li class=""><a href="#fakelink">10</a></li>
+                    <li class="pagination-dropdown dropup">
+                        <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fui-triangle-up"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#fakelink">10–20</a></li>
+                            <li><a href="#fakelink">20–30</a></li>
+                            <li><a href="#fakelink">40–50</a></li>
+                        </ul>
+                    </li>
+                    <li class="next"><a href="#fakelink" class="fui-arrow-right"></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
