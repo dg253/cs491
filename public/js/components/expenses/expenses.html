@@ -168,6 +168,18 @@
                         </td>
                         <td class="bill-amount">
                             <span class="amount">${{ b.amount.amount }}</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Actions <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
                             <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
                         </td>
                     </tr>
