@@ -64,5 +64,26 @@
                 amount: { amount: '1,750', status: 'Pending' }
             }
         ];
+
+        $scope.deleteBill = deleteBill;
+
+        function deleteBill (index) {
+            swal({
+                    title: "Are you sure?",
+                    text: "You cannot recover this bill",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Yes, delete it!",
+                    closeOnConfirm: false
+                },
+                function () {
+                    $scope.$apply(function () {
+                       $scope.bills.splice(index, 1);
+                    });
+
+                    swal("Deleted!", "Bill deleted.", "success");
+                });
+        }
     }
 }());

@@ -173,8 +173,7 @@
                                     Actions <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Edit</a></li>
-                                    <li><a href="#">Delete</a></li>
+                                    <li ng-click="deleteBill($index)"><a href="#">Delete</a></li>
                                 </ul>
                             </div>
                             <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
