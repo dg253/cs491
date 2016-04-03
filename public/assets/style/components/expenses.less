@@ -155,96 +155,6 @@
       }
     }
 
-    .bills-card {
-      background-color: @card-background;
-      border-radius: 3px;
-      box-shadow: 0px 0px 8px gray;
-
-      .bills-header {
-        margin: 0 25px;
-        padding: 12px 0;
-
-        .card-title {
-          font-size: 16px;
-          font-weight: bold;
-        }
-        
-        .left-to-budget {
-          font-size: 12px;
-        }
-
-        .navbar-form {
-          margin: 0;
-          padding: 0;
-
-          .form-group {
-            .input-group {
-              border-bottom: 1px solid @search-border-bottom;
-              input {
-                border: none;
-              }
-
-              span {
-                button {
-                  border: none;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .bills-table {
-
-        table {
-          tbody {
-
-            .table-header {
-              background-color: @table-header-bg;
-            }
-
-            .bill-row {
-              td {
-                font-weight: bold;
-
-                .alt-text {
-                  display: block;
-                  font-size: 12px;
-                }
-
-                .overdue {
-                  color: @red;
-                }
-              }
-
-              .bill-name {
-
-              }
-
-              .bill-due-date {
-
-              }
-
-              .bill-freq {
-
-              }
-
-              .bill-amount {
-                .btn-group {
-                  float: right;
-
-                  button {
-                    font-size: 14px;
-                    padding: 8px 12px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
     .pagination {
       text-align: center;
       display: block;
@@ -264,3 +174,93 @@
       }
     }
   }
+
+.bills-card {
+  background-color: @card-background;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px gray;
+
+  .bills-header {
+    margin: 0 25px;
+    padding: 12px 0;
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .left-to-budget {
+      font-size: 12px;
+    }
+
+    .navbar-form {
+      margin: 0;
+      padding: 0;
+
+      .form-group {
+        .input-group {
+          border-bottom: 1px solid @search-border-bottom;
+          input {
+            border: none;
+          }
+
+          span {
+            button {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bills-table {
+
+    table {
+      tbody {
+
+        .table-header {
+          background-color: @table-header-bg;
+        }
+
+        .bill-row {
+          td {
+            font-weight: bold;
+
+            .alt-text {
+              display: block;
+              font-size: 12px;
+            }
+
+            .overdue {
+              color: @red;
+            }
+          }
+
+          .bill-name {
+
+          }
+
+          .bill-due-date {
+
+          }
+
+          .bill-freq {
+
+          }
+
+          .bill-amount {
+            .btn-group {
+              float: right;
+
+              button {
+                font-size: 14px;
+                padding: 8px 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

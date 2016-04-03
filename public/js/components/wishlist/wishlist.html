@@ -1,0 +1,52 @@
+<div class="wishlist-wrapper">
+    <div class="bills-card clearfix">
+        <div class="bills-header clearfix">
+            <span class="card-title">Wishlist</span>
+            <form class="navbar-form navbar-right" action="/wishlist" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn"><span class="fui-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bills-table">
+            <table class="table table-striped">
+                <tbody>
+                <tr class="table-header">
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Purhcase Link</th>
+                    <th>Amount</th>
+                </tr>
+                <tr class="bill-row" ng-repeat="b in wishlist track by $index">
+                    <td class="bill-name">
+                        <span class="service-name">{{ b.name.name }}</span>
+                        <span class="company-name alt-text">{{ b.name.company }}</span>
+                    </td>
+                    <td class="bill-due-date">
+                        <span class="due-date">{{ b.dateCreated }}</span>
+                    </td>
+                    <td class="bill-freq">
+                        <span class="freq">{{ b.purchaseLink }}</span>
+                    </td>
+                    <td class="bill-amount">
+                        <span class="amount">${{ b.amount }}</span>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Actions <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-click="deleteWishlistItem($index)"><a href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

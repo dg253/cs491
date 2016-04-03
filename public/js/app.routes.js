@@ -33,8 +33,8 @@
 
             .state('wishlist', {
                 url: '/wishlist',
-                templateUrl: 'js/components/wishlist/wishlist.html'
-
+                templateUrl: 'js/components/wishlist/wishlist.html',
+                controller: 'wishlistCtrl'
             })
 
             .state('login', {
