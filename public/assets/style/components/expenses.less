@@ -160,7 +160,7 @@
 
       .bills-header {
         margin: 0 25px;
-        padding-top: 5px;
+        padding: 12px 0;
 
         .card-title {
           font-size: 16px;
@@ -193,13 +193,44 @@
       }
 
       .bills-table {
-        .table-header {
 
-        }
+        table {
+          tbody {
 
-        .table-body {
-          .table-row {
+            .table-header {
+              background-color: @table-header-bg;
+            }
 
+            .bill-row {
+              td {
+                font-weight: bold;
+
+                .alt-text {
+                  display: block;
+                  font-size: 12px;
+                }
+
+                .overdue {
+                  color: @red;
+                }
+              }
+
+              .bill-name {
+
+              }
+
+              .bill-due-date {
+
+              }
+
+              .bill-freq {
+
+              }
+
+              .bill-amount {
+
+              }
+            }
           }
         }
       }

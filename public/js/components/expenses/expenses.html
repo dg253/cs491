@@ -133,7 +133,7 @@
         <div class="bills-header clearfix">
             <span class="card-title">Bills</span>
             <span class="left-to-budget alt-text">| 14 due this month</span>
-            <form class="navbar-form navbar-right" action="#" role="search">
+            <form class="navbar-form navbar-right" action="/expenses" role="search">
                 <div class="form-group">
                     <div class="input-group">
                         <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
@@ -145,10 +145,34 @@
             </form>
         </div>
         <div class="bills-table">
-            <div class="table-header"></div>
-            <div class="table-body clearfix">
-
-            </div>
+            <table class="table table-striped">
+                <tbody>
+                    <tr class="table-header">
+                        <th>Name</th>
+                        <th>Due Date</th>
+                        <th>Frequency</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr class="bill-row" ng-repeat="b in bills track by $index">
+                        <td class="bill-name">
+                            <span class="service-name">{{ b.name.name }}</span>
+                            <span class="company-name alt-text">{{ b.name.company }}</span>
+                        </td>
+                        <td class="bill-due-date">
+                            <span class="due-date">{{ b.dueDate.date }}</span>
+                            <span class="due-date-status alt-text" ng-class="{ overdue: b.dueDate.status === 'Overdue' }">{{ b.dueDate.status }}</span>
+                        </td>
+                        <td class="bill-freq">
+                            <span class="freq">{{ b.freq.freq }}</span>
+                            <span class="when-started alt-text">{{ b.freq.startedOn }}</span>
+                        </td>
+                        <td class="bill-amount">
+                            <span class="amount">${{ b.amount.amount }}</span>
+                            <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
