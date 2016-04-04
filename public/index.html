@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="nav-button-group">
-                        <button class="btn btn-embossed create-goal">Create a Goal</button>
+                        <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
                         <button class="btn btn-embossed create-budget">Create a Budget</button>
                         <button class="btn btn-embossed add-bill">Add a Bill</button>
                     </div>
@@ -153,5 +153,61 @@
 
     <!--Main JS file-->
     <script src="main.js"></script>
+
+
+    <!-- Create a goal modal -->
+    <div id="goalModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Create a Goal</h3>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- create a goal form -->
+                <div class="col-md-8">
+                  <form>
+                    <div class="form-group">
+                      <label for="goalName">Goal Name</label>
+                      <input type="text" class="form-control input-sm" id="goalName" placeholder="Goal Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="goalAmount">Goal Amount</label>
+                      <input type="number" class="form-control input-sm" id="goalAmount" placeholder="Goal Amount">
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio"> Private
+                      </label>
+                      <label>
+                        <input type="radio"> Public
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+                <!-- end create a goal form -->
+
+                <!-- create a goal placeholder -->
+                <div class="col-md-4">
+                  fkja;dj
+                </div>
+                <!-- create a goal placeholder -->
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="btn btn-default btn-wide">It’s ok</a>
+            <a href="#" class="btn btn-primary btn-wide">Turn it off now.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Create a goal modal -->
 </body>
 </html>
