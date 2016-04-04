@@ -10,25 +10,25 @@
 
         $scope.wishlist = [
             {
-                name: { name: 'Spotify Premium', company: 'Spotify USA' },
+                name: { name: 'Macbook Pro', company: 'Spotify USA' },
                 dateCreated: 'Mar 14, 2016',
                 purchaseLink: 'Edison, NJ',
                 amount: '1,499.00'
             },
             {
-                name: { name: 'Xbox Live', company: 'Microsoft' },
+                name: { name: 'Nest Cam Security Camera', company: 'Microsoft' },
                 dateCreated: 'Mar 5, 2016',
                 purchaseLink: 'Bridgewater, NJ',
                 amount: '199.95'
             },
             {
-                name: { name: 'Amazon Prime', company: 'Amazon.com' },
+                name: { name: 'Samsung Ultra 3D Smart TV', company: 'Amazon.com' },
                 dateCreated: 'Mar 2, 2016',
                 purchaseLink: 'Online',
                 amount: '2,259,98'
             },
             {
-                name: { name: 'Netflix Premium', company: 'Netflix Inc' },
+                name: { name: 'Tesla Model S P90D', company: 'Netflix Inc' },
                 dateCreated: 'Feb 28, 2016',
                 purchaseLink: 'New York, NY',
                 amount: '116,000.00'
