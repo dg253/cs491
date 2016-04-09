@@ -47,6 +47,11 @@
                 templateUrl: 'js/components/register/register.html'
             })
 
+            .state('test', {
+                url: '/test',
+                templateUrl: 'js/components/test/test.html'
+            })
+
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
     }
