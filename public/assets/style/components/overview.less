@@ -1,4 +1,3 @@
-
 // color palette (eventually moving to global)
 .light-blue{
   color: @lightBlue
@@ -61,4 +60,39 @@
 .budgets-graph{
   width: 600px;
   height: 300px;
+}
+
+
+//Budget Summary Start
+
+.budget-overview{
+  width: 90%;
+  margin: 0 auto;
+
+  .flex-card{
+    background-color: #00aaff;
+    max-width: 250px;
+    padding: 10px 20px;
+    margin-right: 5px;
+    box-shadow: inset 0 0 3px #000000;
+
+    .flex-header{
+      color: rgba(255,255,255,0.8);
+      padding-bottom: -5px;
+    }
+
+    .flex-body{
+      margin: -5px auto;
+      color: rgba(255,255,255,0.8);
+      .flex-count{
+        font-size:40px;
+        padding-right:5px;
+        color: rgba(255,255,255,1);
+      }
+    }
+
+    .flex-footer{
+      color: rgba(255,255,255,1);
+    }
+  }
 }
