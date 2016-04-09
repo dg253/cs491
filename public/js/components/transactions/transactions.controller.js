@@ -6,71 +6,65 @@
     transactionsCtrl.$inject = ['$scope'];
 
     function transactionsCtrl ($scope) {
-        $scope.sum = 0;
 
-        $scope.labels = ['Bills', 'Clothes', 'Transportation', 'Entertainment', 'Gas', 'Other'];
-        $scope.data = [39, 14, 13, 12, 6, 16];
-        $scope.colors = Chart.defaults.global.colours;
-
-        $scope.data.forEach(function (num, index) {
-            $scope.sum += num;
-        });
-
-        $scope.chartOptions = {
-            percentageInnerCutout : 70
-        };
-
-        $scope.bills = [
+        $scope.transactions = [
             {
-                name: { name: 'Spotify Premium', company: 'Spotify USA' },
-                dueDate: { date: 'Mar 14, 2016', status: 'Overdue' },
-                freq: { freq: 'Monthly', startedOn: '1.14.14' },
-                amount: { amount: '12.95', status: 'Delayed' }
+                name: { name: 'Lunch', company: 'Chipotle' },
+                dateCreated: 'Mar 22, 2016',
+                purchaseLink: 'Edison, NJ',
+                amount: '11.86',
+                expense: true
             },
             {
-                name: { name: 'Xbox Live', company: 'Microsoft' },
-                dueDate: { date: 'Mar 17, 2016', status: 'Overdue' },
-                freq: { freq: 'Every 3 Months', startedOn: '4.17.12' },
-                amount: { amount: '29.95', status: 'Delayed' }
+                name: { name: 'ATM Deposit', company: 'Bank of America' },
+                dateCreated: 'Mar 20, 2016',
+                purchaseLink: 'Bridgewater, NJ',
+                amount: '199.95',
+                expense: false
             },
             {
-                name: { name: 'Amazon Prime', company: 'Amazon.com' },
-                dueDate: { date: 'Apr 2, 2016', status: 'in 10 Days' },
-                freq: { freq: 'Annual', startedOn: '4.2.15' },
-                amount: { amount: '98.95', status: 'Pending' }
+                name: { name: 'Cell Phone Bill', company: 'Verizon' },
+                dateCreated: 'Mar 19, 2016',
+                purchaseLink: 'Online',
+                amount: '44.95',
+                expense: true
             },
             {
-                name: { name: 'Netflix Premium', company: 'Netflix Inc' },
-                dueDate: { date: 'Apr 8, 2016', status: 'in 16 Days' },
-                freq: { freq: 'Monthly', startedOn: '10.8.13' },
-                amount: { amount: '11.99', status: 'Pending' }
+                name: { name: 'Food and Drinks', company: 'Minetta Tavern' },
+                dateCreated: 'Mar 18, 2016',
+                purchaseLink: 'New York, NY',
+                amount: '127.43',
+                expense: true
             },
             {
-                name: { name: 'Internet and Cable', company: 'Optimum Online' },
-                dueDate: { date: 'Apr 12, 2016', status: 'in 20 Days' },
-                freq: { freq: 'Every 3 Months', startedOn: '2.12.15' },
-                amount: { amount: '74.98', status: 'Pending' }
+                name: { name: 'Books', company: 'Barnes and Noble' },
+                dateCreated: 'Mar 18, 2016',
+                purchaseLink: 'Edison, NJ',
+                amount: '14.95',
+                expense: true
             },
             {
-                name: { name: 'Cell Phone', company: 'Verizon' },
-                dueDate: { date: 'Apr 19, 2016', status: 'in 27 Days' },
-                freq: { freq: 'Monthly', startedOn: '4.19.12' },
-                amount: { amount: '44.95', status: 'Pending' }
+                name: { name: 'Gasoline', company: 'Exxon' },
+                dateCreated: 'Mar 16, 2016',
+                purchaseLink: 'Highland Park, NJ',
+                amount: '20.00',
+                expense: true
             },
             {
-                name: { name: 'Rent', company: 'Rockwell Realty' },
-                dueDate: { date: 'Mar 14, 2016', status: 'in 5 Weeks' },
-                freq: { freq: 'Monthly', startedOn: '2.1.15' },
-                amount: { amount: '1,750', status: 'Pending' }
+                name: { name: 'Internet and Cable Bill', company: 'Optimum Online' },
+                dateCreated: 'Mar 12, 2016',
+                purchaseLink: 'Online',
+                amount: '74.98',
+                expense: true
             }
         ];
 
-        $scope.deleteBill = deleteBill;
+        $scope.deleteTransactionItem = deleteTransactionItem;
 
-        function deleteBill (index) {
+        function deleteTransactionItem (index) {
             swal({
                     title: "Are you sure?",
-                    text: "You cannot recover this bill",
+                    text: "You cannot recover this transaction",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
@@ -79,10 +73,10 @@
                 },
                 function () {
                     $scope.$apply(function () {
-                        $scope.bills.splice(index, 1);
+                        $scope.transactions.splice(index, 1);
                     });
 
-                    swal("Deleted!", "Bill deleted.", "success");
+                    swal("Deleted!", "Transaction deleted.", "success");
                 });
         }
     }

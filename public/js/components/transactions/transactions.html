@@ -1,84 +1,80 @@
 
-<div class="bills-card clearfix">
-    <div class="bills-header clearfix">
-        <span class="card-title">Bills</span>
-        <span class="left-to-budget alt-text">| 14 due this month</span>
-        <form class="navbar-form navbar-right" action="/expenses" role="search">
-            <div class="form-group">
-                <div class="input-group">
-                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+<div class="transactions-wrapper">
+    <div class="sv-table-card clearfix">
+        <div class="sv-table-header clearfix">
+            <span class="card-title">Transactions</span>
+            <form class="navbar-form navbar-right" action="/transactions" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
                         <span class="input-group-btn">
                             <button type="submit" class="btn"><span class="fui-search"></span></button>
                         </span>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="bills-table">
-        <table class="table table-striped">
-            <tbody>
-            <tr class="table-header">
-                <th>Name</th>
-                <th>Due Date</th>
-                <th>Frequency</th>
-                <th>Amount</th>
-            </tr>
-            <tr class="bill-row" ng-repeat="b in bills track by $index">
-                <td class="bill-name">
-                    <span class="service-name">{{ b.name.name }}</span>
-                    <span class="company-name alt-text">{{ b.name.company }}</span>
-                </td>
-                <td class="bill-due-date">
-                    <span class="due-date">{{ b.dueDate.date }}</span>
-                    <span class="due-date-status alt-text" ng-class="{ overdue: b.dueDate.status === 'Overdue' }">{{ b.dueDate.status }}</span>
-                </td>
-                <td class="bill-freq">
-                    <span class="freq">{{ b.freq.freq }}</span>
-                    <span class="when-started alt-text">{{ b.freq.startedOn }}</span>
-                </td>
-                <td class="bill-amount">
-                    <span class="amount">${{ b.amount.amount }}</span>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                            Actions <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li ng-click="viewBill($index)"><a href="#">Details</a></li>
-                            <li ng-click="editBill($index)"><a href="#">Edit</a></li>
-                            <li ng-click="deleteBill($index)"><a href="#">Delete</a></li>
-                        </ul>
                     </div>
-                    <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+                </div>
+            </form>
+        </div>
+        <div class="sv-table-table">
+            <table class="table table-striped">
+                <tbody>
+                <tr class="table-header">
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Amount</th>
+                </tr>
+                <tr class="bill-row" ng-repeat="b in transactions track by $index">
+                    <td class="bill-name">
+                        <span class="service-name">{{ b.name.name }}</span>
+                        <span class="company-name alt-text">{{ b.name.company }}</span>
+                    </td>
+                    <td class="bill-due-date">
+                        <span class="due-date">{{ b.dateCreated }}</span>
+                    </td>
+                    <td class="bill-freq">
+                        <span class="freq">{{ b.purchaseLink }}</span>
+                    </td>
+                    <td class="bill-amount">
+                        <span class="amount" ng-class="{ overdue: b.expense === true }">${{ b.amount }}</span>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Actions <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-click="deleteTransactionItem($index)"><a href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
-<div class="pagination">
-    <ul>
-        <li class="previous"><a href="#" class="fui-arrow-left"></a></li>
-        <li class=""><a href="#">1</a></li>
-        <li class=""><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li class=""><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">8</a></li>
-        <li><a href="#">9</a></li>
-        <li class=""><a href="#">10</a></li>
-        <li class="pagination-dropdown dropup">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <i class="fui-triangle-up"></i>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="#">10–20</a></li>
-                <li><a href="#">20–30</a></li>
-                <li><a href="#">40–50</a></li>
-            </ul>
-        </li>
-        <li class="next"><a href="#" class="fui-arrow-right"></a></li>
-    </ul>
+    <div class="pagination">
+        <ul>
+            <li class="previous"><a href="#" class="fui-arrow-left"></a></li>
+            <li class=""><a href="#">1</a></li>
+            <li class=""><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class=""><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li class=""><a href="#">10</a></li>
+            <li class="pagination-dropdown dropup">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fui-triangle-up"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">10–20</a></li>
+                    <li><a href="#">20–30</a></li>
+                    <li><a href="#">40–50</a></li>
+                </ul>
+            </li>
+            <li class="next"><a href="#" class="fui-arrow-right"></a></li>
+        </ul>
+    </div>
 </div>
