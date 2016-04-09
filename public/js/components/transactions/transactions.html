@@ -1,129 +1,84 @@
-<div class="transaction-table panel table-responsive">
-<!--Transaction table start-->
-	<div class="trans-header .col-md-9 container-fluid">
-		<div class="col-md-9 table-name"><b>Transactions</b></div>
 
-		<!--SEARCH BAR-->
-		<form class="transaction-search col-md-3">
-			<form role="form">
-			  <div class="form-group has-feedback">
-			    <input type="text" class="form-control flat" placeholder="Search" />
-			    <i class="form-control-feedback glyphicon glyphicon-search"></i>
-			  </div>
-			</form>
-		</form>
-		<!---->
+<div class="bills-card clearfix">
+    <div class="bills-header clearfix">
+        <span class="card-title">Bills</span>
+        <span class="left-to-budget alt-text">| 14 due this month</span>
+        <form class="navbar-form navbar-right" action="/expenses" role="search">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn"><span class="fui-search"></span></button>
+                        </span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bills-table">
+        <table class="table table-striped">
+            <tbody>
+            <tr class="table-header">
+                <th>Name</th>
+                <th>Due Date</th>
+                <th>Frequency</th>
+                <th>Amount</th>
+            </tr>
+            <tr class="bill-row" ng-repeat="b in bills track by $index">
+                <td class="bill-name">
+                    <span class="service-name">{{ b.name.name }}</span>
+                    <span class="company-name alt-text">{{ b.name.company }}</span>
+                </td>
+                <td class="bill-due-date">
+                    <span class="due-date">{{ b.dueDate.date }}</span>
+                    <span class="due-date-status alt-text" ng-class="{ overdue: b.dueDate.status === 'Overdue' }">{{ b.dueDate.status }}</span>
+                </td>
+                <td class="bill-freq">
+                    <span class="freq">{{ b.freq.freq }}</span>
+                    <span class="when-started alt-text">{{ b.freq.startedOn }}</span>
+                </td>
+                <td class="bill-amount">
+                    <span class="amount">${{ b.amount.amount }}</span>
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-click="viewBill($index)"><a href="#">Details</a></li>
+                            <li ng-click="editBill($index)"><a href="#">Edit</a></li>
+                            <li ng-click="deleteBill($index)"><a href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                    <span class="amount-status alt-text" ng-class="{ overdue: b.amount.status === 'Delayed'}">{{ b.amount.status }}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-	</div>
-
-	<table class="table table-striped table-hover">
-		<tr>
-			<th>Name</th>
-			<th>Date<span class="glyphicon glyphicon-triangle-bottom"></span></th>
-			<th>Location</th>
-			<th>Amount<span class="glyphicon glyphicon-triangle-bottom"></span></th>
-			<th></th>
-		</tr>
-		<tbody>
-			<tr>
-				<td>Lunch<br><span>Chipotle</span></td>
-				<td><b>Mar 22,2016</b></td>
-				<td><b>Edison, NJ</b></td>
-				<td><span style="color:#d65b4a;">$11.86</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-			<tr>
-				<td>ATM Deposit<br><span>Bank of America</span></td>
-				<td><b>Mar 20,2016</b></td>
-				<td><b>Bridgewater, NJ</b></td>
-				<td><span style="color:#2ecc71;">$140.00</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-			<tr>
-				<td>Cell Phone Bill<br><span>Verizon</span></td>
-				<td><b>Mar 19,2016</b></td>
-				<td><b>Online</b></td>
-				<td><span style="color:#d65b4a;">$44.95</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-			<tr>
-				<td>Food and Drinks<br><span>Minetta Tavern</span></td>
-				<td><b>Mar 18,2016</b></td>
-				<td><b>New York City, NY</b></td>
-				<td><span style="color:#d65b4a;">$127.43</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-			<tr>
-				<td>Books<br><span>Barnes and Nobles</span></td>
-				<td><b>Mar 18,2016</b></td>
-				<td><b>Edison, NJ</b></td>
-				<td><span style="color:#d65b4a;">$14.95</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-			<tr>
-				<td>Gasoline<br><span>Exxon</span></td>
-				<td><b>Mar 16,2016</b></td>
-				<td><b>Highland Park, NJ</b></td>
-				<td><span style="color:#d65b4a;">$20.00</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-
-
-			<tr>
-				<td>Internet and Cable Bill<br><span>Optimum Online</span></td>
-				<td><b>Mar 12,2016</b></td>
-				<td><b>Online</b></td>
-				<td><span style="color:#d65b4a;">$74.98</span></td>
-				<td>
-					<div class="btn-group">
-	  				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions <span class="caret"></span></button>
-				  <ul class="dropdown-menu" role="menu">
-				  </ul>
-				</div>
-			</td>
-			</tr>
-		</tbody>
-	</table>
-	<!--Transaction table end-->
+<div class="pagination">
+    <ul>
+        <li class="previous"><a href="#" class="fui-arrow-left"></a></li>
+        <li class=""><a href="#">1</a></li>
+        <li class=""><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li class=""><a href="#">10</a></li>
+        <li class="pagination-dropdown dropup">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="fui-triangle-up"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">10–20</a></li>
+                <li><a href="#">20–30</a></li>
+                <li><a href="#">40–50</a></li>
+            </ul>
+        </li>
+        <li class="next"><a href="#" class="fui-arrow-right"></a></li>
+    </ul>
 </div>

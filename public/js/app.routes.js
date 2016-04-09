@@ -27,8 +27,8 @@
 
             .state('transactions', {
                 url: '/transactions',
-                templateUrl: 'js/components/transactions/transactions.html'
-
+                templateUrl: 'js/components/transactions/transactions.html',
+                controller: 'transactionsCtrl'
             })
 
             .state('wishlist', {
