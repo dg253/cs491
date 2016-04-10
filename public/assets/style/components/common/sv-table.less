@@ -1,0 +1,55 @@
+// Recent Transaction Table Start
+.recent-transactions-wrapper{
+  width: 90%;
+  margin: 0 auto;
+
+  .recent-transactions{
+    @tableRed: #af4034;
+    @tableGreen: #2ecc71;
+    @tableBlue: #1f96ef;
+    padding: 0; //Padding affects the content inside
+
+    .recent-transactions-header{
+      background-color: @card-header;
+      a{color:@tableBlue;}
+      .recent-transactions-title{font-size:1.5em;}
+      .recent-transactions-title,.recent-transactions-link{
+        line-height:50px;
+        white-space: nowrap;
+      }
+    }
+
+    .recent-transactions-table{
+      margin: 0 auto; //Gap between bottom
+
+      tbody{
+        .tableRed{color: @tableRed;}
+        .tableGreen{color: @tableGreen;}
+        .recent-transactions-table-data-left{
+          font-weight: bold;
+          color: rgba(0,0,0,1);
+        }
+        .recent-transactions-table-graphic{
+          .glyphicon-usd{color:@tableRed}
+          .glyphicon-piggy-bank{color:@tableGreen;}
+        }
+        td{
+          padding:20px;
+          &:nth-child(1){
+            padding:0;
+            vertical-align: middle;
+            text-align: center;
+          }
+          &:nth-child(2){
+            padding: 0;
+            vertical-align: middle;
+          }
+          span:nth-child(1){
+            font-size:1.2em;
+          }
+          color: rgba(0,0,0,0.5);
+        }
+      }
+    }
+  }
+}
