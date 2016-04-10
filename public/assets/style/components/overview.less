@@ -19,10 +19,12 @@
 // Styles specific to Balances Summary
 .left{
   background-color: @primary;
+  border-right: 1px solid #eee;
 }
 
 .right{
   background-color: @secondary;
+  border-left: 1px solid #eee;
 }
 
 .balance-heading-item{
@@ -42,6 +44,11 @@
 .summary{
   padding-top: 10px;
   padding-bottom: 10px;
+
+  a{
+    font-size: smaller;
+  }
+
   .summary-list{
     padding-top: 15px;
     padding-bottom: 10px;
@@ -57,7 +64,8 @@
   margin: 0px;
 }
 
-.budgets-graph{
-  width: 600px;
-  height: 300px;
+canvas{
+    width: 100% !important;
+    max-width: 800px;
+    height: auto !important;
 }
