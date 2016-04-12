@@ -22,13 +22,16 @@
                 color: startColor,
                 trailColor: '#eee',
                 trailWidth: 1,
-                duration: 2000,
+                duration: 3000,
                 easing: 'bounce',
                 strokeWidth: 8,
 
                 // Set default step function for all animate calls
                 step: function(state, circle) {
                     circle.path.setAttribute('stroke', state.color);
+                    if (!beginAt) {
+                        circle.setText('0%');
+                    }
 
                     if (beginAt++ < stopAt) {
                         circle.setText(beginAt + '%');
