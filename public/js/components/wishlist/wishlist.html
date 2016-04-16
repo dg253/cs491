@@ -19,7 +19,7 @@
                 <tr class="table-header">
                     <th>Name</th>
                     <th>Date</th>
-                    <th>Purhcase Link</th>
+                    <th class="third-column">Purchase Link</th>
                     <th>Amount</th>
                 </tr>
                 <tr class="bill-row" ng-repeat="b in wishlist track by $index">
@@ -39,6 +39,7 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                 Actions <span class="caret"></span>
                             </button>
+                            <div class="sv-ellipsis" data-toggle="dropdown">&#8942;</div>
                             <ul class="dropdown-menu" role="menu">
                                 <li ng-click="deleteWishlistItem($index)"><a href="#">Delete</a></li>
                             </ul>

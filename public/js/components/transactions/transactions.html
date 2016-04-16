@@ -20,7 +20,7 @@
                 <tr class="table-header">
                     <th>Name</th>
                     <th>Date</th>
-                    <th>Location</th>
+                    <th class="third-column">Location</th>
                     <th>Amount</th>
                 </tr>
                 <tr class="bill-row" ng-repeat="b in transactions track by $index">
@@ -40,6 +40,7 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                 Actions <span class="caret"></span>
                             </button>
+                            <div class="sv-ellipsis" data-toggle="dropdown">&#8942;</div>
                             <ul class="dropdown-menu" role="menu">
                                 <li ng-click="deleteTransactionItem($index)"><a href="#">Delete</a></li>
                             </ul>

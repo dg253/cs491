@@ -44,6 +44,14 @@
 
         .table-header {
           background-color: @table-header-bg;
+
+          th {
+            &.third-column {
+              @media (max-width: 600px) {
+                display: none;
+              }
+            }
+          }
         }
 
         .bill-row {
@@ -59,6 +67,10 @@
             .overdue {
               color: @red;
             }
+
+            @media (min-width: 780px) {
+              padding: 9px 10px;
+            }
           }
 
           .bill-name {
@@ -70,15 +82,42 @@
           }
 
           .bill-freq {
+            @media (max-width: 600px) {
+              display: none;
+            }
           }
 
           .bill-amount {
+            @media (max-width: 427px) {
+              padding-right: 2px;
+            }
+
             .btn-group {
               float: right;
+
+              @media (max-width: 452px) {
+                margin-left: 5px;
+              }
 
               button {
                 font-size: 14px;
                 padding: 8px 12px;
+
+                @media (max-width: 1060px) {
+                  display: none;
+                }
+              }
+
+              .sv-ellipsis {
+                display: none;
+
+                @media (max-width: 1060px) {
+                  display: block;
+                }
+
+                @media (max-width: 452px) {
+                  font-size: 16px;
+                }
               }
             }
           }
