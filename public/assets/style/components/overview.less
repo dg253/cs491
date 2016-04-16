@@ -7,7 +7,7 @@
   color: @darkBlue
 }
 .red{
-  color: @red
+  color: #2ECC71
 }
 .hr-alt{
   color: #F1F3F5;
@@ -20,10 +20,12 @@
 // Styles specific to Balances Summary
 .left{
   background-color: @primary;
+  border-right: 1px solid #eee;
 }
 
 .right{
   background-color: @secondary;
+  border-left: 1px solid #eee;
 }
 
 .balance-heading-item{
@@ -35,6 +37,10 @@
   }
 }
 
+.balance-heading{
+  padding-top: 20px
+}
+
 .overview-wrapper{
   width: 90%;
   margin: 0 auto;
@@ -42,7 +48,13 @@
 
 .summary{
   padding-top: 10px;
-  padding-bottom: 10px;
+
+  a{
+    font-size: smaller;
+  }
+  .section{
+    padding-top: 10px;
+  }
   .summary-list{
     padding-top: 15px;
     padding-bottom: 10px;
@@ -58,7 +70,8 @@
   margin: 0px;
 }
 
-.budgets-graph{
-  width: 600px;
-  height: 300px;
+canvas{
+    width: 92% !important;
+    max-width: 800px;
+    height: auto !important;
 }
