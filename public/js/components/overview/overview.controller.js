@@ -12,7 +12,8 @@
       $scope.series = ['Series A', 'Series B'];
       $scope.data = [
         [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+        [28, 48, 40, 19, 86, 27, 90],
+        [59, 0, 13, 89, 11, 74, 4]
       ];
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
