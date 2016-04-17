@@ -50,6 +50,10 @@ body {
 .container-fluid {
   padding: 0;
   height: 90%;
+
+  &.fullscreen {
+    height: 100%;
+  }
 }
 
 .sv-ellipsis {
@@ -73,9 +77,13 @@ body {
 .main {
   padding: 0;
   background: url('../img/mountain-background.jpeg');
-  background-repeat: repeat;
+  background-repeat: round;
   background-attachment: fixed;
   overflow-y: auto;
+
+  &.fullscreen {
+    width: 100%;
+  }
 }
 
 .navbar {

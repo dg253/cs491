@@ -39,12 +39,14 @@
 
             .state('login', {
                 url: '/login',
-                templateUrl: 'js/components/login/login.html'
+                templateUrl: 'js/components/login/login.html',
+                controller: 'loginCtrl'
             })
 
             .state('register', {
                 url: '/register',
-                templateUrl: 'js/components/register/register.html'
+                templateUrl: 'js/components/register/register.html',
+                controller: 'registerCtrl'
             })
 
             .state('test', {

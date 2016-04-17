@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/style/app.css"/>
 </head>
 <body ng-controller="navCtrl">
-    <div class="container-fluid">
+    <div class="container-fluid" ng-class="{ fullscreen: !$root.loggedIn }">
         <nav role="navigation" class="navbar top navbar-inverse navbar-embossed" ng-if="$root.loggedIn">
             <div class="navbar-header">
                 <button data-target="#navbar-collapse-08" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -82,7 +82,7 @@
 
 
             <!--Middle Section-->
-            <div ui-view class="col-md-8 main">
+            <div ui-view class="col-md-8 main" ng-class="{ fullscreen: !$root.loggedIn }">
              <!-- <div ui-view></div>-->
             </div>
             <!--End Middle Section-->
