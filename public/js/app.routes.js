@@ -52,7 +52,7 @@
                 templateUrl: 'js/components/test/test.html'
             })
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/login');
         $locationProvider.html5Mode(true);
     }
 }());
