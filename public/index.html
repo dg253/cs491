@@ -25,9 +25,9 @@
     <!--Main app CSS-->
     <link rel="stylesheet" href="assets/style/app.css"/>
 </head>
-<body>
+<body ng-controller="navCtrl">
     <div class="container-fluid">
-        <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
+        <nav role="navigation" class="navbar top navbar-inverse navbar-embossed" ng-if="$root.loggedIn">
             <div class="navbar-header">
                 <button data-target="#navbar-collapse-08" data-toggle="collapse" class="navbar-toggle" type="button">
                 </button>
@@ -43,7 +43,7 @@
 
         <div class="row">
             <!--Left Section-->
-            <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
+            <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">>
                 <div class="profile-area">
                     <div class="profile-area top-half">
                         <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
@@ -88,7 +88,7 @@
             <!--End Middle Section-->
 
             <!--Right Section-->
-            <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs">
+            <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
                 <div class="activity-feed-container">
                     <span>Activity Feed</span>
                     <ol class="activity-feed">
