@@ -23,10 +23,6 @@ html {
 body {
 	background: @color1;
 }
-
-.dave{
-  color: blue;
-}
 .calendar {
 	-ms-flex-align: center;
 	-ms-flex-pack: center;
@@ -70,13 +66,13 @@ body {
 	}
 }
 .calendar_right {
-	-webkit-transform: scale(0.95) translateX(-790px);
+	-webkit-transform: scale(0.95) translateX(-10px);
 	background: #0096cf;
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
 	height: @height1;
 	position: relative;
-	transform: scale(0.95) translateX(-790px);
+	transform: scale(0.95) translateX(-10px);
 	width: @width2;
 	z-index: 0;
 	.list {
@@ -189,13 +185,14 @@ body {
 	transform: scale(0.7);
 	z-index: 0;
 }
-
-	::-webkit-scrollbar {
+ {
+	&::-webkit-scrollbar {
 		display: none;
 	}
-	::-webkit-input-placeholder {
+	&::-webkit-input-placeholder {
 		color: @color0;
 	}
+}
 .bounce-in.ng-animate {
 	-webkit-animation: none 0s;
 	animation: none 0s;
@@ -204,39 +201,39 @@ body {
 	-webkit-animation: bounce-in 0.9s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 	animation: bounce-in 0.9s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
-// @keyframes {
-// 	bounce-in {
-// 		50% { -webkit-transform: translateX(0);
-// 		transform: translateX(0);
-// 	}
-// 	bounce-button-in {
-// 		0% { -webkit-transform: translateZ(0) scale(0);
-// 		transform: translateZ(0) scale(0);
-// 	}
-// }
-// 75% {
-// 	-webkit-transform: translateX(7px);
-// 	-webkit-transform: translateX(7px);
-// 	transform: translateX(7px);
-// 	transform: translateX(7px);
-// }
-// 100% {
-// 	-webkit-transform: translateX(2px);
-// 	-webkit-transform: translateX(2px);
-// 	-webkit-transform: translateZ(0) scale(0.7);
-// 	-webkit-transform: translateZ(0) scale(0.7);
-// 	transform: translateX(2px);
-// 	transform: translateX(2px);
-// 	transform: translateZ(0) scale(0.7);
-// 	transform: translateZ(0) scale(0.7);
-// }
-// @keyframes {
-// 	bounce-in {
-// 		50% { -webkit-transform: translateX(0);
-// 		transform: translateX(0);
-// 	}
-// 	bounce-button-in {
-// 		0% { -webkit-transform: translateZ(0) scale(0);
-// 		transform: translateZ(0) scale(0);
-// 	}
-// }
+@-webkit-keyframes {
+	bounce-in {
+		50% { -webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	bounce-button-in {
+		0% { -webkit-transform: translateZ(0) scale(0);
+		transform: translateZ(0) scale(0);
+	}
+}
+75% {
+	-webkit-transform: translateX(7px);
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+	transform: translateX(7px);
+}
+100% {
+	-webkit-transform: translateX(2px);
+	-webkit-transform: translateX(2px);
+	-webkit-transform: translateZ(0) scale(0.7);
+	-webkit-transform: translateZ(0) scale(0.7);
+	transform: translateX(2px);
+	transform: translateX(2px);
+	transform: translateZ(0) scale(0.7);
+	transform: translateZ(0) scale(0.7);
+}
+@keyframes {
+	bounce-in {
+		50% { -webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	bounce-button-in {
+		0% { -webkit-transform: translateZ(0) scale(0);
+		transform: translateZ(0) scale(0);
+	}
+}
