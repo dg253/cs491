@@ -117,49 +117,7 @@
                         </li>
                     </ol>
                 </div>
-                </hr>
-                <div class="dave">
-                  jim
-                </div>
-                <div class="right-nav-calendar">
-                  <div class='calendar' ng-controller='calendarController as calendar'>
-                  <div class='calendar_left'>
-                    <div class='header'>
-                      <i class='material-icons' ng-click='calendar.prev()'>navigate_before</i>
-                      <h1>{{calendar.month}}</h1>
-                      <i class='material-icons' ng-click='calendar.next()'>navigate_next</i>
-                    </div>
-                    <div class='days'>
-                      <div class='day_item'>Mon</div>
-                      <div class='day_item'>Tue</div>
-                      <div class='day_item'>Wed</div>
-                      <div class='day_item'>Thu</div>
-                      <div class='day_item'>Fri</div>
-                      <div class='day_item'>Sat</div>
-                      <div class='day_item'>Sun</div>
-                    </div>
-                    <div class='dates'></div>
-                  </div>
-                  <div class='calendar_right'>
-                    <div class='list'>
-                      <ul>
-                        <li class='bounce-in' ng-repeat='events in calendar.events' ng-show='events.id === calendar.dataId'>
-                          <span class='type'>It's a {{ events.type }} thing -</span>
-                          <span class='description'>{{ events.description }}</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <form ng-submit='calendar.add()'>
-                      <input ng-model='calendar.description' placeholder='Enter a task for this day' type='text'>
-                        <select ng-model='calendar.type' placeholder='calendar.type'>
-                          <option value='Social'>Social</option>
-                          <option value='Work'>Work</option>
-                        </select>
-                      </input>
-                    </form>
-                  </div>
-                  </div>
-                </div>
+              <calendar class="col-xs-12"selected="day"></calendar>
             </div>
             <!--End Right Section-->
         </div>
@@ -195,6 +153,9 @@
 
     <!--ProgressBar JS-->
     <script src="assets/libs/progressbar.js/dist/progressbar.js"></script>
+
+    <!--Moment JS-->
+    <script src="assets/libs/moment/moment.js"></script>
 
     <!--Main JS file-->
     <script src="main.js"></script>
