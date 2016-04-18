@@ -1,22 +1,15 @@
-<div class="signup-modal">
-    <form class="interactive-form">
-        <input id="input-1" type="text" autofocus required/>
-        <label for="input-1">
-            <span class="label-text">Username</span>
-            <span class="nav-dot"></span>
-            <div class="signup-button-trigger">Login</div>
-        </label>
-       <!-- <input id="input-3" type="email" placeholder="email@address.com" />
-        <label for="input-3">
-            <span class="label-text">Email</span>
-            <span class="nav-dot"></span>
-        </label>-->
-        <input id="input-2" type="password" required/>
-        <label for="input-2">
-            <span class="label-text">Password</span>
-            <span class="nav-dot"></span>
-        </label>
-        <button ng-click="login()">Login</button>
-        <div class="signup-button">Login</div>
+<div class="login-wrapper" ng-submit="login($event)">
+    <form class="login">
+        <p class="title">Saverly</p>
+        <input type="text" placeholder="Username" autofocus/>
+        <i class="glyphicon glyphicon-user"></i>
+        <input type="password" placeholder="Password" />
+        <i class="glyphicon glyphicon-lock"></i>
+        <a href="#">Forgot your password?</a>
+        <p class="signup">Don't have an account? <a ui-sref="register">Sign up</a></p>
+        <button type="submit">
+            <i class="spinner"></i>
+            <span class="state">Log in</span>
+        </button>
     </form>
 </div>
