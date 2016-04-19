@@ -24,6 +24,7 @@
     "progressbar.js": "~1.0.0",
     "bootstrap-sweetalert": "~0.4.5",
     "angular-animate": "^1.5.3",
-    "moment": "^2.12.0"
+    "moment": "^2.12.0",
+    "hover": "Hover#^2.0.2"
   }
 }

@@ -10,6 +10,9 @@
     -moz-box-sizing:border-box;
 }
 
+@background: #EEE;
+@title: #7f8c8d;
+@days:#95a5a6;
 @border-colour:#CCC;
 calendar {
     float:left;
@@ -17,10 +20,9 @@ calendar {
     .border-box;
     background:white;
     width:300px;
-    border:solid 1px @border-colour;
     margin-bottom:10px;
 
-    @secondary-colour:#2875C7;
+    @secondary-colour:#3498db;
     @spacing:10px;
     @icon-width:40px;
     @header-height:40px;
@@ -28,9 +30,9 @@ calendar {
     >div.header {
         float:left;
         width:100%;
-        background:@secondary-colour;
+        background:@background;
         height:@header-height;
-        color:white;
+        color:@title;
 
         >* {
             .vertical-centre(@header-height);
@@ -72,7 +74,6 @@ calendar {
     >div.week {
         float:left;
         width:100%;
-        border-top:solid 1px @border-colour;
 
         &:first-child {
             border-top:none;
@@ -82,11 +83,10 @@ calendar {
             float:left;
             width:100%/7;
             .border-box;
-            border-left:solid 1px @border-colour;
             font-size:0.75em;
             text-align:center;
             .vertical-centre(30px);
-            background:white;
+            background:@background;
             cursor:pointer;
             color:black;
 
@@ -105,11 +105,12 @@ calendar {
             &.selected {
                 background:@secondary-colour;
                 color:white;
+                border-radius: 25%;
             }
         }
 
         &.names>span {
-            color:@secondary-colour;
+            color:@days;
             font-weight:bold;
         }
     }
