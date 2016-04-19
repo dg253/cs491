@@ -1,0 +1,64 @@
+.modal-backdrop{z-index: -1;} //Fixes fading issue
+
+.add-bill{
+  padding:10px 20px;
+
+  .modal-header{
+    border: 0;
+    border-left: 2px solid black;
+    padding: 0 0 0 10px;
+    .modal-title{font-size: 20px;}
+  }
+  .modal-body{
+    margin:0;
+    padding: 20px 0 0 0;
+    .add-bill-icon{
+      padding:0;
+    }
+
+    .add-bill-form{
+      padding: 0;
+      .form-group{
+        padding:0 20px 0 0;
+        margin-bottom: 0;
+        .select-wrapper{
+          .frequency-label{
+            color: #b2bcc5;
+            background-color: none;
+            position:absolute;
+            font-size:10px;
+            top:30px;
+          }
+        }
+
+        .form-style {
+          height: 20px;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          border-bottom:1px solid black;
+        }
+        input:not(:last-child){margin-bottom:25px;}
+        select{margin-bottom: 25px;}
+        textarea{
+          resize: none;
+          height:110px !important;
+        }
+
+        /*select{ //The select down arrow is different due to browsers.
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          @-moz-document url-prefix(){text-indent:-2px;}
+          &::-ms-expand{display: none;}
+        }*/
+      }
+    }
+  }
+
+  .modal-footer{
+    background-color:#fff;
+    padding: 10px 20px 0 0;
+    .btn{padding:0 30px; background-color: #2ecc71;}
+  }
+}

@@ -1,5 +1,5 @@
 <!--Flex cards-->
-<div class="flex-card-wrapper row">
+<div class="flex-card-wrapper row" style="height: 200px;">
 
   <div class="flex-card col-md-3 card card-block">
     <span class="flex-header">Weekly Flex Spending</span>
@@ -14,18 +14,18 @@
 <!--Flex cards end-->
 
 <!--Recent Transaction Table Start-->
-<div class="recent-transactions-wrapper row">
+<div class="recent-transactions-wrapper row" style="height: 500px;">
 
   <div class="recent-transactions card col-md-6 col-xs-12">
     <div class="recent-transactions-header container-fluid">
-      <span class="col-md-6 col-xs-8 recent-transactions-title">Recent Transactions</span>
+      <span class="col-md-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
       <a href="#" class="recent-transactions-link text-right col-md-6 col-xs-4">View More</a>
     </div>
 
     <div class="recent-transactions-body container-fluid">
       <div class="recent-transactions-row container-fluid">
         <div class="recent-transactions-left col-md-1 col-xs-1">
-          <img class="ico-expense" src="assets/img/expense.svg"/>
+          <img class="icon" src="/assets/img/expense.png"/>
         </div>
         <div class="recent-transactions-mid col-md-5 col-xs-5">
           <span class="bold">Books</span><br>
@@ -39,47 +39,102 @@
 
       <div class="recent-transactions-row container-fluid">
         <div class="recent-transactions-left col-md-1 col-xs-1">
-          <span class="glyphicon textGreen glyphicon-piggy-bank"></span>
+          <img class="icon" src="/assets/img/payday.png"/>
         </div>
         <div class="recent-transactions-mid col-md-5 col-xs-5">
-          <span class="bold">Books</span><br>
-          <span class="fade">March 11, 2016</span>
+          <span class="bold">ATM Deposit</span><br>
+          <span class="fade">March 8, 2016</span>
         </div>
         <div class="recent-transactions-right text-right col-md-6 col-xs-6">
-          <span class="textGreen">$21.95</span><br>
+          <span class="textGreen">$1,140.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
         <div class="recent-transactions-left col-md-1 col-xs-1">
-          <span class="glyphicon textRed glyphicon-usd"></span>
+          <img class="icon" src="/assets/img/expense.png"/>
         </div>
         <div class="recent-transactions-mid col-md-5 col-xs-5">
-          <span class="bold">Books</span><br>
-          <span class="fade">March 11, 2016</span>
+          <span class="bold">Gasoline</span><br>
+          <span class="fade">March 2, 2016</span>
         </div>
         <div class="recent-transactions-right text-right col-md-6 col-xs-6">
-          <span class="textRed">$21.95</span><br>
+          <span class="textRed">$20.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
         <div class="recent-transactions-left col-md-1 col-xs-1">
-          <span class="glyphicon textRed glyphicon-usd"></span>
+          <img class="icon" src="/assets/img/expense.png"/>
         </div>
         <div class="recent-transactions-mid col-md-5 col-xs-5">
-          <span class="bold">Books</span><br>
-          <span class="fade">March 11, 2016</span>
+          <span class="bold">Combo Meal</span><br>
+          <span class="fade">February 27, 2016</span>
         </div>
         <div class="recent-transactions-right text-right col-md-6 col-xs-6">
-          <span class="textRed">$21.95</span><br>
+          <span class="textRed">$7.82</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
     </div>
-
+  </div>
 
 </div>
 <!--Recent Transaction Table End-->
+
+<!--Add a bill modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
+
+<div id="bill-modal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="add-bill modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close fui-cross" data-dismiss="modal" ></button>
+        <h4 class="modal-title">Add a Bill</h4>
+      </div>
+
+      <div class="modal-body row">
+        <div class="add-bill-icon col-md-3">
+          <img class="img-responsive" src="assets\flat-ui\HTML\Icons\PNG\@2x\flask@2x.png">
+        </div>
+
+        <div class="add-bill-form col-md-9">
+          <div class="form-group add-bill-input-left col-md-6">
+              <input type="text" class="form-control form-style" placeholder="Name">
+              <input type="text" class="form-control form-style" placeholder="Name">
+              <input type="text" class="form-control form-style" placeholder="Name">
+              <input type="text" class="form-control form-style" placeholder="Name">
+              <input type="text" class="form-control form-style" placeholder="Name">
+          </div>
+
+          <div class="form-group add-bill-input-right col-md-6">
+              <input type="text" class="form-control form-style" placeholder="Tags">
+              <div class="select-wrapper">
+                <span class="frequency-label">Frequency</span>
+                <select class="form-control form-style" placeholder="Select a Frequency">
+                  <option value="" disabled selected>Choose a frequency</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <textarea class="form-control form-style" rows="4" placeholder="Description"/>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Add a bill modal End-->
