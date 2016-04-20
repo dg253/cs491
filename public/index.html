@@ -37,7 +37,18 @@
                 </a>
             </div>
             <div id="navbar-collapse-08" class="collapse navbar-collapse">
-                <p class="navbar-text navbar-right"><i class="glyphicon glyphicon-bell"></i></p>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Preferences</a></li>
+                    <li><a href="#">Link an Account</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
         </nav>
 
@@ -154,9 +165,8 @@
     <!--Main JS file-->
     <script src="main.js"></script>
 
-
     <!-- Create a goal modal -->
-    <div id="goalModal" class="modal fade modal-inverse" role="dialog">
+    <div id="goalModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -201,6 +211,7 @@
                           <div progress-circle stopat="66" class="progress-circle"></div>
                           <div class="footer">
                               <span class="amount-spent">$200 of 300</span>
+                              <div class="clearfix"></div>
                               <span class="amount-remaining alt-text">$10 remaining</span>
                           </div>
                       </div>
@@ -220,5 +231,6 @@
       </div>
     </div>
     <!-- End Create a goal modal -->
+    <div class="modal-overlay"></div>
 </body>
 </html>
