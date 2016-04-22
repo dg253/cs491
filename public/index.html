@@ -24,115 +24,137 @@
 
     <!--Main app CSS-->
     <link rel="stylesheet" href="assets/style/app.css"/>
+
+    <script src="js/modernizr.custom.js"></script>
+
 </head>
 <body>
-    <div class="container-fluid">
-        <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
-            <div class="navbar-header">
+    <div id="st-container" class="container-fluid st-container">
+      <div class="st-pusher">
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 class="icon icon-lab">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Profile</a></li>
+            <li><a href="#">Preferences</a></li>
+            <li><a href="#">Link an Account</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </nav>
+        <div class="st-content">
+          <div class="st-content-inner">
+            <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
+              <div class="navbar-header">
                 <button data-target="#navbar-collapse-08" data-toggle="collapse" class="navbar-toggle" type="button">
                 </button>
                 <a href="#" class="navbar-brand">
                     <img class="logo" src="assets/img/icon1.svg" alt=""/>
                     Saverly
                 </a>
-            </div>
-            <div id="navbar-collapse-08" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Preferences</a></li>
-                    <li><a href="#">Link an Account</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Logout</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-        </nav>
-
-        <div class="row">
-            <!--Left Section-->
-            <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
-                <div class="profile-area">
+              </div>
+              <div id="navbar-collapse-08" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <div id="st-trigger-effects" class="column">
+                    <button data-effect="st-effect-3">Push</button>
+                  </div>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Preferences</a></li>
+                      <li><a href="#">Link an Account</a></li>
+                      <li><a href="#">Support</a></li>
+                      <li><a href="#">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="row">
+                <!--Left Section-->
+                <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
+                  <div class="profile-area">
                     <div class="profile-area top-half">
-                        <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
+                      <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
                     </div>
                     <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
                     <div class="profile-area bottom-half">
-                        <span class="user-fullname">George Watsky</span>
+                      <span class="user-fullname">George Watsky</span>
                     </div>
-                </div>
-                <div class="side-nav area">
+                  </div>
+
+                  <div class="side-nav area">
                     <ul class="nav nav-list">
-                        <li class="nav-header">Menu</li>
-                        <li><a ui-sref="overview">Overview</a></li>
-                        <li><a ui-sref="expenses">Expenses</a></li>
-                        <li><a ui-sref="savings">Savings</a></li>
-                        <li><a ui-sref="transactions">Transactions</a></li>
-                        <li><a ui-sref="wishlist">Wishlist</a></li>
+                      <li class="nav-header">Menu</li>
+                      <li><a ui-sref="overview">Overview</a></li>
+                      <li><a ui-sref="expenses">Expenses</a></li>
+                      <li><a ui-sref="savings">Savings</a></li>
+                      <li><a ui-sref="transactions">Transactions</a></li>
+                      <li><a ui-sref="wishlist">Wishlist</a></li>
                     </ul>
 
                     <div class="nav-search input-group">
-                        <input type="text" class="form-control" placeholder="Search" id="search-query-3">
-                        <span class="input-group-btn">
+                      <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                      <span class="input-group-btn">
                         <button type="submit" class="btn"><span class="fui-search"></span></button>
-                        </span>
+                      </span>
                     </div>
 
                     <div class="nav-button-group">
-                        <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                        <button class="btn btn-embossed create-budget">Create a Budget</button>
-                        <button class="btn btn-embossed add-bill">Add a Bill</button>
+                      <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                      <button class="btn btn-embossed create-budget">Create a Budget</button>
+                      <button class="btn btn-embossed add-bill">Add a Bill</button>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <!--End Left Section-->
+                <!--End Left Section-->
 
+                <!--Middle Section-->
+                <div ui-view class="col-md-8 main">
+                 <!-- <div ui-view></div>-->
+                </div>
+                <!--End Middle Section-->
 
-            <!--Middle Section-->
-            <div ui-view class="col-md-8 main">
-             <!-- <div ui-view></div>-->
-            </div>
-            <!--End Middle Section-->
-
-            <!--Right Section-->
-            <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs">
-                <div class="activity-feed-container">
+                <!--Right Section-->
+                <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs">
+                  <div class="activity-feed-container">
                     <span>Activity Feed</span>
                     <ol class="activity-feed">
-                        <li class="feed-item">
-                            <time class="date" datetime="9-25">Mar 3</time>
-                            <span class="text">Created budget <a href="">Groceries</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-24">Mar 2</time>
-                            <span class="text">Added to Wishlist <a href="">Nest Cam Security Camera</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-23">Feb 26</time>
-                            <span class="text">Created budget <a href="">Entertainment</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-21">Feb 25</time>
-                            <span class="text">Added to wishlist <a href="">Tesla Model S P90D</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-18">Feb 24</time>
-                            <span class="text">Added to Wishlist <a href="">MacBook Pro</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-17">Feb 15</time>
-                            <span class="text">Created budget <a href="">Personal Care</a></span>
-                        </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-25">Mar 3</time>
+                        <span class="text">Created budget <a href="">Groceries</a></span>
+                      </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-24">Mar 2</time>
+                        <span class="text">Added to Wishlist <a href="">Nest Cam Security Camera</a></span>
+                      </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-23">Feb 26</time>
+                        <span class="text">Created budget <a href="">Entertainment</a></span>
+                      </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-21">Feb 25</time>
+                        <span class="text">Added to wishlist <a href="">Tesla Model S P90D</a></span>
+                      </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-18">Feb 24</time>
+                        <span class="text">Added to Wishlist <a href="">MacBook Pro</a></span>
+                      </li>
+                      <li class="feed-item">
+                        <time class="date" datetime="9-17">Feb 15</time>
+                        <span class="text">Created budget <a href="">Personal Care</a></span>
+                      </li>
                     </ol>
-                </div>
-                <div class="right-nav-calendar"></div>
-            </div>
-            <!--End Right Section-->
-        </div>
-    </div>
+                  </div>
+
+                  <div class="right-nav-calendar"></div>
+                  </div>
+                <!--End Right Section-->
+            </div><!-- /row -->
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
 
     <!--Bootstrap-->
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -161,6 +183,10 @@
 
     <!--ProgressBar JS-->
     <script src="assets/libs/progressbar.js/dist/progressbar.js"></script>
+
+    <!--sidebar menu JS-->
+    <script src="js/classie.js"></script>
+		<script src="js/sidebarEffects.js"></script>
 
     <!--Main JS file-->
     <script src="main.js"></script>
@@ -220,7 +246,6 @@
                 <!-- end create a goal placeholder -->
               </div>
             </div>
-
           </div>
 
           <div class="modal-footer">
