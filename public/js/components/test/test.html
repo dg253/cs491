@@ -1,79 +1,229 @@
-<!--Flex cards-->
-<div class="flex-card-wrapper row" style="height: 200px;">
+<script>
+$("[name='goal-length']").bootstrapSwitch();
+$("[name='display-goal']").bootstrapSwitch();
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 
-  <div class="flex-card col-md-3 card card-block">
-    <span class="flex-header">Weekly Flex Spending</span>
-    <div class="flex-body">
-      <span class="flex-count">52</span> REMAINING
+<!--Add a bill modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
+
+<div id="bill-modal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="add-bill no-padding modal-content">
+
+      <div class="add-bill-header container-fluid">
+        <span class="add-bill-title no-padding col-md-6 col-xs-8"> Add a Bill </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="add-bill-body no-padding container-fluid">
+        <div class="add-bill-icon-md no-padding col-md-3">
+          <img class="bill-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
+        </div>
+
+        <div class="add-bill-info no-padding col-md-9">
+
+          <div class="add-bill-info-l col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div class="add-bill-info-r col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <div class="freq-wrapper">
+              <span class="freq-label">Frequency</span>
+              <select>
+                <option disabled selected>Choose a frequency</option>
+                <option>1</option>
+              </select>
+            </div>
+            <textarea placeholder="Description" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="add-bill-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3 col-xs-6">
+          <label data-toggle="tooltip" class="goal-tooltip" data-placement="top" title="Short or Long Term Goals">
+            <input type="checkbox" data-toggle="switch" name="goal-length" data-on-text="Long"
+            data-off-text="Short"  id="label-switch"/>
+          </label>
+
+          <label data-toggle="tooltip" class="goal-tooltip" data-placement="top" title="Display Privately or Publicly">
+            <input type="checkbox" data-toggle="switch" name="display-goal" data-on-text="Public"
+            data-off-text="Prvt" id="display-goals"/>
+          </label>
+        </div>
+
+        <div class="col-md-9 col-xs-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+        </div>
+
+      </div>
+
     </div>
-    <hr style="margin-top: 0; margin-bottom: 5px; opacity:0.3;">
-    <span class="flex-footer"> 58% SPENT </span>
   </div>
+</div>
+<!--Add a bill modal End-->
+
+<!--Flex cards-->
+<div class="flex-card-wrapper container-fluid">
+
+<div class="col-sm-12">
+
+<!--weekly-flex-->
+  <div class="no-padding col-sm-3" style="padding-right:5px;">
+    <div class="flex-card weekly-flex">
+      <div class="flex-header">Weekly Flex Spending</div>
+      <div class="flex-body">
+        <span class="flex-count">52</span> REMAINING
+      </div>
+      <hr style="margin-top: 0; margin-bottom: 5px; opacity:0.3;">
+      <span class="flex-footer"> 58% SPENT </span>
+    </div>
+  </div>
+<!--Monthly-->
+  <div class="no-padding col-sm-3">
+    <div class="flex-card monthly-flex">
+      <div class="flex-header">Monthly Flex Spending</div>
+      <div class="flex-body">
+        <span class="flex-count">264</span> REMAINING
+      </div>
+      <hr style="margin-top: 0; margin-bottom: 5px; opacity:0.3;">
+      <span class="flex-footer"> 34% SPENT </span>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-sm-12">
+
+<!--Total Liabilities-->
+  <div class="no-padding col-sm-4" style="padding-right:1px;">
+    <div class="flex-card flex-sm liabilities-flex">
+      <div class="flex-header text-uppercase">Total Liabilities</div>
+      <div class="flex-body">
+        <span class="flex-count">1.78k</span> 8% INCREASE
+      </div>
+    </div>
+  </div>
+<!--Total Assets-->
+  <div class="no-padding col-sm-4">
+    <div class="flex-card flex-sm assets-flex">
+      <div class="flex-header text-uppercase">Total Assets</div>
+      <div class="flex-body">
+        <span class="flex-count">3.12k</span>18% INCREASE
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-sm-12">
+
+<!--Allocated Funds-->
+  <div class="no-padding col-sm-4" style="padding-right:1px;">
+    <div class="flex-card flex-sm allocated-flex">
+      <div class="flex-header text-uppercase">Allocated Funds</div>
+      <div class="flex-body">
+        <span class="flex-count">2.09k</span> 8% INCREASE
+      </div>
+    </div>
+  </div>
+<!--Unallocated Funds-->
+  <div class="no-padding col-sm-4">
+    <div class="flex-card flex-sm unallocated-flex">
+      <div class="flex-header text-uppercase">Unallocated Funds</div>
+      <div class="flex-body">
+        <span class="flex-count">1.02k</span>17% DECREASE
+      </div>
+    </div>
+  </div>
+<!--Total Savings-->
+  <div class="no-padding col-sm-4" style="padding-left:1px;">
+    <div class="flex-card flex-sm savings-flex ">
+      <div class="flex-header text-uppercase">Total Savings</div>
+      <div class="flex-body">
+        <span class="flex-count">3.12k</span>21% INCREASE
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 <!--Flex cards end-->
 
 <!--Recent Transaction Table Start-->
-<div class="recent-transactions-wrapper row" style="height: 500px;">
+<div class="recent-transactions-wrapper col-sm-6">
 
-  <div class="recent-transactions card col-md-6 col-xs-12">
+  <div class="recent-transactions card col-sm-12">
     <div class="recent-transactions-header container-fluid">
-      <span class="col-md-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
-      <a href="#" class="recent-transactions-link text-right col-md-6 col-xs-4">View More</a>
+      <span class="col-sm-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
+      <a href="#" class="recent-transactions-link text-right col-sm-6 col-xs-4">View More</a>
     </div>
 
     <div class="recent-transactions-body container-fluid">
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-md-1 col-xs-1">
+        <div class="recent-transactions-left col-sm-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-md-5 col-xs-5">
+        <div class="recent-transactions-mid col-sm-5 col-xs-5">
           <span class="bold">Books</span><br>
           <span class="fade">March 11, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
           <span class="textRed">$21.95</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-md-1 col-xs-1">
+        <div class="recent-transactions-left col-sm-1 col-xs-1">
           <img class="icon" src="/assets/img/payday.png"/>
         </div>
-        <div class="recent-transactions-mid col-md-5 col-xs-5">
+        <div class="recent-transactions-mid col-sm-5 col-xs-5">
           <span class="bold">ATM Deposit</span><br>
           <span class="fade">March 8, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
           <span class="textGreen">$1,140.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-md-1 col-xs-1">
+        <div class="recent-transactions-left col-sm-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-md-5 col-xs-5">
+        <div class="recent-transactions-mid col-sm-5 col-xs-5">
           <span class="bold">Gasoline</span><br>
           <span class="fade">March 2, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
           <span class="textRed">$20.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-md-1 col-xs-1">
+        <div class="recent-transactions-left col-sm-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-md-5 col-xs-5">
+        <div class="recent-transactions-mid col-sm-5 col-xs-5">
           <span class="bold">Combo Meal</span><br>
           <span class="fade">February 27, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
           <span class="textRed">$7.82</span><br>
           <span class="fade">Amount</span>
         </div>
@@ -83,58 +233,3 @@
 
 </div>
 <!--Recent Transaction Table End-->
-
-<!--Add a bill modal start-->
-<button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
-
-<div id="bill-modal" class="modal fade">
-  <div class="modal-dialog modal-lg">
-    <div class="add-bill modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close fui-cross" data-dismiss="modal" ></button>
-        <h4 class="modal-title">Add a Bill</h4>
-      </div>
-
-      <div class="modal-body row">
-        <div class="add-bill-icon col-md-3">
-          <img class="img-responsive" src="assets\flat-ui\HTML\Icons\PNG\@2x\flask@2x.png">
-        </div>
-
-        <div class="add-bill-form col-md-9">
-          <div class="form-group add-bill-input-left col-md-6">
-              <input type="text" class="form-control form-style" placeholder="Name">
-              <input type="text" class="form-control form-style" placeholder="Name">
-              <input type="text" class="form-control form-style" placeholder="Name">
-              <input type="text" class="form-control form-style" placeholder="Name">
-              <input type="text" class="form-control form-style" placeholder="Name">
-          </div>
-
-          <div class="form-group add-bill-input-right col-md-6">
-              <input type="text" class="form-control form-style" placeholder="Tags">
-              <div class="select-wrapper">
-                <span class="frequency-label">Frequency</span>
-                <select class="form-control form-style" placeholder="Select a Frequency">
-                  <option value="" disabled selected>Choose a frequency</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <textarea class="form-control form-style" rows="4" placeholder="Description"/>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-primary">
-          Confirm
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Add a bill modal End-->

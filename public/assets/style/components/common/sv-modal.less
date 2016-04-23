@@ -1,64 +1,120 @@
 .modal-backdrop{z-index: -1;} //Fixes fading issue
 
+//Bill Style Start
 .add-bill{
-  padding:10px 20px;
+  background-color: @card-header;
 
-  .modal-header{
-    border: 0;
-    border-left: 2px solid black;
-    padding: 0 0 0 10px;
-    .modal-title{font-size: 20px;}
-  }
-  .modal-body{
-    margin:0;
-    padding: 20px 0 0 0;
-    .add-bill-icon{
-      padding:0;
+  //Form-Style
+  .text-form{
+    input{
+      .bottom-only;
+      height:20px;
+      &:not(:last-child),&:first-child{margin-bottom: 25px;}
     }
 
-    .add-bill-form{
+    select{
+      .bottom-only;
+      height: 20px;
+      margin-bottom: 25px;
+      &:focus,&:active{outline:none;}
+    }
+
+    textarea{
+      .bottom-only;
+      resize:none;
+      height: 100%;
+      box-sizing: border-box;
+      font-size: inherit;
       padding: 0;
-      .form-group{
-        padding:0 20px 0 0;
-        margin-bottom: 0;
-        .select-wrapper{
-          .frequency-label{
-            color: #b2bcc5;
-            background-color: none;
-            position:absolute;
-            font-size:10px;
-            top:30px;
-          }
-        }
+    }
+  }
 
-        .form-style {
-          height: 20px;
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          border-bottom:1px solid black;
-        }
-        input:not(:last-child){margin-bottom:25px;}
-        select{margin-bottom: 25px;}
-        textarea{
-          resize: none;
-          height:110px !important;
-        }
+  .bottom-only{ //MIXIN
+    width:100%;
+    border:0;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    padding:0;
+    outline:none;
+  }
+  //Form-Style End
 
-        /*select{ //The select down arrow is different due to browsers.
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          @-moz-document url-prefix(){text-indent:-2px;}
-          &::-ms-expand{display: none;}
-        }*/
+  .add-bill-header{
+    background-color: inherit;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 20px;
+
+    .add-bill-title{font-weight: bold; font-size: 1.2em;}
+
+    .exit-btn{
+      width:auto;
+      float:right;
+      border:0;
+      background-color: transparent;
+      top:4px;
+
+      .exit-btn-img{
+        opacity: 0.5;
+        width: 25px;
+        height: 25px;
       }
     }
   }
 
-  .modal-footer{
-    background-color:#fff;
-    padding: 10px 20px 0 0;
-    .btn{padding:0 30px; background-color: #2ecc71;}
+  .add-bill-body{
+    background-color:white;
+    padding:10px 20px;
+
+    .bill-img{width:100%; height:200px}
+
+    .add-bill-icon-md{
+      @media only screen and (max-width : 992px){
+          display:none !important;
+        }
+      }
+
+    .add-bill-info{
+      @media only screen and (min-width : 992px){height: 200px;}//Keeps everything equal with icon and uniform
+
+      .add-bill-info-l{
+        height: inherit;
+        line-height:0; //takes out extra space for equal spacing
+        .text-form;
+      }
+
+      .add-bill-info-r{
+        @media only screen and (max-width : 992px){padding-top: 10px;}
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        line-height:0;
+        .text-form;
+        input{
+            max-height: 20px;
+            @media only screen and (max-width : 992px){margin-top:25px;}//Space inbetween info-boxes
+            @media only screen and (min-width : 992px){height: 100%;} //Weird height issue
+          }
+        .freq-label{
+          font-size: 10px;
+          color: #b2bcc5;
+          @media only screen and (min-width:992px){top: 40px;}//adjustment for label
+          @media only screen and (max-width:992px){top: 75px;}
+          position: absolute;
+        }
+      }
+    }
   }
+
+ .add-bill-footer{
+   background-color: white;
+   padding: 0 20px 15px 20px;
+   padding-bottom: 15px;
+   .btn{padding: 5px 15px;}
+    .switch-wrap{@media only screen and (max-width:992px){text-align:left; padding-left:10px}}   
+   .goal-tooltip + .tooltip > .tooltip-inner {    border-style: solid;
+    border-width: 1px 1px 0px 1px;}
+   .goal-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:white; }
+ }
+
 }
+//Bill Style End

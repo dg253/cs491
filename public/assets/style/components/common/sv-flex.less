@@ -1,30 +1,74 @@
-.flex-card-wrapper {
-  width: 90%;
-  margin: 0 auto;
+//
+.only-left{
+  border-radius: 3px 0 0 3px;
+}
+.only-right{
+  border-radius: 0 3px 3px 0;
+}
+//
 
-  .flex-card{
-    background-color: #00aaff;
-    padding: 10px 20px;
-    margin-right: 5px;
-    min-width:200px;
+//Reusable card
+.flex-card{
+  background-color: #00aaff;
+  padding: 10px 20px;
+  min-width:200px;
+  margin: 5px 0;
 
-    .flex-header{
-      color: rgba(255,255,255,0.8);
-      padding-bottom: -5px;
-    }
+  .flex-header{
+    color: rgba(255,255,255,0.8);
+    padding-bottom: -5px;
+    margin: 0 auto;
+  }
 
-    .flex-body{
-      margin: -5px auto;
-      color: rgba(255,255,255,0.8);
-      .flex-count{
-        font-size:40px;
-        padding-right:5px;
-        color: rgba(255,255,255,1);
-      }
-    }
-
-    .flex-footer{
+  .flex-body{
+    margin: -5px auto;
+    color: rgba(255,255,255,0.8);
+    .flex-count{
+      font-size:40px;
+      padding-right:5px;
       color: rgba(255,255,255,1);
     }
   }
+
+  .flex-footer{
+    color: rgba(255,255,255,1);
+  }
 }
+.flex-sm{.flex-header,.flex-body{width:200px;}}
+//Reusbale card end
+
+//Weekly Spending
+.weekly-flex{
+  background-color: #00aaff;
+}
+//Monthly Spending Start
+.monthly-flex{
+  background-color: #e67e22;
+}
+//Monthly Spending End
+
+//Pair Two Start
+.liabilities-flex{
+  background-color: #c0392b;
+  .only-left;
+}
+.assets-flex{
+  background-color: #2ecc71;
+  .only-right;
+}
+//Pair Two End
+
+//Pair Three Start
+.allocated-flex{
+  background-color: #3498db;
+  .only-left;
+}
+.unallocated-flex{
+  background-color: #e67e22;
+  border-radius: 0;
+}
+.savings-flex{
+  background-color: #2ecc71;
+  .only-right;
+}
+//Pair Three End
