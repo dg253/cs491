@@ -10,25 +10,6 @@ $(".tagsinput").tagsinput();
 $('select').select2({ dropdownCssClass: 'dropdown-inverse' });
 </script>
 
-<select class="form-control select select-primary select-block mbl">
-    <optgroup label="Profile">
-        <option value="0">My Profile</option>
-        <option value="1">My Friends</option>
-    </optgroup>
-    <optgroup label="System">
-        <option value="2">Messages</option>
-        <option value="3">My Settings</option>
-        <option value="4">Logout</option>
-    </optgroup>
-</select>
-
-<select multiple="multiple" class="form-control multiselect multiselect-info">
-    <option value="0">1</option>
-    <option value="1" selected>2</option>
-    <option value="2" selected>3</option>
-    <option value="3" selected>4</option>
-    <option value="4">5</option>
-</select>
 
 <!--Add a bill modal start-->
 <button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
@@ -52,25 +33,31 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse' });
         <div class="savery-modal-info no-padding col-md-9">
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Amount">
-            <input type="text" placeholder="Merchant">
-            <input type="text" placeholder="Start Date">
-            <input type="text" placeholder="End Date (Optional)">
+            <input type="text" class="form-control flat" placeholder="Name">
+            <input type="text" class="form-control flat" placeholder="Amount">
+            <input type="text" class="form-control flat" placeholder="Merchant">
+            <input type="text" class="form-control flat" placeholder="Start Date">
+            <input type="text" class="form-control flat" placeholder="End Date (Optional)">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
             <div class="tagsinput-primary">
-              <input name="tagsinput" class="tagsinput" placeholder="Tags"/>
+            <input name="tagsinput" class="tagsinput" value="School, Teacher, Colleague" />
             </div>
             <div class="freq-wrapper">
-              <span class="freq-label">Frequency</span>
-              <select>
-                <option disabled selected>Choose a frequency</option>
-                <option>1</option>
+              <select class="form-control select select-primary select-block mbl">
+                  <optgroup label="Profile">
+                      <option value="0">My Profile</option>
+                      <option value="1">My Friends</option>
+                  </optgroup>
+                  <optgroup label="System">
+                      <option value="2">Messages</option>
+                      <option value="3">My Settings</option>
+                      <option value="4">Logout</option>
+                  </optgroup>
               </select>
             </div>
-            <textarea placeholder="Description" />
+            <textarea class="form-control flat" placeholder="Description" />
           </div>
 
         </div>

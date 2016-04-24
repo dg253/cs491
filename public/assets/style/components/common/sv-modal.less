@@ -4,39 +4,6 @@
 .savery-modal{
   background-color: @card-header;
 
-  //Form-Style
-  .text-form{
-    input{
-      .bottom-only;
-      height:20px;
-      &:not(:last-child),&:first-child{margin-bottom: 25px;}
-    }
-
-    select{
-      .bottom-only;
-      height: 20px;
-      margin-bottom: 25px;
-      &:focus,&:active{outline:none;}
-    }
-
-    textarea{
-      .bottom-only;
-      resize:none;
-      height: 100%;
-      font-size: inherit;
-      padding: 0;
-    }
-  }
-
-  .bottom-only{ //MIXIN
-    width:100%;
-    border:0;
-    border-bottom: 1px solid black;
-    font-weight: bold;
-    padding:0;
-    outline:none;
-  }
-  //Form-Style End
 
   .savery-modal-header{
     background-color: inherit;
@@ -77,12 +44,12 @@
       padding-top: 20px;
     }
     .savery-modal-info{
-      @media only screen and (min-width : 992px){height: 200px;}//Keeps everything equal with icon and uniform
+      //@media only screen and (min-width : 992px){height: 200px;}//Keeps everything equal with icon and uniform
 
       .savery-modal-info-l{
         height: inherit;
         line-height:0; //takes out extra space for equal spacing
-        .text-form;
+
       }
 
       .savery-modal-info-r{
@@ -91,7 +58,7 @@
         display: flex;
         flex-direction: column;
         line-height:0;
-        .text-form;
+
         input{
             max-height: 20px;
             @media only screen and (max-width : 992px){margin-top:25px;}//Space inbetween info-boxes
