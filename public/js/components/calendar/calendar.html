@@ -16,5 +16,5 @@
     <span class="day" ng-mouseenter="hover = true"
      ng-mouseleave="hover = false"
      ng-class="{ 'pop': hover, today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }"
-     ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</span>
+     ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}<span ng-if="activityInDay(day).length > 0" class="fui-star"></span></span>
 </div>

@@ -94,35 +94,22 @@
             <!--Right Section-->
             <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
                 <div class="activity-feed-container">
-                    <span>Activity Feed</span>
+                    <span>Recent Activity</span>
                     <ol class="activity-feed">
-                        <li class="feed-item">
-                            <time class="date" datetime="9-25">Mar 3</time>
-                            <span class="text">Created budget <a href="">Groceries</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-24">Mar 2</time>
-                            <span class="text">Added to Wishlist <a href="">Nest Cam Security Camera</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-23">Feb 26</time>
-                            <span class="text">Created budget <a href="">Entertainment</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-21">Feb 25</time>
-                            <span class="text">Added to wishlist <a href="">Tesla Model S P90D</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-18">Feb 24</time>
-                            <span class="text">Added to Wishlist <a href="">MacBook Pro</a></span>
-                        </li>
-                        <li class="feed-item">
-                            <time class="date" datetime="9-17">Feb 15</time>
-                            <span class="text">Created budget <a href="">Personal Care</a></span>
+                        <li class="feed-item" ng-repeat="activity in activityFeed">
+                            <time class="date" datetime="9-25">{{activity.date}}</time>
+                            <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
+                            <span class="pull-right"
+                            ng-class="{
+                              'label label-success': activity.txCode == 'pos',
+                              'label label-danger': activity.txCode == 'neg',
+                              'label label-info': activity.txCode == 'mv'
+                            }">{{activity.actionAmt}}</span>
+                            <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
                         </li>
                     </ol>
                 </div>
-              <calendar class="col-xs-12 no-padding"selected="day"></calendar>
+              <calendar class="col-xs-12 no-padding" callback="displayNewFeed" selected="day"></calendar>
             </div>
             <!--End Right Section-->
         </div>
