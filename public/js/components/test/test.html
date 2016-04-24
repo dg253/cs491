@@ -6,7 +6,29 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 $(".tagsinput").tagsinput();
+
+$('select').select2({ dropdownCssClass: 'dropdown-inverse' });
 </script>
+
+<select class="form-control select select-primary select-block mbl">
+    <optgroup label="Profile">
+        <option value="0">My Profile</option>
+        <option value="1">My Friends</option>
+    </optgroup>
+    <optgroup label="System">
+        <option value="2">Messages</option>
+        <option value="3">My Settings</option>
+        <option value="4">Logout</option>
+    </optgroup>
+</select>
+
+<select multiple="multiple" class="form-control multiselect multiselect-info">
+    <option value="0">1</option>
+    <option value="1" selected>2</option>
+    <option value="2" selected>3</option>
+    <option value="3" selected>4</option>
+    <option value="4">5</option>
+</select>
 
 <!--Add a bill modal start-->
 <button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
