@@ -1,6 +1,7 @@
 <script>
 $("[name='goal-length']").bootstrapSwitch();
 $("[name='display-goal']").bootstrapSwitch();
+$("[name='display-wish']").bootstrapSwitch();
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
@@ -9,25 +10,25 @@ $(function () {
 <!--Add a bill modal start-->
 <button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
 
-<div id="bill-modal" class="modal fade">
+<div id="bill-modal" class="bill-modal modal fade">
   <div class="modal-dialog modal-lg">
-    <div class="add-bill no-padding modal-content">
+    <div class="savery-modal no-padding modal-content">
 
-      <div class="add-bill-header container-fluid">
-        <span class="add-bill-title no-padding col-md-6 col-xs-8"> Add a Bill </span>
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Bill </span>
         <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
           <img class="exit-btn-img" src="assets\img\exit.svg">
         </button>
       </div>
 
-      <div class="add-bill-body no-padding container-fluid">
-        <div class="add-bill-icon-md no-padding col-md-3">
-          <img class="bill-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="savery-modal-icon-md no-padding col-md-3">
+          <img class="savery-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
         </div>
 
-        <div class="add-bill-info no-padding col-md-9">
+        <div class="savery-modal-info no-padding col-md-9">
 
-          <div class="add-bill-info-l col-md-6 col-xs-12">
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
             <input type="text" placeholder="Name">
             <input type="text" placeholder="Name">
@@ -35,7 +36,7 @@ $(function () {
             <input type="text" placeholder="Name">
           </div>
 
-          <div class="add-bill-info-r col-md-6 col-xs-12">
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
             <div class="freq-wrapper">
               <span class="freq-label">Frequency</span>
@@ -50,14 +51,120 @@ $(function () {
         </div>
       </div>
 
-      <div class="add-bill-footer container-fluid">
+      <div class="savery-modal-footer container-fluid">
         <div class="switch-wrap text-center no-padding col-md-3 col-xs-6">
-          <label data-toggle="tooltip" class="goal-tooltip" data-placement="top" title="Short or Long Term Goals">
+        </div>
+
+        <div class="col-md-9 col-xs-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a savery modal End-->
+
+<!--Add a budget modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#budget-modal">Add a Budget</button>
+
+<div id="budget-modal" class="budget-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Budget </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="savery-modal-icon-md no-padding col-md-3">
+          <img class="savery-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
+        </div>
+
+        <div class="savery-modal-info info-sm no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <textarea placeholder="Description" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3 col-xs-6">
+        </div>
+
+        <div class="col-md-9 col-xs-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a budget modal End-->
+
+<!--Add a goal modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#goal-modal">Add a Goal</button>
+
+<div id="goal-modal" class="goal-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Goal </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="savery-modal-icon-md no-padding col-md-3">
+          <img class="savery-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
+        </div>
+
+        <div class="savery-modal-info info-sm no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <textarea placeholder="Description" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3 col-xs-6">
+          <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Short or Long Term Goals">
             <input type="checkbox" data-toggle="switch" name="goal-length" data-on-text="Long"
             data-off-text="Short"  id="label-switch"/>
           </label>
 
-          <label data-toggle="tooltip" class="goal-tooltip" data-placement="top" title="Display Privately or Publicly">
+          <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Display Privately or Publicly">
             <input type="checkbox" data-toggle="switch" name="display-goal" data-on-text="Public"
             data-off-text="Prvt" id="display-goals"/>
           </label>
@@ -74,7 +181,63 @@ $(function () {
     </div>
   </div>
 </div>
-<!--Add a bill modal End-->
+<!--Add a goal modal End-->
+
+<!--Make a Wish modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#wish-modal">Make a Wish</button>
+
+<div id="wish-modal" class="wish-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Make a Wish </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="savery-modal-icon-md no-padding col-md-3">
+          <img class="savery-img" src="assets\flat-ui\HTML\Icons\SVG\flask.svg">
+        </div>
+
+        <div class="savery-modal-info info-sm no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <textarea placeholder="Description" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3 col-xs-6">
+          <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Display Privately or Publicly">
+            <input type="checkbox" data-toggle="switch" name="display-wish" data-on-text="Public"
+            data-off-text="Prvt" id="display-wish"/>
+          </label>
+        </div>
+
+        <div class="col-md-9 col-xs-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a wish modal End-->
 
 <!--Flex cards-->
 <div class="flex-card-wrapper container-fluid">
@@ -233,3 +396,22 @@ $(function () {
 
 </div>
 <!--Recent Transaction Table End-->
+
+<!--Saverly Card-->
+<div class="col-md-6">
+<div class="sav-card">
+
+  <div class="sav-header container-fluid">
+    <div class="col-md-6 sav-title"><span>SAMPLE TITLE</span></div>
+    <div class="sav-link col-md-6"><a href="#">SAMPLE LINK</a></div>
+  </div>
+
+  <div class="sav-body" style="height: 500px">
+    Testing
+  </div>
+
+  <div class="sav-footer">
+    Testing
+  </div>
+</div>
+</div>
