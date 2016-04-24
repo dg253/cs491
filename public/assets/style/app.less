@@ -78,9 +78,13 @@ body {
 .main {
   padding: 0;
   background: url('../img/mountain-background.jpeg');
-  background-repeat: round;
-  background-attachment: fixed;
+  /*background-repeat: round;
+  background-attachment: fixed;*/
   overflow-y: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   &.fullscreen {
     width: 100%;
