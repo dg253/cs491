@@ -5,6 +5,7 @@ $("[name='display-wish']").bootstrapSwitch();
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+$(".tagsinput").tagsinput();
 </script>
 
 <!--Add a bill modal start-->
@@ -30,14 +31,16 @@ $(function () {
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Amount">
+            <input type="text" placeholder="Merchant">
+            <input type="text" placeholder="Start Date">
+            <input type="text" placeholder="End Date (Optional)">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <input type="text" placeholder="Name">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="tagsinput" placeholder="Tags"/>
+            </div>
             <div class="freq-wrapper">
               <span class="freq-label">Frequency</span>
               <select>
@@ -91,13 +94,13 @@ $(function () {
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Amount">
+            <input type="text" placeholder="Start Date">
+            <input type="text" placeholder="End Date">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Tags">
             <textarea placeholder="Description" />
           </div>
 
@@ -144,13 +147,13 @@ $(function () {
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Target Amount">
+            <input type="text" placeholder="Down Payment (Optional)">
+            <input type="text" placeholder="Target Date (Optional)">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Tags">
             <textarea placeholder="Description" />
           </div>
 
@@ -162,11 +165,6 @@ $(function () {
           <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Short or Long Term Goals">
             <input type="checkbox" data-toggle="switch" name="goal-length" data-on-text="Long"
             data-off-text="Short"  id="label-switch"/>
-          </label>
-
-          <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Display Privately or Publicly">
-            <input type="checkbox" data-toggle="switch" name="display-goal" data-on-text="Public"
-            data-off-text="Prvt" id="display-goals"/>
           </label>
         </div>
 
@@ -206,9 +204,9 @@ $(function () {
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Merchant">
+            <input type="text" placeholder="Purchase Link">
+            <input type="text" placeholder="Tags">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
