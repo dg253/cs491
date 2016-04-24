@@ -19,6 +19,10 @@
                     $location.path('/');
                 }
             }
+
+            if (toState.name === 'register' && fromState.name === 'login') {
+                localStorage.removeItem('reloaded');
+            }
         });
     }
 }());

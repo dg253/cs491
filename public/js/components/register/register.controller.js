@@ -9,5 +9,10 @@
         $scope.register = function () {
             $state.go('login');
         };
+
+        if (!localStorage.reloaded) {
+            location.reload();
+            localStorage.reloaded = true;
+        }
     }
 }());
