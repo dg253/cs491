@@ -25,6 +25,8 @@ app.directive("calendar", function() {
                 // if(activities.length > 0 ){
                 //   scope.callback(activities);
                 // }
+
+                activities.push(["filter"]);
                 scope.callback(activities);
             };
 
@@ -52,7 +54,7 @@ app.directive("calendar", function() {
                 txCode: "new"              // pos: +$29 into checking, neg: -$29 from checking, new: create, mv: $29 into wishlist (for styling)
               },
               {
-                date: "Apr 17nd",
+                date: "Apr 17th",
                 actionType: "Added to Wishlist",
                 category: "Xbox",
                 description: "Added $29 to wishlist: Xbox",

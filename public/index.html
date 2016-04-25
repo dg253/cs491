@@ -94,9 +94,13 @@
             <!--Right Section-->
             <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
                 <div class="activity-feed-container">
-                    <span>Recent Activity</span>
+                    <span ng-hide="isFilteredActivities()">Recent Activity</span>
+                    <span ng-show="isFilteredActivities()">Activity on {{activityFeed[0].date}}
+                      <span class="glyphicon glyphicon-remove" style="cursor: pointer;" ng-click="displayNewFeed([])"></span>
+                    </span>
                     <ol class="activity-feed">
-                        <li class="feed-item" ng-repeat="activity in activityFeed">
+                        <li class="feed-item" ng-hide="activity[0] == 'filter'" ng-repeat="activity in activityFeed">
+                          <span ng-if="activity[0] != 'filter'">
                             <time class="date" datetime="9-25">{{activity.date}}</time>
                             <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
                             <span class="pull-right"
@@ -106,6 +110,7 @@
                               'label label-info': activity.txCode == 'mv'
                             }">{{activity.actionAmt}}</span>
                             <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
+                          </span>
                         </li>
                     </ol>
                 </div>

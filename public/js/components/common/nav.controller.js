@@ -76,7 +76,7 @@
         });
 
         $scope.displayNewFeed = function(newFeed){
-          if(newFeed.length <= 0){
+          if(newFeed.length <= 1){
             $scope.activityFeed = $scope.recentActivities;
           }else{
             $scope.activityFeed = newFeed;
@@ -84,5 +84,14 @@
         }
 
         $scope.displayNewFeed($scope.recentActivities)
+
+        $scope.isFilteredActivities = function(){
+          var feed = $scope.activityFeed;
+          if(feed[feed.length - 1] == "filter"){
+            return true;
+          }else{
+            return false;
+          }
+        }
     }
 }());
