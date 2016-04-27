@@ -50,7 +50,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
                 <option diabled>Choose a frequency</option>
               </select>
             </div>
-            <textarea class="form-control sav-form flat" placeholder="Description" style="resize:;" />
+            <textarea class="form-control sav-form flat" placeholder="Description" style="height:67px" />
           </div>
 
         </div>
@@ -63,7 +63,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
         <div class="col-md-9">
           <div class="col-md-6">
           </div>
-          <div class="col-md-6">
+          <div class="confirm-wrap col-md-6">
             <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
               Confirm
             </button>
@@ -109,7 +109,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
             <div class="tagsinput-primary">
               <input name="tagsinput" class="budgettag" placeholder="Tags" />
             </div>
-            <textarea class="form-control sav-form flat" placeholder="Description" style="resize:;" />
+            <textarea class="form-control sav-form flat" placeholder="Description"/>
           </div>
 
         </div>
@@ -122,7 +122,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
         <div class="col-md-9">
           <div class="col-md-6">
           </div>
-          <div class="col-md-6">
+          <div class="confirm-wrap col-md-6">
             <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
               Confirm
             </button>
@@ -168,7 +168,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
             <div class="tagsinput-primary">
               <input name="tagsinput" class="goaltag" placeholder="Tags" />
             </div>
-            <textarea class="form-control sav-form flat" placeholder="Description" style="resize:;" />
+            <textarea class="form-control sav-form flat" placeholder="Description"  />
           </div>
 
         </div>
@@ -185,7 +185,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
               data-off-text="Short"  id="label-switch"/>
             </label>
           </div>
-          <div class="col-sm-6">
+          <div class="confirm-wrap col-md-6">
             <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
               Confirm
             </button>
@@ -207,7 +207,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
     <div class="savery-modal no-padding modal-content">
 
       <div class="savery-modal-header container-fluid">
-        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> make a Wish </span>
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Make a Wish </span>
         <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
           <img class="exit-btn-img" src="assets\img\exit.svg">
         </button>
@@ -228,7 +228,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <textarea class="form-control sav-form flat" placeholder="Description" style="resize:;" />
+            <textarea class="form-control sav-form flat" placeholder="Description" style="height:180px;" />
           </div>
 
         </div>
@@ -241,7 +241,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
         <div class="col-md-9">
           <div class="col-md-6">
           </div>
-          <div class="col-md-6">
+          <div class="confirm-wrap col-md-6">
             <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
               Confirm
             </button>
@@ -268,7 +268,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
       <div class="flex-body">
         <span class="flex-count">52</span> REMAINING
       </div>
-      <hr style="margin-top: 0; margin-bottom: 5px; opacity:0.3;">
+      <hr>
       <span class="flex-footer"> 58% SPENT </span>
     </div>
   </div>
@@ -279,7 +279,7 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
       <div class="flex-body">
         <span class="flex-count">264</span> REMAINING
       </div>
-      <hr style="margin-top: 0; margin-bottom: 5px; opacity:0.3;">
+      <hr>
       <span class="flex-footer"> 34% SPENT </span>
     </div>
   </div>
@@ -344,66 +344,66 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
 <!--Flex cards end-->
 
 <!--Recent Transaction Table Start-->
-<div class="recent-transactions-wrapper col-sm-6">
+<div class="recent-transactions-wrapper col-md-6">
 
-  <div class="recent-transactions card col-sm-12">
+  <div class="recent-transactions card col-md-12">
     <div class="recent-transactions-header container-fluid">
-      <span class="col-sm-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
-      <a href="#" class="recent-transactions-link text-right col-sm-6 col-xs-4">View More</a>
+      <span class="col-md-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
+      <div class="recent-transactions-link text-right col-md-6 col-xs-4"><a href="#">View More</a></div>
     </div>
 
     <div class="recent-transactions-body container-fluid">
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-sm-1 col-xs-1">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-sm-5 col-xs-5">
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
           <span class="bold">Books</span><br>
           <span class="fade">March 11, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
           <span class="textRed">$21.95</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-sm-1 col-xs-1">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
           <img class="icon" src="/assets/img/payday.png"/>
         </div>
-        <div class="recent-transactions-mid col-sm-5 col-xs-5">
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
           <span class="bold">ATM Deposit</span><br>
           <span class="fade">March 8, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
           <span class="textGreen">$1,140.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-sm-1 col-xs-1">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-sm-5 col-xs-5">
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
           <span class="bold">Gasoline</span><br>
           <span class="fade">March 2, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
           <span class="textRed">$20.00</span><br>
           <span class="fade">Amount</span>
         </div>
       </div>
 
       <div class="recent-transactions-row container-fluid">
-        <div class="recent-transactions-left col-sm-1 col-xs-1">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
           <img class="icon" src="/assets/img/expense.png"/>
         </div>
-        <div class="recent-transactions-mid col-sm-5 col-xs-5">
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
           <span class="bold">Combo Meal</span><br>
           <span class="fade">February 27, 2016</span>
         </div>
-        <div class="recent-transactions-right text-right col-sm-6 col-xs-6">
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
           <span class="textRed">$7.82</span><br>
           <span class="fade">Amount</span>
         </div>
@@ -413,22 +413,3 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
 
 </div>
 <!--Recent Transaction Table End-->
-
-<!--Saverly Card-->
-<div class="col-md-6">
-<div class="sav-card">
-
-  <div class="sav-header container-fluid">
-    <div class="col-md-6 sav-title"><span>SAMPLE TITLE</span></div>
-    <div class="sav-link col-md-6"><a href="#">SAMPLE LINK</a></div>
-  </div>
-
-  <div class="sav-body" style="height: 500px">
-    Testing
-  </div>
-
-  <div class="sav-footer">
-    Testing
-  </div>
-</div>
-</div>
