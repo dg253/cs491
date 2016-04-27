@@ -8,8 +8,9 @@ $(function () {
 $(".billtag").tagsinput({ maxTags: 5, maxChars: 9 });
 $(".budgettag").tagsinput({ maxTags: 5, maxChars: 9 });
 $(".goaltag").tagsinput({ maxTags: 5, maxChars: 9 });
+$(".wishtag").tagsinput({ maxTags: 5, maxChars: 9 });
 
-$('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select a state" });
+$('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Choose a frequency" });
 </script>
 
 <!--Add a bill modal start-->
@@ -47,7 +48,8 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
             </div>
             <div class="freq-wrapper">
               <select class="form-control sav-select sav-form">
-                <option diabled>Choose a frequency</option>
+                <option></option>
+                <option>1</option>
               </select>
             </div>
             <textarea class="form-control sav-form flat" placeholder="Description" style="height:67px" />
@@ -101,8 +103,8 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" class="form-control sav-form flat" placeholder="Name">
             <input type="text" class="form-control sav-form flat" placeholder="Amount">
-            <input type="text" class="form-control sav-form flat" placeholder="Merchant">
             <input type="text" class="form-control sav-form flat" placeholder="Start Date">
+            <input type="text" class="form-control sav-form flat" placeholder="End Date">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
@@ -159,9 +161,9 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" class="form-control sav-form flat" placeholder="Name">
-            <input type="text" class="form-control sav-form flat" placeholder="Amount">
-            <input type="text" class="form-control sav-form flat" placeholder="Merchant">
-            <input type="text" class="form-control sav-form flat" placeholder="Start Date">
+            <input type="text" class="form-control sav-form flat" placeholder="Target Amount">
+            <input type="text" class="form-control sav-form flat" placeholder="Down Payment (Optional)">
+            <input type="text" class="form-control sav-form flat" placeholder="Target Option (Optional)">
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
@@ -222,9 +224,11 @@ $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Select
 
           <div class="savery-modal-info-l col-md-6 col-xs-12">
             <input type="text" class="form-control sav-form flat" placeholder="Name">
-            <input type="text" class="form-control sav-form flat" placeholder="Amount">
             <input type="text" class="form-control sav-form flat" placeholder="Merchant">
-            <input type="text" class="form-control sav-form flat" placeholder="Start Date">
+            <input type="text" class="form-control sav-form flat" placeholder="Purchase Link">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="wishtag" placeholder="Tags" />
+            </div>
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
