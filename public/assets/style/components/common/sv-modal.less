@@ -1,13 +1,12 @@
 .modal-backdrop{z-index: -1;} //Fixes fading issue
 .modal-dialog{@media only screen(max-width:768px){margin: 30px;}}
 
-
 //Savery Style Start
 .savery-modal{
   background-color: @card-header;
-  font-family: Source Sans Pro !important;
+  & *{&:not(.sav-cal span){font-family: Source Sans Pro;} font-size: 13px;}
 
-.sav-form{
+  .sav-form{
     border-color: transparent;
     border: none;
     border-bottom: 1px solid black;
@@ -15,32 +14,52 @@
     padding: 0;
     margin: 0px 4px;
     margin-bottom: 4px;
-    font-size: 13px;
     & :not(textarea){height: 42px;}
   }
-.select2-container .select2-choice{
-  height:42px;
-  margin-bottom: 4px;
-  padding-left:0;
-  font-size: 13px;
-  color: 	#C6C6C6;
-}
-.tagsinput-primary{
-  margin: 0 4px;
-  margin-bottom: 4px;
-  width: 100%;
-}
-.bootstrap-tagsinput{
-  padding:0;
-  padding-top: 2px;
-  border: 0;
-  border-bottom: 1px solid black;
-  border-radius: 0px;
-  & > input {margin-bottom: 13px !important;}
-}
-.select2-arrow {right: 0;}
 
-textarea{padding-top: 10px !important; resize:none; height: 71px; width:100%; }
+  .select2-container .select2-choice{
+    height:42px;
+    margin-bottom: 4px;
+    padding-left:0;
+    font-size: 13px;
+    color: 	#C6C6C6;
+  }
+
+  .tagsinput-primary{
+    margin: 0 4px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .bootstrap-tagsinput{
+    overflow-y: auto;
+    @media only screen and (min-width:992px){height: 88px;}
+    padding:0;
+    padding-top: 2px;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    & > input {margin-bottom: 13px !important;}
+  }
+
+  .select2-arrow {right: 0;}
+
+  .sav-cal{
+    margin:0;
+    & > .input-group{
+      .sav-form;
+      width: 100%;
+      &  * {border:0; color:#C6C6C6; padding:0;}
+      & button {margin-right:10px;}
+    }
+  }
+
+textarea{
+  padding-top: 10px !important;
+  resize:none;
+  @media only screen and (min-width:992px){height: 90px;}
+  width:100%;
+}
 .savery-modal-header{
     background-color: inherit;
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -66,6 +85,7 @@ textarea{padding-top: 10px !important; resize:none; height: 71px; width:100%; }
   .savery-modal-body{
     background-color:white;
     padding:0px 20px;
+    padding-top: 10px;
 
     .savery-modal-img{
       width: 100%;
@@ -91,9 +111,18 @@ textarea{padding-top: 10px !important; resize:none; height: 71px; width:100%; }
 
 }
 //Savery Style End
-
-
-  .savery-modal-info-sm{
-    @media only screen and (min-width : 992px){height: 155px !important;}
-    padding-top: 20px;
+.goal-modal{
+  .savery-modal-info-r{
+    textarea{  @media only screen and (min-width:992px){height: 88px;}}
   }
+}
+.wish-modal{
+  .savery-modal-info-r{
+    textarea{  @media only screen and (min-width:992px){height: 89px;}}
+  }
+}
+
+.savery-modal-info-sm{
+  @media only screen and (min-width : 992px){height: 155px !important;}
+  padding-top: 20px;
+}
