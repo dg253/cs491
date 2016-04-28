@@ -11,11 +11,11 @@
 
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
             if (!$rootScope.loggedIn) {
-                if (!(toState.name === 'login' || toState.name === 'register')) {
+                if (!(toState.name === 'login' || toState.name === 'register' || toState.name === 'forgotPw')) {
                     $location.path('/login');
                 }
             } else {
-                if (toState.name === 'login' || toState.name === 'register') {
+                if (toState.name === 'login' || toState.name === 'register' || toState.name === 'forgotPw') {
                     $location.path('/');
                 }
             }

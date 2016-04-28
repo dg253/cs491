@@ -49,6 +49,12 @@
                 controller: 'registerCtrl'
             })
 
+            .state('forgotPw', {
+                url: '/forgot',
+                templateUrl: 'js/components/forgotPw/forgotPw.html',
+                controller: 'forgotCtrl'
+            })
+
             .state('test', {
                 url: '/test',
                 templateUrl: 'js/components/test/test.html'
