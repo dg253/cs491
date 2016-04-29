@@ -35,12 +35,13 @@
   .bootstrap-tagsinput{
     overflow-y: auto;
     @media only screen and (min-width:992px){height: 88px;}
+    @media only screen and (max-width:992px){max-height: 88px;} 
     padding:0;
     padding-top: 2px;
     border: 0;
     border-bottom: 1px solid black;
     border-radius: 0px;
-    & > input {margin-bottom: 13px !important;}
+    & > input {margin-bottom: 13px !important; font-size: 13px;}
   }
 
   .select2-arrow {right: 0;}
