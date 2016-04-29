@@ -1,7 +1,7 @@
 <script>
-$("[name='goal-length']").bootstrapSwitch();
-$("[name='display-goal']").bootstrapSwitch();
-$("[name='display-wish']").bootstrapSwitch();
+$("#label-switch").bootstrapSwitch({
+  handleWidth: 1000
+});
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
@@ -21,10 +21,6 @@ datepickerSelector.datepicker({
 }).prev('.input-group-btn').on('click', function (e) {
   e && e.preventDefault();
   datepickerSelector.focus();
-}).on('itemAdded', function(event) {
-  if(maxTags > 0){
-    $('input').attr("placeholder","placeholder text");
-  }
 });
 
 $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
@@ -123,13 +119,13 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
                 <span class="input-group-btn">
                   <button class="btn" type="button"><span class="fui-calendar"></span></button>
                 </span>
-                <input type="text" class="form-control" value="Start Date" id="start-bill" />
+                <input type="text" readonly="true" class="form-control" value="Start Date" id="start-bill" />
               </div>
               <div class="input-group">
                 <span class="input-group-btn">
                   <button class="btn" type="button"><span class="fui-calendar"></span></button>
                 </span>
-                <input type="text" class="form-control" value="End Date" id="end-bill" />
+                <input type="text" readonly="true" class="form-control" value="End Date" id="end-bill" />
               </div>
             </div>
           </div>
@@ -200,13 +196,13 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
                 <span class="input-group-btn">
                   <button class="btn" type="button"><span class="fui-calendar"></span></button>
                 </span>
-                <input type="text" class="form-control" value="Start Date" id="start-budget" />
+                <input type="text" readonly="true" class="form-control" value="Start Date" id="start-budget" />
               </div>
               <div class="input-group">
                 <span class="input-group-btn">
                   <button class="btn" type="button"><span class="fui-calendar"></span></button>
                 </span>
-                <input type="text" class="form-control" value="End Date" id="end-budget" />
+                <input type="text" readonly="true" class="form-control" value="End Date" id="end-budget" />
               </div>
             </div>
           </div>
@@ -288,7 +284,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
           <div class="col-sm-6">
             <label data-toggle="tooltip" class="show-tooltip" data-placement="top" title="Short or Long Term Goals">
               <input type="checkbox" data-toggle="switch" name="goal-length" data-on-text="Long"
-              data-off-text="Short"  id="label-switch"/>
+              data-off-text="Short" id="label-switch"/>
             </label>
           </div>
           <div class="confirm-wrap col-md-6">
@@ -335,7 +331,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
                 <span class="input-group-btn">
                   <button class="btn" type="button"><span class="fui-calendar"></span></button>
                 </span>
-                <input type="text" class="form-control" value="Desired Purchase Date" id="end-wish" />
+                <input type="text" readonly="true" class="form-control" value="Desired Purchase Date" id="end-wish" />
               </div>
             </div>
           </div>

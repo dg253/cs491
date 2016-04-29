@@ -4,7 +4,6 @@
 //Savery Style Start
 .savery-modal{
   background-color: @card-header;
-  & *{&:not(.sav-cal span){font-family: Source Sans Pro;} font-size: 13px;}
 
   .sav-form{
     border-color: transparent;
@@ -15,6 +14,8 @@
     margin: 0px 4px;
     margin-bottom: 4px;
     & :not(textarea){height: 42px;}
+    font-family: Source Sans Pro;
+    font-size: 13px;
   }
 
   .select2-container .select2-choice{
@@ -49,8 +50,9 @@
     & > .input-group{
       .sav-form;
       width: 100%;
-      &  * {border:0; color:#C6C6C6; padding:0;}
+      &  * {border:0; color:#C6C6C6; padding:0; background-color: transparent;}
       & button {margin-right:10px;}
+      & input {font-family: Source Sans Pro !important; opacity: 1; font-size: 13px;}
     }
   }
 
