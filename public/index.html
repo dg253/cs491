@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en" ng-app="savery">
+<link rel="shortcut icon" type="image/png" href="assets/img/fav.ico"/>
 <head>
     <base href="/">
+
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -119,7 +122,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="right-nav-calendar"></div>
+              <calendar class="col-xs-12 no-padding"selected="day"></calendar>
             </div>
             <!--End Right Section-->
         </div>
@@ -140,6 +143,9 @@
     <!--Angular-->
     <script src="assets/libs/angular/angular.js"></script>
 
+    <!--Angular Animate-->
+    <script src="assets/libs/angular-animate/angular-animate.js"></script>
+
     <!--UI-Router-->
     <script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
 
@@ -152,6 +158,9 @@
 
     <!--ProgressBar JS-->
     <script src="assets/libs/progressbar.js/dist/progressbar.js"></script>
+
+    <!--Moment JS-->
+    <script src="assets/libs/moment/moment.js"></script>
 
     <!--Main JS file-->
     <script src="main.js"></script>
