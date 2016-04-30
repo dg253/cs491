@@ -1,22 +1,22 @@
 <div class="signup-modal">
     <form class="interactive-form">
-        <input id="input-1" type="text" placeholder="John Doe"  autofocus required/>
+        <input id="input-1" type="text" placeholder="John Doe" autofocus required/>
         <label for="input-1">
             <span class="label-text">Full Name</span>
             <span class="nav-dot"></span>
             <div class="signup-button-trigger">Sign Up</div>
         </label>
-        <input id="input-2" type="email" placeholder="email@address.com" required />
+        <input id="input-2" type="email" placeholder="email@address.com" required/>
         <label for="input-2">
             <span class="label-text">Email</span>
             <span class="nav-dot"></span>
         </label>
-        <input id="input-3" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+        <input id="input-3" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"/>
         <label for="input-3">
             <span class="label-text">Password</span>
             <span class="nav-dot"></span>
         </label>
-        <input id="input-4" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+        <input id="input-4" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required ng-keypress="register($event)" />
         <label for="input-4">
             <span class="label-text">Confirm Password</span>
             <span class="nav-dot"></span>
