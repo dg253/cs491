@@ -31,7 +31,7 @@
 <body>
     <div id="st-container" class="container-fluid">
       <div class="st-pusher">
-        <nav class="st-menu st-effect-3" id="menu-3">
+        <nav class="st-menu st-effect-right" id="rightmobilemenu">
           <h2 class="icon icon-lab">Saverly</h2>
           <ul>
             <li><a href="#" data-toggle="modal" data-target="#prefModal">Preferences</a></li>
@@ -45,7 +45,8 @@
           <div class="st-content-inner">
             <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
               <div id="st-trigger-effects" class="navbar-header">
-                <button data-effect="st-effect-3" class="navbar-toggle" type="button">
+                <button data-effect="st-effect-right" class="navbar-toggle" >
+                  <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
                 </button>
                 <a href="#"class="navbar-brand">
                     <img class="logo" src="assets/img/icon1.svg" alt=""/>
@@ -70,48 +71,43 @@
             </nav>
 
             <!--Left Section-->
-            <div id="st-container" class="row">
-              <div class="st-pusher">
-                <div class="st-content">
-                  <div class="st-content-inner">
-                    <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
-                      <div class="profile-area">
-                        <div class="profile-area top-half">
-                          <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
-                        </div>
-                        <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
-                        <div class="profile-area bottom-half">
-                          <span class="user-fullname">George Watsky</span>
-                        </div>
-                      </div>
+            <div class="row">
+              <div id="leftmobilemenu" class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
+                <div class="profile-area">
+                  <div class="profile-area top-half">
+                    <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
+                  </div>
+                  <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
+                  <div class="profile-area bottom-half">
+                    <span class="user-fullname">George Watsky</span>
+                  </div>
+                </div>
 
-                      <div class="side-nav area">
-                        <ul class="nav nav-list">
-                          <li class="nav-header">Menu</li>
-                          <li><a ui-sref="overview">Overview</a></li>
-                          <li><a ui-sref="expenses">Expenses</a></li>
-                          <li><a ui-sref="savings">Savings</a></li>
-                          <li><a ui-sref="transactions">Transactions</a></li>
-                          <li><a ui-sref="wishlist">Wishlist</a></li>
-                        </ul>
+                <div class="side-nav area">
+                  <ul class="nav nav-list">
+                    <li class="nav-header">Menu</li>
+                    <li><a ui-sref="overview">Overview</a></li>
+                    <li><a ui-sref="expenses">Expenses</a></li>
+                    <li><a ui-sref="savings">Savings</a></li>
+                    <li><a ui-sref="transactions">Transactions</a></li>
+                    <li><a ui-sref="wishlist">Wishlist</a></li>
+                  </ul>
 
-                        <div class="nav-search input-group">
-                          <input type="text" class="form-control" placeholder="Search" id="search-query-3">
-                          <span class="input-group-btn">
-                            <button type="submit" class="btn"><span class="fui-search"></span></button>
-                          </span>
-                        </div>
+                  <div class="nav-search input-group">
+                    <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn"><span class="fui-search"></span></button>
+                    </span>
+                  </div>
 
-                        <div class="nav-button-group">
-                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                          <button class="btn btn-embossed create-budget">Create a Budget</button>
-                          <button class="btn btn-embossed add-bill">Add a Bill</button>
-                        </div>
-                      </div>
-                    </div><!-- /left menu content-->
-                  </div><!-- /st-content-inner left mobile menu-->
-                </div><!-- /st-content left mobile menu-->
-              </div><!-- /st-pusher left mobile menu-->
+                  <div class="nav-button-group">
+                    <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                    <button class="btn btn-embossed create-budget">Create a Budget</button>
+                    <button class="btn btn-embossed add-bill">Add a Bill</button>
+                  </div>
+                </div>
+              </div>
+              <!-- /left menu content-->
               <!--End Left Section-->
 
               <!--Middle Section-->
@@ -195,6 +191,19 @@
 
     <!--Main JS file-->
     <script src="main.js"></script>
+    <script>
+    $(window).resize(function(){
+       console.log('resize called');
+       var width = $(window).width();
+       if(width <= 990){
+           $('#myelement').removeClass('width8').addClass('width6');
+       }
+       else{
+           $('#myelement').removeClass('width6').addClass('width8');
+       }
+      })
+      .resize();
+    </script>
 
     <!-- Create a goal modal -->
     <div id="goalModal" class="modal scale fade" role="dialog">
