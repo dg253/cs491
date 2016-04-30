@@ -68,11 +68,12 @@
                 </ul>
               </div>
             </nav>
-            <div id="st-container2" class="row">
+
+            <!--Left Section-->
+            <div id="st-container" class="row">
               <div class="st-pusher">
                 <div class="st-content">
                   <div class="st-content-inner">
-                    <!--Left Section-->
                     <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs">
                       <div class="profile-area">
                         <div class="profile-area top-half">
@@ -107,53 +108,53 @@
                           <button class="btn btn-embossed add-bill">Add a Bill</button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </div><!-- /left menu content-->
+                  </div><!-- /st-content-inner left mobile menu-->
+                </div><!-- /st-content left mobile menu-->
+              </div><!-- /st-pusher left mobile menu-->
+              <!--End Left Section-->
+
+              <!--Middle Section-->
+              <div ui-view class="col-md-8 main">
+               <!-- <div ui-view></div>-->
               </div>
-                <!--End Left Section-->
+              <!--End Middle Section-->
 
-                <!--Middle Section-->
-                <div ui-view class="col-md-8 main">
-                 <!-- <div ui-view></div>-->
+              <!--Right Section-->
+              <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs">
+                <div class="activity-feed-container">
+                  <span>Activity Feed</span>
+                  <ol class="activity-feed">
+                    <li class="feed-item">
+                      <time class="date" datetime="9-25">Mar 3</time>
+                      <span class="text">Created budget <a href="">Groceries</a></span>
+                    </li>
+                    <li class="feed-item">
+                      <time class="date" datetime="9-24">Mar 2</time>
+                      <span class="text">Added to Wishlist <a href="">Nest Cam Security Camera</a></span>
+                    </li>
+                    <li class="feed-item">
+                      <time class="date" datetime="9-23">Feb 26</time>
+                      <span class="text">Created budget <a href="">Entertainment</a></span>
+                    </li>
+                    <li class="feed-item">
+                      <time class="date" datetime="9-21">Feb 25</time>
+                      <span class="text">Added to wishlist <a href="">Tesla Model S P90D</a></span>
+                    </li>
+                    <li class="feed-item">
+                      <time class="date" datetime="9-18">Feb 24</time>
+                      <span class="text">Added to Wishlist <a href="">MacBook Pro</a></span>
+                    </li>
+                    <li class="feed-item">
+                      <time class="date" datetime="9-17">Feb 15</time>
+                      <span class="text">Created budget <a href="">Personal Care</a></span>
+                    </li>
+                  </ol>
                 </div>
-                <!--End Middle Section-->
 
-                <!--Right Section-->
-                <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs">
-                  <div class="activity-feed-container">
-                    <span>Activity Feed</span>
-                    <ol class="activity-feed">
-                      <li class="feed-item">
-                        <time class="date" datetime="9-25">Mar 3</time>
-                        <span class="text">Created budget <a href="">Groceries</a></span>
-                      </li>
-                      <li class="feed-item">
-                        <time class="date" datetime="9-24">Mar 2</time>
-                        <span class="text">Added to Wishlist <a href="">Nest Cam Security Camera</a></span>
-                      </li>
-                      <li class="feed-item">
-                        <time class="date" datetime="9-23">Feb 26</time>
-                        <span class="text">Created budget <a href="">Entertainment</a></span>
-                      </li>
-                      <li class="feed-item">
-                        <time class="date" datetime="9-21">Feb 25</time>
-                        <span class="text">Added to wishlist <a href="">Tesla Model S P90D</a></span>
-                      </li>
-                      <li class="feed-item">
-                        <time class="date" datetime="9-18">Feb 24</time>
-                        <span class="text">Added to Wishlist <a href="">MacBook Pro</a></span>
-                      </li>
-                      <li class="feed-item">
-                        <time class="date" datetime="9-17">Feb 15</time>
-                        <span class="text">Created budget <a href="">Personal Care</a></span>
-                      </li>
-                    </ol>
-                  </div>
-
-                  <div class="right-nav-calendar"></div>
-                  </div>
-                <!--End Right Section-->
+                <div class="right-nav-calendar"></div>
+              </div>
+              <!--End Right Section-->
             </div><!-- /row -->
           </div><!-- /st-content-inner -->
         </div><!-- /st-content -->
