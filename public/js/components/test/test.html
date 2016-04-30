@@ -1,0 +1,535 @@
+<script>
+/*$("#label-switch").bootstrapSwitch({
+  handleWidth: 1000
+});*/
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$(".billtag").tagsinput({});
+$(".budgettag").tagsinput({});
+$(".goaltag").tagsinput({});
+$(".wishtag").tagsinput({});
+
+$('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Choose a frequency" });
+
+var datepickerSelector = $('#start-bill');
+datepickerSelector.datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: 'd MM, yy',
+  yearRange: '-1:+1'
+}).prev('.input-group-btn').on('click', function (e) {
+  e && e.preventDefault();
+  datepickerSelector.focus();
+});
+
+$.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+// Now let's align datepicker with the prepend button
+datepickerSelector.datepicker('widget').css({ 'margin-left': -datepickerSelector.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+var datepickerSelector2 = $('#end-bill');
+datepickerSelector2.datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: 'd MM, yy',
+  yearRange: '-1:+1'
+}).prev('.input-group-btn').on('click', function (e) {
+  e && e.preventDefault();
+  datepickerSelector2.focus();
+});
+$.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+// Now let's align datepicker with the prepend button
+datepickerSelector2.datepicker('widget').css({ 'margin-left': -datepickerSelector2.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+var datepickerSelector3 = $('#start-budget');
+datepickerSelector3.datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: 'd MM, yy',
+  yearRange: '-1:+1'
+}).prev('.input-group-btn').on('click', function (e) {
+  e && e.preventDefault();
+  datepickerSelector3.focus();
+});
+$.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+// Now let's align datepicker with the prepend button
+datepickerSelector3.datepicker('widget').css({ 'margin-left': -datepickerSelector3.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+var datepickerSelector4 = $('#end-budget');
+datepickerSelector4.datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: 'd MM, yy',
+  yearRange: '-1:+1'
+}).prev('.input-group-btn').on('click', function (e) {
+  e && e.preventDefault();
+  datepickerSelector4.focus();
+});
+$.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+// Now let's align datepicker with the prepend button
+datepickerSelector4.datepicker('widget').css({ 'margin-left': -datepickerSelector4.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+var datepickerSelector5 = $('#end-wish');
+datepickerSelector5.datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: 'd MM, yy',
+  yearRange: '-1:+1'
+}).prev('.input-group-btn').on('click', function (e) {
+  e && e.preventDefault();
+  datepickerSelector5.focus();
+});
+$.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+// Now let's align datepicker with the prepend button
+datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelector5.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+</script>
+
+<!--Add a bill modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
+
+<div id="bill-modal" class="bill-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Bill </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="no-padding col-md-3">
+          <img class="savery-modal-img img-responsive" src="assets\img\wallet.png">
+        </div>
+
+        <div class="savery-modal-info no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" class="form-control sav-form flat" placeholder="Name">
+            <input type="text" class="form-control sav-form flat" placeholder="Amount">
+            <input type="text" class="form-control sav-form flat" placeholder="Merchant">
+            <div class="form-group sav-cal">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                <input type="text" readonly="true" class="form-control" value="Start Date" id="start-bill" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                <input type="text" readonly="true" class="form-control" value="End Date (Optional)" id="end-bill" />
+              </div>
+            </div>
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="billtag" placeholder="Tags" />
+            </div>
+            <div class="freq-wrapper">
+              <select class="form-control sav-select sav-form">
+                <option></option>
+                <option>Weekly</option>
+                <option>Biweekly</option>
+                <option>Monthly</option>
+                <option>Quarterly</option>
+                <option>Annually</option>
+              </select>
+            </div>
+            <textarea class="form-control sav-form flat" placeholder="Description"/>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3">
+        </div>
+
+        <div class="col-md-9">
+          <div class="col-md-6">
+          </div>
+          <div class="confirm-wrap col-md-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a bill modal End-->
+
+<!--Add a budget modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#budget-modal">Add a Budget</button>
+
+<div id="budget-modal" class="budget-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Budget </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="no-padding col-md-3">
+          <img class="savery-modal-img img-responsive" src="assets\img\calculator.png">
+        </div>
+
+        <div class="savery-modal-info no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" class="form-control sav-form flat" placeholder="Name">
+            <input type="text" class="form-control sav-form flat" placeholder="Amount">
+            <div class="form-group sav-cal">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                <input type="text" readonly="true" class="form-control" value="Start Date" id="start-budget" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                <input type="text" readonly="true" class="form-control" value="End Date (Optional)" id="end-budget" />
+              </div>
+            </div>
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="budgettag" placeholder="Tags" />
+            </div>
+            <textarea class="form-control sav-form flat" placeholder="Description"/>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3">
+        </div>
+
+        <div class="col-md-9">
+          <div class="col-md-6">
+          </div>
+          <div class="confirm-wrap col-md-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a budget modal End-->
+
+<!--Add a goal modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#goal-modal">Add a Goal</button>
+
+<div id="goal-modal" class="goal-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Goal </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="no-padding col-md-3">
+          <img class="savery-modal-img img-responsive" src="assets\img\rotates to progression.png">
+        </div>
+
+        <div class="savery-modal-info no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" class="form-control sav-form flat" placeholder="Name">
+            <input type="text" class="form-control sav-form flat" placeholder="Target Amount">
+            <input type="text" class="form-control sav-form flat" placeholder="Down Payment (Optional)">
+            <input type="text" class="form-control sav-form flat" placeholder="Target Option (Optional)">
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="goaltag" placeholder="Tags" />
+            </div>
+            <textarea class="form-control sav-form flat" placeholder="Description"  />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3">
+        </div>
+
+        <div class="no-padding col-md-9">
+          <div class="col-sm-6">
+              <div class="switch">
+                  <label>
+                      <span class="term-switch short">Short Term</span>
+                      <input type="checkbox">
+                      <span class="lever"></span>
+                      <span class="term-switch long">Long Term</span>
+                  </label>
+              </div>
+          </div>
+          <div class="confirm-wrap col-md-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a goal modal End-->
+
+<!--Add a wish modal start-->
+<button class="btn btn-embossed" data-toggle="modal" data-target="#wish-modal">Make a Wish</button>
+
+<div id="wish-modal" class="wish-modal modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="savery-modal no-padding modal-content">
+
+      <div class="savery-modal-header container-fluid">
+        <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Make a Wish </span>
+        <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+          <img class="exit-btn-img" src="assets\img\exit.svg">
+        </button>
+      </div>
+
+      <div class="savery-modal-body no-padding container-fluid">
+        <div class="no-padding col-md-3">
+          <img class="savery-modal-img img-responsive" src="assets\img\laptop-store.png">
+        </div>
+
+        <div class="savery-modal-info no-padding col-md-9">
+
+          <div class="savery-modal-info-l col-md-6 col-xs-12">
+            <input type="text" class="form-control sav-form flat" placeholder="Name">
+            <input type="text" class="form-control sav-form flat" placeholder="Merchant">
+            <input type="text" class="form-control sav-form flat" placeholder="Purchase Link">
+            <div class="form-group sav-cal">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                <input type="text" readonly="true" class="form-control" value="Desired Purchase Date" id="end-wish" />
+              </div>
+            </div>
+          </div>
+
+          <div class="savery-modal-info-r col-md-6 col-xs-12">
+            <div class="tagsinput-primary">
+              <input name="tagsinput" class="wishtag" placeholder="Tags" />
+            </div>
+            <textarea class="form-control sav-form flat" placeholder="Description" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="savery-modal-footer container-fluid">
+        <div class="switch-wrap text-center no-padding col-md-3">
+        </div>
+
+        <div class="col-md-9">
+          <div class="col-md-6">
+          </div>
+          <div class="confirm-wrap col-md-6">
+            <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+              Confirm
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Add a wish modal End-->
+
+
+<!--Flex cards-->
+<div class="flex-card-wrapper container-fluid">
+
+<div class="col-sm-12">
+
+<!--weekly-flex-->
+  <div class="no-padding col-sm-3" style="padding-right:5px;">
+    <div class="flex-card weekly-flex">
+      <div class="flex-header">Weekly Flex Spending</div>
+      <div class="flex-body">
+        <span class="flex-count">52</span> REMAINING
+      </div>
+      <hr>
+      <span class="flex-footer"> 58% SPENT </span>
+    </div>
+  </div>
+<!--Monthly-->
+  <div class="no-padding col-sm-3">
+    <div class="flex-card monthly-flex">
+      <div class="flex-header">Monthly Flex Spending</div>
+      <div class="flex-body">
+        <span class="flex-count">264</span> REMAINING
+      </div>
+      <hr>
+      <span class="flex-footer"> 34% SPENT </span>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-sm-12">
+
+<!--Total Liabilities-->
+  <div class="no-padding col-sm-4" style="padding-right:1px;">
+    <div class="flex-card flex-sm liabilities-flex">
+      <div class="flex-header text-uppercase">Total Liabilities</div>
+      <div class="flex-body">
+        <span class="flex-count">1.78k</span> 8% INCREASE
+      </div>
+    </div>
+  </div>
+<!--Total Assets-->
+  <div class="no-padding col-sm-4">
+    <div class="flex-card flex-sm assets-flex">
+      <div class="flex-header text-uppercase">Total Assets</div>
+      <div class="flex-body">
+        <span class="flex-count">3.12k</span>18% INCREASE
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-sm-12">
+
+<!--Allocated Funds-->
+  <div class="no-padding col-sm-4" style="padding-right:1px;">
+    <div class="flex-card flex-sm allocated-flex">
+      <div class="flex-header text-uppercase">Allocated Funds</div>
+      <div class="flex-body">
+        <span class="flex-count">2.09k</span> 8% INCREASE
+      </div>
+    </div>
+  </div>
+<!--Unallocated Funds-->
+  <div class="no-padding col-sm-4">
+    <div class="flex-card flex-sm unallocated-flex">
+      <div class="flex-header text-uppercase">Unallocated Funds</div>
+      <div class="flex-body">
+        <span class="flex-count">1.02k</span>17% DECREASE
+      </div>
+    </div>
+  </div>
+<!--Total Savings-->
+  <div class="no-padding col-sm-4" style="padding-left:1px;">
+    <div class="flex-card flex-sm savings-flex ">
+      <div class="flex-header text-uppercase">Total Savings</div>
+      <div class="flex-body">
+        <span class="flex-count">3.12k</span>21% INCREASE
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!--Flex cards end-->
+
+<!--Recent Transaction Table Start-->
+<div class="recent-transactions-wrapper col-md-6">
+
+  <div class="recent-transactions card col-md-12">
+    <div class="recent-transactions-header container-fluid">
+      <span class="col-md-6 col-xs-8 recent-transactions-title bold">Recent Transactions</span>
+      <div class="recent-transactions-link text-right col-md-6 col-xs-4"><a href="#">View More</a></div>
+    </div>
+
+    <div class="recent-transactions-body container-fluid">
+      <div class="recent-transactions-row container-fluid">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
+          <img class="icon" src="/assets/img/expense.png"/>
+        </div>
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
+          <span class="bold">Books</span><br>
+          <span class="fade">March 11, 2016</span>
+        </div>
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+          <span class="textRed">$21.95</span><br>
+          <span class="fade">Amount</span>
+        </div>
+      </div>
+
+      <div class="recent-transactions-row container-fluid">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
+          <img class="icon" src="/assets/img/payday.png"/>
+        </div>
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
+          <span class="bold">ATM Deposit</span><br>
+          <span class="fade">March 8, 2016</span>
+        </div>
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+          <span class="textGreen">$1,140.00</span><br>
+          <span class="fade">Amount</span>
+        </div>
+      </div>
+
+      <div class="recent-transactions-row container-fluid">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
+          <img class="icon" src="/assets/img/expense.png"/>
+        </div>
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
+          <span class="bold">Gasoline</span><br>
+          <span class="fade">March 2, 2016</span>
+        </div>
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+          <span class="textRed">$20.00</span><br>
+          <span class="fade">Amount</span>
+        </div>
+      </div>
+
+      <div class="recent-transactions-row container-fluid">
+        <div class="recent-transactions-left col-md-1 col-xs-1">
+          <img class="icon" src="/assets/img/expense.png"/>
+        </div>
+        <div class="recent-transactions-mid col-md-5 col-xs-5">
+          <span class="bold">Combo Meal</span><br>
+          <span class="fade">February 27, 2016</span>
+        </div>
+        <div class="recent-transactions-right text-right col-md-6 col-xs-6">
+          <span class="textRed">$7.82</span><br>
+          <span class="fade">Amount</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--Recent Transaction Table End-->

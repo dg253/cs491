@@ -1,0 +1,210 @@
+.modal-backdrop{z-index: -1;} //Fixes fading issue
+.modal-dialog{@media only screen(max-width:768px){margin: 30px;}}
+
+//Savery Style Start
+.savery-modal{
+  background-color: @card-header;
+
+  .sav-form{
+    border-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    padding: 0;
+    margin: 0px 4px;
+    margin-bottom: 4px;
+    & :not(textarea){height: 42px;}
+    font-family: Source Sans Pro;
+    font-size: 13px;
+  }
+
+  .select2-container .select2-choice{
+    height:42px;
+    margin-bottom: 4px;
+    padding-left:0;
+    font-size: 13px;
+    color: 	rgb(198, 198, 199);
+  }
+
+  .tagsinput-primary{
+    margin: 0 4px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .bootstrap-tagsinput{
+    overflow-y: auto;
+    @media only screen and (min-width:992px){height: 88px;}
+    @media only screen and (max-width:992px){max-height: 88px;} 
+    padding:0;
+    padding-top: 2px;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    & > input {margin-bottom: 13px !important; font-size: 13px;}
+  }
+
+  .select2-arrow {right: 0;}
+
+  .sav-cal{
+    margin:0;
+    & > .input-group{
+      .sav-form;
+      width: 100%;
+      &  * {border:0; color:#C6C6C6; padding:0; background-color: transparent;}
+      & button {margin-right:10px;}
+      & input {font-family: Source Sans Pro !important; opacity: 1; font-size: 13px;}
+    }
+  }
+
+textarea{
+  padding-top: 10px !important;
+  resize:none;
+  @media only screen and (min-width:992px){height: 90px;}
+  width:100%;
+}
+.savery-modal-header{
+    background-color: inherit;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 20px;
+
+    .savery-modal-title{font-weight: bold; font-size: 1.2em;}
+
+    .exit-btn{
+      width:auto;
+      float:right;
+      border:0;
+      background-color: transparent;
+      top:4px;
+
+      .exit-btn-img{
+        opacity: 0.5;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .savery-modal-body{
+    background-color:white;
+    padding:0px 20px;
+    padding-top: 10px;
+
+    .savery-modal-img{
+      width: 100%;
+      @media only screen and (max-width : 992px){
+          display:none !important;
+        }
+      }
+
+  }
+
+ .savery-modal-footer{
+   .confirm-wrap{padding-right:0;}
+   background-color: white;
+   padding: 10px 20px 0 20px;
+   padding-bottom: 15px;
+   .btn{padding: 5px 15px;}
+   .switch-wrap{@media only screen and (max-width:992px){text-align:left; padding-left:10px}}
+   .show-tooltip{line-height:0px;}
+   .show-tooltip + .tooltip > .tooltip-inner {    border-style: solid;
+    border-width: 1px 1px 0px 1px;}
+   .show-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:white; }
+
+   .term-switch {
+      font-size: 12px;
+      color: @gray;
+   }
+ }
+
+}
+//Savery Style End
+.goal-modal{
+  .savery-modal-info-r{
+    textarea{  @media only screen and (min-width:992px){height: 88px;}}
+  }
+}
+.wish-modal{
+  .savery-modal-info-r{
+    textarea{  @media only screen and (min-width:992px){height: 89px;}}
+  }
+}
+
+.savery-modal-info-sm{
+  @media only screen and (min-width : 992px){height: 155px !important;}
+  padding-top: 20px;
+}
+
+/* Switch
+   ========================================================================== */
+.switch,
+.switch * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.switch label input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #26a69a;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: white;
+  left: 24px;
+}
+
+.switch label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 15px;
+  background-color: #818181;
+  border-radius: 15px;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+}
+.switch label .lever:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 21px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+  left: -5px;
+  top: -3px;
+  transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+}
+
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+input[type=checkbox]:not(:disabled) ~ .lever:active:after,
+input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.switch input[type=checkbox][disabled] + .lever {
+  cursor: default;
+}
+
+.switch label input[type=checkbox][disabled] + .lever:after,
+.switch label input[type=checkbox][disabled]:checked + .lever:after {
+  background-color: gray;
+}
+
