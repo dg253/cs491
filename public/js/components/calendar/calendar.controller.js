@@ -1,15 +1,12 @@
 var app = angular.module("calendar", []);
 
-app.controller("calendarDemo", function($scope) {
-    $scope.day = moment();
-});
-
 app.directive("calendar", function() {
     return {
         restrict: "E",
         templateUrl: "js/components/calendar/calendar.html",
         scope: {
-            selected: "="
+            selected: "=",
+            callback: "="
         },
         link: function(scope) {
             scope.selected = _removeTime(scope.selected || moment());
@@ -23,6 +20,14 @@ app.directive("calendar", function() {
 
             scope.select = function(day) {
                 scope.selected = day.date;
+                console.log(scope.selected.format('MMM Do'))
+                var activities = scope.activityInDay(day);
+                // if(activities.length > 0 ){
+                //   scope.callback(activities);
+                // }
+
+                activities.push(["filter"]);
+                scope.callback(activities);
             };
 
             scope.next = function() {
@@ -38,6 +43,77 @@ app.directive("calendar", function() {
                 scope.month.month(scope.month.month()-1);
                 _buildMonth(scope, previous, scope.month);
             };
+
+            scope.activities = [
+              {
+                date: "Apr 23rd",              // date activity took place
+                actionType: "Created Budget",   // saveryActions: created budget, added to wishlist, accountLevelActions: expense, credit
+                category: "Groceries",          // savery category, api category (plaid)
+                description: "",               // if available from api (plaid), or saverly "moved 29$ into wishlist: xbox"
+                actionAmt: "",               // debit amt, credit amt, amt moved to savingsGoals/wishlist
+                txCode: "new"              // pos: +$29 into checking, neg: -$29 from checking, new: create, mv: $29 into wishlist (for styling)
+              },
+              {
+                date: "Apr 17th",
+                actionType: "Added to Wishlist",
+                category: "Xbox",
+                description: "Added $29 to wishlist: Xbox",
+                actionAmt: "$29",
+                txCode: "mv"
+              },
+              {
+                date: "Apr 9th",
+                actionType: "Account Expense",
+                category: "Restaurants",
+                description: "Mc Donalds",
+                actionAmt: "$13",
+                txCode: "neg"
+              },
+              {
+                date: "Apr 9th",
+                actionType: "Account Expense",
+                category: "Restaurants",
+                description: "Mc Donalds",
+                actionAmt: "$13",
+                txCode: "neg"
+              },
+              {
+                date: "Mar 30th",
+                actionType: "Account Expense",
+                category: "Bar",
+                description: "Gyps Tevern",
+                actionAmt: "$53",
+                txCode: "neg"
+              },
+              {
+                date: "Mar 29th",
+                actionType: "Account Credit",
+                category: "Deposit",
+                description: "",
+                actionAmt: "$459.97",
+                txCode: "pos"
+              },
+              {
+                date: "Mar 12th",
+                actionType: "Account Expense",
+                category: "Shops",
+                description: "Chindo",
+                actionAmt: "$43.24",
+                txCode: "neg"
+              }
+            ];
+
+            scope.activityInDay = function(day){
+              var activities = [];
+              for (act in scope.activities){
+                var dave = scope.activities[act].date;
+                if(day.date.format('MMM Do') == scope.activities[act].date){
+                  var obj = angular.copy(scope.activities[act]);
+                  activities.push(obj);
+                }
+              }
+              return activities;
+            }
         }
     };
 
@@ -71,4 +147,5 @@ app.directive("calendar", function() {
         }
         return days;
     }
+
 });

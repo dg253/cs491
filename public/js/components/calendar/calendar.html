@@ -1,7 +1,7 @@
 <div class="header">
-    <i class="fa fa-angle-left" ng-click="previous()"></i>
-    <span>{{month.format("MMMM, YYYY")}}</span>
-    <i class="fa fa-angle-right" ng-click="next()"></i>
+  <i class="fa fa-angle-left fui-arrow-left" ng-click="previous()"></i>
+  <span>{{month.format("MMMM YYYY")}}</span>
+  <i class="fa fa-angle-right fui-arrow-right" ng-click="next()"></i>
 </div>
 <div class="week names">
     <span class="day">Sun</span>
@@ -15,6 +15,12 @@
 <div class="week" ng-repeat="week in weeks">
     <span class="day" ng-mouseenter="hover = true"
      ng-mouseleave="hover = false"
-     ng-class="{ 'pop': hover, today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }"
-     ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</span>
+     ng-class="{ 'pop': hover, today: day.isToday, 'different-month': !day.isCurrentMonth }"
+     ng-click="select(day)" ng-repeat="day in week.days">
+     <span ng-class="{'activity':activityInDay(day).length > 0, selector: day.date.isSame(selected)}">
+      <span>{{day.number}}</span>
+     </span>
+     <span ng-if="activityInDay(day).length > 0" style="color: white;">{{day.number}}</span>
+   </span>
+
 </div>
