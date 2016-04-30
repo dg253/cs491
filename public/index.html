@@ -220,13 +220,17 @@
                 <!-- create a goal form -->
                 <div class="col-md-8">
                   <form>
-                    <div class="form-group">
+                    <div class="form-group form-inline">
                       <label for="goalName">Goal Name</label>
-                      <input type="text" class="form-control input-sm" id="goalName" placeholder="Goal Name">
+                      <input type="text" ng-model="goalName" class="form-control input-sm" id="goalName" placeholder="Goal Name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-inline">
                       <label for="goalAmount">Goal Amount</label>
-                      <input type="number" class="form-control input-sm" id="goalAmount" placeholder="Goal Amount">
+                      <input type="number" ng-model="goalAmount" class="form-control input-sm" id="goalAmount" placeholder=100 ng-value=100>
+                    </div>
+                    <div class="form-group form-inline">
+                      <label for="goalDownPayment">Down Payment</label>
+                      <input type="number" ng-model="goalDownPayment" class="form-control input-sm" id="goalDownPayment" placeholder=30 ng-value=30>
                     </div>
                     <div class="radio">
                       <label>
@@ -236,23 +240,21 @@
                         <input type="radio"> Public
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form>
                 </div>
                 <!-- end create a goal form -->
 
                 <!-- create a goal placeholder -->
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                   <div class="budget-progress-card">
-                      <div class="budget-progress card-header">
-                          <span class="card-title center">Goal Name</span>
+                      <div class="budget-progress card-header transparent">
+                          <span class="card-title center">{{ goalName }}</span>
                       </div>
                       <div class="budget-progress body">
-                          <div progress-circle stopat="66" class="progress-circle"></div>
+                          <div progress-circle stopat="40" class="progress-circle"></div>
                           <div class="footer">
-                              <span class="amount-spent">$200 of 300</span>
+                              <span class="amount-spent">{{ goalDownPayment }} of ${{ goalAmount }}</span>
                               <div class="clearfix"></div>
-                              <span class="amount-remaining alt-text">$10 remaining</span>
+                              <span class="amount-remaining alt-text">${{ goalAmount - goalDownPayment}} remaining</span>
                           </div>
                       </div>
                   </div>
@@ -263,8 +265,9 @@
           </div>
 
           <div class="modal-footer">
-            <a href="#" class="btn btn-default btn-wide">It’s ok</a>
-            <a href="#" class="btn btn-primary btn-wide">Turn it off now.</a>
+              <a href="#" class="btn btn-default btn-wide">Cancel</a>
+              <button type="submit" class="btn btn-primary btd-wide">Submit</button>
+              </form>
           </div>
         </div>
       </div>
@@ -308,7 +311,7 @@
                         <label for="emailInput">Email</label>
                         <input type="email" class="form-control" id="emailInput" placeholder="john@example.com">
                       </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
+                      <button type="submit" class="btn btn-default">Save</button>
                     </form>
                   </div>
 
@@ -332,8 +335,32 @@
           </div>
 
           <div class="modal-footer">
-            <a href="#" class="btn btn-default btn-wide">It’s ok</a>
-            <a href="#" class="btn btn-primary btn-wide">Turn it off now.</a>
+            <a href="#" class="btn btn-default btn-wide">Done</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Create a goal modal -->
+
+    <!-- share modal -->
+    <div id="shareModal" class="modal scale fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Share</h3>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="btn btn-default btn-wide">Cancel</a>
+            <a href="#" class="btn btn-primary btn-wide">Confirm</a>
           </div>
         </div>
       </div>
