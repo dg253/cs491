@@ -185,6 +185,347 @@
       </div>
     </div><!-- / Create a goal modal -->
 
+    <!-- preferences modal -->
+    <div id="prefModal" class="modal fade" role="dialog">
+
+      <!-- modal dialog sticky to top -->
+      <div class="modal-dialog stickToTop">
+
+        <!-- modal content-->
+        <div class="modal-content">
+
+          <!-- modal header-->
+          <div class="modal-header">
+            <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title"><span class="fui-gear"></span> Preferences</h3>
+          </div><!-- / modal header-->
+
+          <!-- modal body-->
+          <div class="modal-body">
+
+            <!-- modal container fluid-->
+            <div class="container-fluid">
+
+              <!-- row for modal-->
+              <div class="row">
+
+                <!-- Tab Links-->
+                <ul class="nav nav-tabs nav-append-content">
+                  <li class="active"><a href="#generalTab" aria-controls="generalTab" role="tab" data-toggle="tab">General</a></li>
+                  <li><a href="#securityTab"  aria-controls="securityTab" role="tab" data-toggle="tab">Security</a></li>
+                  <li><a href="#notificationsTab"  aria-controls="notificationsTab" role="tab" data-toggle="tab">Notifications</a></li>
+                </ul><!-- / Tab Links-->
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+
+                  <!-- General Tab -->
+                  <div class="tab-pane active" id="generalTab">
+                    <div class="row">
+                      <form name="general">
+                        <div class="col-xs-9">
+                          <div class="form-group">
+                            <label for="firstNameInput">First Name</label>
+                            <input type="text" class="form-control" id="firstNameInput" ng-model="firstNameInput" ng-value="John" placeholder="John">
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-9">
+                          <div class="form-group">
+                            <label for="lastNameInput">Last Name</label>
+                            <input type="text" class="form-control" id="lastNameInput" ng-model="lastNameInput" placeholder="Doe">
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-9">
+                          <div class="form-group">
+                            <label for="emailInput">Email</label>
+                            <input type="email" class="form-control" id="emailInput" ng-model="emailInput" placeholder="john@example.com">
+                          </div>
+                        </div>
+                    </div>
+                    <!-- save password row -->
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <button type="submit" class="btn btn-primary">Save Contact</button>
+                        </form>
+                      </div>
+                    </div><!-- / save password row -->
+                  </div><!-- / General Tab -->
+
+                  <!-- Security Tab -->
+                  <div class="tab-pane" id="securityTab">
+
+                    <!-- Panel Group -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                      <!-- password manage -->
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Change Password
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <!-- password row -->
+                            <div class="row">
+                              <form name="passwordForm">
+                              <div class="col-xs-5">
+                                  <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" class="form-control" ng-model="currentPassword" >
+                                  </div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="col-xs-5">
+                                  <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" class="form-control" ng-model="newPassword">
+                                  </div>
+                              </div>
+                            </div><!-- / password row -->
+                            <!-- save password row -->
+                            <div class="row">
+                              <div class="col-xs-2">
+                                <button type="submit" class="btn btn-primary">Save Password</button>
+                              </form>
+                              </div>
+                            </div><!-- / save password row -->
+                          </div><!-- / panel-body  -->
+                        </div><!-- / collapse panel -->
+                      </div><!-- / password manage -->
+
+                      <!-- phone numbers manage -->
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Phone Number
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <!-- security row -->
+                            <div class="row">
+                              <form name="phoneForm">
+                              <div class="col-xs-5">
+                                <div class="form-group">
+                                  <label for="newNumber">Phone Number</label>
+                                  <input type="tel" class="form-control" ng-model="newNumber" maxlength=10 placeholder="1234567890">
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="col-xs-5">
+                                  <div class="form-group">
+                                    <label for="confirmNumber">New Phone Number</label>
+                                    <input type="tel" class="form-control" ng-model="confirmNumber" maxlength=10 placeholder="1234567890">
+                                  </div>
+                              </div>
+                            </div><!-- end security row -->
+                            <!-- save numbers  -->
+                            <div class="row">
+                              <div class="col-xs-2">
+                                <button type="submit" class="btn btn-primary">Save Number</button>
+                                </form>
+                              </div>
+                            </div><!-- / save numbers  -->
+                          </div><!-- / panel body  -->
+                        </div><!-- / collapse panel -->
+                      </div><!-- / phone numbers manage -->
+
+                      <!-- security manage -->
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Security Questions
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div><!-- / panel heading -->
+
+                        <!-- panel collapse question select -->
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            <!-- q1 row -->
+                            <div class="row">
+                              <form name="question1Form">
+                                <div class="col-xs-5">
+                                  <select name="question1Selected" class="form-control select select-primary select-block mbl">
+                                    <optgroup label="Question 1">
+                                      <option value="q1">Question 1</option>
+                                      <option value="q2">Question 2</option>
+                                      <option value="q3">Question 3</option>
+                                      <option value="q4">Question 4</option>
+                                      <option value="q5">Question 5</option>
+                                    </optgroup>
+                                  </select>
+                                </div>
+                                <div class="col-xs-5">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control input-sm" ng-model="answer1" placeholder="Answer #1">
+                                  </div>
+                                </div>
+                            </div><!-- / q1 row -->
+
+                            <!-- q2 row -->
+                            <div class="row">
+                                <div class="col-xs-5">
+                                  <select name="question2Selected" class="form-control select select-primary select-block mbl">
+                                    <optgroup label="Question 2">
+                                      <option value="q6">Question 6</option>
+                                      <option value="q7">Question 7</option>
+                                      <option value="q8">Question 8</option>
+                                      <option value="q9">Question 9</option>
+                                      <option value="q10">Question 10</option>
+                                    </optgroup>
+                                  </select>
+                                </div>
+                                <div class="col-xs-5">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control input-sm" ng-model="answer2" placeholder="Answer #2">
+                                  </div>
+                                </div>
+                              </form>
+                            </div><!-- / q2 row -->
+                            <!-- save questions -->
+                            <div class="row">
+                              <div class="col-xs-2">
+                                <button type="submit" class="btn btn-primary">Save Answers</button>
+                                </form>
+                              </div>
+                            </div><!-- / save questions -->
+                          </div><!-- / panel body  -->
+                        </div><!-- / panel collapse -->
+                      </div><!-- / security manage -->
+
+                    </div><!-- / panel group -->
+
+                  </div><!-- / Security Tab -->
+
+                  <!-- Notifications Tab -->
+                  <div class="tab-pane" id="notificationsTab">
+
+                    <!-- form for notifications  -->
+                    <div class="row">
+
+                      <form name="notifications">
+                      <div class="col-xs-10">
+                        <div class="form-group">
+                          <label for="isNotificationsEnabled">Enable | Disable Push Notifications</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-2">
+                        <!-- Default switch -->
+                        <div class="form-group">
+                          <input type="checkbox" checked data-toggle="switch" name="custom-switch-text" data-on-color="success" data-on-text="Enabled" data-off-text="Disabled" id="switch-10" />
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="clearfix"></div>
+                      <h3>Notify me of:</h3>
+                      <div class="col-xs-10">
+                      </div>
+                      <div class="col-xs-2">
+
+                        <div class="bootstrap-switch-square">
+                          <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate bootstrap-switch-id-custom-switch-13 bootstrap-switch-on">
+                            <div class="bootstrap-switch-container">
+                              <span class="bootstrap-switch-handle-on bootstrap-switch-primary">
+                                <i class="fui-check"></i>
+                              </span>
+                              <label class="bootstrap-switch-label">&nbsp;</label>
+                              <span class="bootstrap-switch-handle-off bootstrap-switch-default">
+                                <i class="fui-cross"></i>
+                              </span>
+                              <input type="checkbox" checked="" data-toggle="switch" name="switch-13" data-on-text="&lt;i class='fui-check'&gt;&lt;/i&gt;" data-off-text="&lt;i class='fui-cross'&gt;&lt;/i&gt;" id="custom-switch-13"/>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div><!-- form for notifications  -->
+
+                  </div><!-- / Notifications Tab -->
+
+                </div><!-- / Tab Content -->
+
+              </div><!-- / row for modal-->
+
+            </div><!-- / modal container fluid -->
+
+          </div><!-- / modal body -->
+
+          <!-- modal footer-->
+          <div class="modal-footer">
+            <a data-dismiss="modal" class="btn btn-default btn-wide">Done</a>
+          </div><!-- / modal footer-->
+
+        </div><!-- / modal content-->
+
+      </div><!-- / modal dialog sticky to top -->
+
+    </div><!-- / preferences modal -->
+
+    <!-- share modal -->
+    <div id="shareModal" class="modal scale fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title"><span class="fui-mail"></span> Share</h3>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="form-group">
+                    <label for="linkShare">Invite via Link</label>
+                    <input id="linkurl" type="text" class="form-control" value="sharethislink.saverly.com">
+                    <!-- Trigger -->
+                    <button class="btn-xs" ngclipboard data-clipboard-target="#linkurl">
+                        <span class="glyphicon glyphicon-copy pull-right" aria-hidden="true">Copy to clipboard</span>
+                    </button>
+                  </div>
+                  <hr>
+                  <form name="email">
+                  <div class="form-group">
+                    <label for="emailShare">Invite via Email</label>
+                    <input type="text" class="form-control" ng-model="emailShare" placeholder="john@example.com">
+                  </div>
+                  <button type="submit"  class="btn btn-primary btn-xs btn-wide sharebtn">Send Email Invite</button>
+                  </form>
+
+                <form name="sms">
+                <div class="form-group">
+                  <label for="smsShare">Invite via SMS</label>
+                  <input type="text" class="form-control" ng-model="smsShare" maxlength="10" placeholder="1234567890">
+                </div>
+                <button type="submit" class="btn btn-primary btn-xs btn-wide sharebtn">Send SMS Invite</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a data-dismiss="modal" class="btn btn-default btn-wide">Done</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- / share modal -->
 
     <!--Bootstrap-->
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
