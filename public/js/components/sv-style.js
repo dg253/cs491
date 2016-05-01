@@ -1,6 +1,6 @@
 $( window ).resize(function() {
   activityFeedResize();
-  balanceGraphPosition();
+  //balanceGraphPosition();
 });
 
 function activityFeedResize(){

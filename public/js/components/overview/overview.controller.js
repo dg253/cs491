@@ -15,6 +15,99 @@
         [28, 48, 40, 42, 86, 27, 90],
         [10, 0, 9, 19, 11, 74, 60]
       ];
+
+      $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July"];
+      $scope.series = ['Series A', 'Series B'];
+      $scope.networthData = [
+        [65, 59, 80, 81, 56, 55, 40],
+        [28, 48, 40, 42, 86, 27, 90],
+        [10, 0, 9, 19, 11, 74, 60]
+      ];
+
+      $scope.balanceTimeline = function(timeframe){
+        if(timeframe == 3){
+          $scope.labels = ["May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [ 56, 55, 40],
+            [86, 27, 90],
+            [11, 74, 60]
+          ];
+        }
+        else if (timeframe == 6){
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 12){
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 24){
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else{
+
+        }
+      }
+
+      $scope.networthTimeline = function(timeframe){
+        if(timeframe == 3){
+          $scope.networthLabels = ["May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [ 56, 55, 40],
+            [86, 27, 90],
+            [11, 74, 60]
+          ];
+        }
+        else if (timeframe == 6){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 12){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 24){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else{
+
+        }
+      }
+
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
       };

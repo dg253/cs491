@@ -2,17 +2,17 @@
 <div class="clearfix" style="width: 90%; margin: auto;">
 
       <div class="row card balances-card" style="box-shadow: 0px 0px 8px gray;">
-          <div class="left col-sm-12 col-lg-9 no-padding">
+          <div class="left col-sm-12 no-padding">
             <div name="balances-header" class="container-fluid col-md-12">
               <h4 style="font-size: 24px;" class="balances-header col-xs-6 col-sm-3">Balances</h4>
               <div class="btn-group col-xs-6 visible-xs balance-heading">
                 <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
                   Past 6 Months <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Past 3 Months</a></li>
-                  <li><a href="#">Past Year</a></li>
-                  <li><a href="#">Past 2 Years</a></li>
+                <ul style="font-size: 11px" class="dropdown-menu" role="menu">
+                  <li><a href="#" ng-click="balanceTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(12)">Past Year</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
                   <li><a href="#">Graph Options</a></li>
                 </ul>
@@ -27,9 +27,9 @@
                   Past 6 Months <span class="caret"></span>
                 </button>
                 <ul style="font-size: 11px" class="dropdown-menu" role="menu">
-                  <li><a href="#">Past 3 Months</a></li>
-                  <li><a href="#">Past Year</a></li>
-                  <li><a href="#">Past 2 Years</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(12)">Past Year</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
                   <li><a href="#">Graph Options</a></li>
                 </ul>
@@ -43,8 +43,8 @@
               </br>
             </div>
           </div>
-          <div class="right no-padding col-xs-12 col-lg-3">
-            <div class="col-md-4 col-xs-12 col-lg-12">
+          <div class="right col-xs-12">
+            <div class="col-md-4 col-xs-12">
               <h4 style="font-size: 24px;">Summary</h4>
               <div class="alt-text">Total Balance</div>
               <div class="clearfix">
@@ -53,7 +53,7 @@
               </div>
             </div>
             <!-- <div class="col-md-12 no-padding"><hr class="no-padding"></div> -->
-              <div class="section summary col-xs-12 col-md-4 col-lg-12">
+              <div class="section summary col-xs-12 col-md-4">
                 <div class="clearfix">
                   <span class="alt-text">Upcoming Bills</span>
                   <span class="pull-right visible-xs visible-sm visible-lg"><a href="#daveisthepinnacleofmankind">View More</a></span>
@@ -70,7 +70,7 @@
                   <strong class="pull-right">4/2</strong>
                 </div>
               </div>
-              <div class="section summary col-xs-12 col-md-4 col-lg-12">
+              <div class="section summary col-xs-12 col-md-4">
                 <div class="container-fluid col-md-12">
                   <div class="clearfix">
                     <span class="alt-text">Top Savings Goals</span>
@@ -91,6 +91,62 @@
               </div>
           </div>
       </div>
+
+
+      <div class="row card balances-card" style="box-shadow: 0px 0px 8px gray;">
+          <div class="left col-sm-12 no-padding">
+            <div name="balances-header" class="container-fluid col-md-12">
+              <h4 style="font-size: 24px;" class="balances-header col-xs-6 col-sm-3">Net Worth</h4>
+              <div class="btn-group col-xs-6 visible-xs balance-heading">
+                <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+                  Past 6 Months <span class="caret"></span>
+                </button>
+                <ul style="font-size: 11px" class="dropdown-menu" role="menu">
+                  <li><a href="#" ng-click="networthTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="networthTimeline(12)">Past Year</a></li>
+                  <li><a href="#" ng-click="networthTimeline(24)">Past 2 Years</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Graph Options</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-6 balance-heading img-responsive center-block">
+                <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked dark-blue"></span><span>Net Worth</span></span>
+                <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked light-blue"></span><span>Assets</span></span>
+                <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked red"></span><span>Liablities</span></span>
+              </div>
+              <div class="btn-group col-xs-3 visible-sm visible-md visible-lg pad">
+                <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+                  Past 6 Months <span class="caret"></span>
+                </button>
+                <ul style="font-size: 11px" class="dropdown-menu" role="menu">
+                  <li><a href="#" ng-click="networthTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="networthTimeline(12)">Past Year</a></li>
+                  <li><a href="#" ng-click="networthTimeline(24)">Past 2 Years</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Graph Options</a></li>
+                </ul>
+              </div>
+            </div>
+            <div name="balances-content" class="container-fluid col-md-12">
+              <canvas id="line" class="budgets-graph chart chart-line img-responsive center-block" chart-data="networthData"
+                chart-labels="networthLabels" chart-legend="false" chart-series="series"
+                chart-click="onClick" chart-options="chartOptions">
+              </canvas>
+              </br>
+            </div>
+          </div>
+          <div class="right col-xs-12">
+            <div class="col-md-4 col-xs-12">
+              test 1
+            </div>
+            <div class="col-md-4 col-xs-12">
+              test 2
+            </div>
+            <div class="col-md-4 col-xs-12">
+              test 3
+            </div>
+          </div>
+        </div>
 </div>
 
 <!-- Balances Summary End -->
