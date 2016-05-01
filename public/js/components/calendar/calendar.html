@@ -17,10 +17,10 @@
      ng-mouseleave="hover = false"
      ng-class="{ 'pop': hover, today: day.isToday, 'different-month': !day.isCurrentMonth }"
      ng-click="select(day)" ng-repeat="day in week.days">
-     <span ng-class="{'activity':activityInDay(day).length > 0, selector: day.date.isSame(selected)}">
+     <span ng-class="{'dne':activityInDay(day).length > 0, selector: day.date.isSame(selected)}">
       <span>{{day.number}}</span>
      </span>
-     <span ng-if="activityInDay(day).length > 0" style="color: white;">{{day.number}}</span>
+     <!-- <span ng-if="activityInDay(day).length > 0" style="color: white;">{{day.number}}</span> -->
    </span>
 
 </div>

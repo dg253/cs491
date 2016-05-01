@@ -3,18 +3,57 @@
 @brand-secondary: #f37167; // Orange
 
 .right-nav {
-  overflow: auto;
+  height: 100%;
+  position: relative;
+}
+
+.cal{
+  position: absolute;
+  bottom: 0px;
+  background-color: #EEE;
+  position: absolute;
+  padding-top: 8px;
+  bottom: 0px;
+  background-color: #EEE;
+  border-top: 1px solid #bdc3c7;
+    box-shadow: -6px -8px 7px -9px grey;
+
+  .cal-inner {
+    background-color: #EEE;
+    padding-right:20px;
+    padding-left:5px;
+
+  }
 }
 
 .activity-feed-container {
   padding-top: 10px;
+
+  .activity-header {
+      border-bottom: 1px solid rgba(127, 143, 164, 0.21);
+      padding: 0px 12px;
+      padding-bottom: 8px;
+
+      .closer {
+        padding-right: 15px;
+        padding-top: 4px;
+        cursor: pointer;
+      }
+  }
+}
+
+.closer {
+  padding-right: 15px;
+  padding-top: 4px;
+  cursor: pointer;
 }
 
 .activity-feed {
   font-size: 12px;
   padding: 15px;
   list-style: none;
-  min-height: 570px;
+  max-height: 600px;
+  overflow-y: scroll;
 
   a {
     color: @brand-primary;
@@ -45,6 +84,7 @@
     .label{
       font-size: 12px;
     }
+
 
     .date {
       display: block;

@@ -22,11 +22,7 @@ app.directive("calendar", function() {
                 scope.selected = day.date;
                 console.log(scope.selected.format('MMM Do'))
                 var activities = scope.activityInDay(day);
-                // if(activities.length > 0 ){
-                //   scope.callback(activities);
-                // }
-
-                activities.push(["filter"]);
+                activities.push({filter: true, date: scope.selected.format('MMM Do')});
                 scope.callback(activities);
             };
 
@@ -63,7 +59,7 @@ app.directive("calendar", function() {
               },
               {
                 date: "Apr 9th",
-                actionType: "Account Expense",
+                actionType: "Expense",
                 category: "Restaurants",
                 description: "Mc Donalds",
                 actionAmt: "$13",
@@ -71,7 +67,7 @@ app.directive("calendar", function() {
               },
               {
                 date: "Apr 9th",
-                actionType: "Account Expense",
+                actionType: "Expense",
                 category: "Restaurants",
                 description: "Mc Donalds",
                 actionAmt: "$13",
@@ -79,7 +75,7 @@ app.directive("calendar", function() {
               },
               {
                 date: "Mar 30th",
-                actionType: "Account Expense",
+                actionType: "Expense",
                 category: "Bar",
                 description: "Gyps Tevern",
                 actionAmt: "$53",
@@ -87,7 +83,7 @@ app.directive("calendar", function() {
               },
               {
                 date: "Mar 29th",
-                actionType: "Account Credit",
+                actionType: "Credit",
                 category: "Deposit",
                 description: "",
                 actionAmt: "$459.97",
@@ -95,7 +91,7 @@ app.directive("calendar", function() {
               },
               {
                 date: "Mar 12th",
-                actionType: "Account Expense",
+                actionType: "Expense",
                 category: "Shops",
                 description: "Chindo",
                 actionAmt: "$43.24",
