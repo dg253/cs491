@@ -606,17 +606,17 @@
                   <form name="email">
                   <div class="form-group">
                     <label for="emailShare">Invite via Email</label>
-                    <input type="email" class="form-control" ng-model="emailShare" placeholder="john@example.com">
+                    <input type="text" class="form-control" ng-model="emailShare" placeholder="john@example.com">
                   </div>
-                  <button type="submit" ng-disabled="email.$valid" class="btn btn-primary btn-xs btn-wide sharebtn">Send Email Invite</button>
+                  <button type="submit"  class="btn btn-primary btn-xs btn-wide sharebtn">Send Email Invite</button>
                   </form>
 
                 <form name="sms">
                 <div class="form-group">
                   <label for="smsShare">Invite via SMS</label>
-                  <input type="email" class="form-control" ng-model="smsShare" maxlength="10" placeholder="1234567890">
+                  <input type="text" class="form-control" ng-model="smsShare" maxlength="10" placeholder="1234567890">
                 </div>
-                <button type="submit" ng-disabled="sms.$valid" class="btn btn-primary btn-xs btn-wide sharebtn">Send SMS Invite</button>
+                <button type="submit" class="btn btn-primary btn-xs btn-wide sharebtn">Send SMS Invite</button>
                 </form>
               </div>
             </div>
