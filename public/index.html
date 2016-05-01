@@ -266,8 +266,8 @@
     <!-- End Create a goal modal -->
 
     <!-- preferences modal -->
-    <div id="prefModal" class="modal stickToTop fade" role="dialog">
-      <div class="modal-dialog">
+    <div id="prefModal" class="modal fade" role="dialog">
+      <div class="modal-dialog stickToTop">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
@@ -288,7 +288,7 @@
                 <div class="tab-content">
                   <!-- General Tab -->
                   <div class="tab-pane active" id="generalTab">
-                    <form>
+                    <form name="general">
                       <div class="form-group">
                         <label for="firstNameInput">First Name</label>
                         <input type="text" class="form-control" id="firstNameInput" value="John" placeholder="John">
@@ -304,11 +304,99 @@
                       <button type="submit" class="btn btn-default">Save</button>
                     </form>
                   </div>
+                  <!-- End General Tab -->
 
                   <!-- Security Tab -->
                   <div class="tab-pane" id="securityTab">
-                    <p>Security tab goes in this div</p>
+                    <!-- password row -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Password
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <!-- password row -->
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <form name="security">
+                                  <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" class="form-control" id="currentPassword">
+                                  </div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="col-xs-6">
+                                  <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" class="form-control" id="newPassword">
+                                  </div>
+                              </div>
+                            </div><!-- end password row -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Phone Number
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <!-- security row -->
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <form name="security">
+                                  <div class="form-group">
+                                    <label for="newPhoneNumber">Phone Number</label>
+                                    <input type="tel" class="form-control" maxlength=10 id="newPhoneNumber">
+                                  </div>
+                              </div>
+                              <div class="col-xs-6">
+                                  <div class="form-group">
+                                    <label for="confirmPhoneNumber">New Phone Number</label>
+                                    <input type="tel" class="form-control" maxlength=10 id="confirmPhoneNumber">
+                                  </div>
+                              </div>
+                                  <button type="submit" class="btn btn-default">Save</button>
+                                </form>
+                            </div><!-- end security row -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Security Questions
+                            </a>
+                          </h4>
+                          <button class="btn btn-primary btn-xs accordionbtn pull-right" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            expand
+                          </button>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <!-- End Security Tab -->
 
                   <!-- Notifications Tab -->
                   <div class="tab-pane" id="notificationsTab">
@@ -325,7 +413,7 @@
         </div>
       </div>
     </div>
-    <!-- End Create a goal modal -->
+    <!-- End Preferences modal -->
 
     <!-- share modal -->
     <div id="shareModal" class="modal scale fade" role="dialog">
@@ -341,7 +429,7 @@
               <div class="row">
 
                   <div class="form-group">
-                    <label for="linkShare">Link</label>
+                    <label for="linkShare">Invite via Link</label>
                     <input id="linkurl" type="text" class="form-control" value="sharethislink.saverly.com">
                     <!-- Trigger -->
                     <button class="btn-xs" ngclipboard data-clipboard-target="#linkurl">
