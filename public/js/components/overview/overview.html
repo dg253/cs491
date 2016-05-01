@@ -2,16 +2,28 @@
 <div class="clearfix" style="width: 90%; margin: auto;">
 
       <div class="row card" style="box-shadow: 0px 0px 8px gray;">
-          <div class="left col-sm-12 col-md-9 cool-text">
+          <div class="left col-sm-12 col-md-9 no-padding">
             <div name="balances-header" class="container-fluid col-md-12">
-              <h4 class="col-xs-3">Balances</h4>
-              <div class="col-sm-6 pad img-responsive center-block">
+              <h4 class="col-xs-6 col-sm-3">Balances</h4>
+              <div class="btn-group col-xs-6 visible-xs balance-heading">
+                <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+                  Past 6 Months <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-6 balance-heading img-responsive center-block">
                 <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked dark-blue"></span><span>Balance</span></span>
                 <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked light-blue"></span><span>Savings</span></span>
                 <span class="balance-heading-item"><span class="icon fui-checkbox-unchecked red"></span><span>Total Assets</span></span>
               </div>
-              <div class="btn-group col-xs-3 pad">
-                <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+              <div class="btn-group col-xs-3 visible-sm visible-md visible-lg pad">
+                <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
                   Past 6 Months <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
@@ -26,7 +38,7 @@
             <div name="balances-content" class="container-fluid col-md-12">
               <canvas id="line" class="budgets-graph chart chart-line img-responsive center-block" chart-data="data"
                 chart-labels="labels" chart-legend="false" chart-series="series"
-                chart-click="onClick" >
+                chart-click="onClick" chart-options="chartOptions">
               </canvas>
             </div>
           </div>
@@ -39,9 +51,9 @@
                 <span class="col-xs-4" style="padding-top: 24px; padding-right: 0px;"><span class="label label-primary pull-right">12.5%</span></span>
               </div>
             </div>
-            <div class="col-md-12 no-padding"><hr></div>
+            <div class="col-md-12 no-padding"><hr class="no-padding"></div>
             <div class="summary col-md-12">
-              <div class="container-fluid col-md-12">
+              <div class="section container-fluid col-md-12">
                 <div class="clearfix">
                   <span class="alt-text">Upcoming Bills</span>
                   <span class="pull-right visible-xs visible-sm visible-lg"><a href="#daveisthepinnacleofmankind">View More</a></span>
@@ -57,9 +69,8 @@
                   <strong>Amazon Prime</strong>
                   <strong class="pull-right">4/2</strong>
                 </div>
-                </br>
               </div>
-              <div class="container-fluid col-md-12">
+              <div class="section container-fluid col-md-12">
                 <div class="container-fluid col-md-12">
                   <div class="clearfix">
                     <span class="alt-text">Top Savings Goals</span>
