@@ -24,6 +24,9 @@
     <!--SweetAlert-->
     <link rel="stylesheet" href="assets/libs/bootstrap-sweetalert/lib/sweet-alert.css"/>
 
+    <!-- bootstrap-switch css-->
+    <link rel="stylesheet" href="assets/style/bootstrap-switch/bootstrap3/bootstrap-switch.min.css"/>
+
     <!--Main app CSS-->
     <link rel="stylesheet" href="assets/style/app.css"/>
 
@@ -203,6 +206,9 @@
     <!--Angular-ChartJS-->
     <script src="assets/libs/angular-chart.js/dist/angular-chart.js"></script>
 
+    <!-- bootstrap-switch JS-->
+    <script src="js/bootstrap-switch/bootstrap-switch.min.js"></script>
+
     <!--ProgressBar JS-->
     <script src="assets/libs/progressbar.js/dist/progressbar.js"></script>
 
@@ -301,8 +307,10 @@
 
             <!-- modal container fluid-->
             <div class="container-fluid">
+
               <!-- row for modal-->
               <div class="row">
+
                 <!-- Tab Links-->
                 <ul class="nav nav-tabs nav-append-content">
                   <li class="active"><a href="#generalTab" aria-controls="generalTab" role="tab" data-toggle="tab">General</a></li>
@@ -312,6 +320,7 @@
 
                 <!-- Tab Content -->
                 <div class="tab-content">
+
                   <!-- General Tab -->
                   <div class="tab-pane active" id="generalTab">
                     <div class="row">
@@ -394,7 +403,7 @@
                         </div><!-- / collapse panel -->
                       </div><!-- / password manage -->
 
-                      <!-- numbers manage -->
+                      <!-- phone numbers manage -->
                       <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingTwo">
                           <h4 class="panel-title">
@@ -412,7 +421,6 @@
                             <div class="row">
                               <form name="phoneForm">
                               <div class="col-xs-5">
-                                <form name="phoneForm">
                                 <div class="form-group">
                                   <label for="newNumber">Phone Number</label>
                                   <input type="tel" class="form-control" ng-model="newNumber" maxlength=10 placeholder="1234567890">
@@ -435,7 +443,7 @@
                             </div><!-- / save numbers  -->
                           </div><!-- / panel body  -->
                         </div><!-- / collapse panel -->
-                      </div><!-- /numbers manage -->
+                      </div><!-- / phone numbers manage -->
 
                       <!-- security manage -->
                       <div class="panel panel-default">
@@ -511,7 +519,39 @@
 
                   <!-- Notifications Tab -->
                   <div class="tab-pane" id="notificationsTab">
-                    <p>Notifications form goes in this div</p>
+
+                    <!-- form for notifications  -->
+                    <div class="row">
+
+                      <form name="notifications">
+                      <div class="col-xs-10">
+                        <div class="form-group">
+                          <label for="isNotificationsEnabled">Enable | Disable Push Notifications</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-2">
+                        <!-- Default switch -->
+                        <div class="form-group">
+                          <input type="checkbox" checked data-toggle="switch" name="custom-switch-text" data-on-color="success" data-on-text="Enabled" data-off-text="Disabled" id="switch-10" />
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="clearfix"></div>
+                      <h3>Notify me of:</h3>
+                      <div class="col-xs-10">
+                        <div class="form-group">
+                          <label for="everyNotification">Every Notification</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-2">
+                        <!-- Default switch -->
+                        <div class="form-group">
+                          <input type="checkbox" checked data-toggle="switch" name="custom-switch-text" data-on-color="success" data-on-text="All" data-off-text="Not All" id="switch-10" />
+                        </div>
+                      </div>
+
+                    </div><!-- form for notifications  -->
+
                   </div><!-- / Notifications Tab -->
 
                 </div><!-- / Tab Content -->
