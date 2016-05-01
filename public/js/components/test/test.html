@@ -1,3 +1,4 @@
+
 <script>
 $(".billtag").tagsinput({});
 $(".budgettag").tagsinput({});
@@ -5,6 +6,26 @@ $(".goaltag").tagsinput({});
 $(".wishtag").tagsinput({});
 
 $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Choose a frequency" });
+var counter = {};
+$('input').on('itemAdded', function(event) {
+  var id = $(event.target.parentNode).attr("id");
+  if(!counter[id]){
+      counter[id] = 1;
+  }else{
+    counter[id] = counter[id] + 1;
+  }
+
+  $("#" + id + " .bootstrap-tagsinput input").attr("placeholder", "");
+});
+
+$('input').on('itemRemoved', function (event) {
+    var id = $(event.target.parentNode).attr("id");
+    if(counter[id] > 0) counter[id] = counter[id] - 1;
+
+    if(counter[id] <= 0){
+      $("#" + id + " .bootstrap-tagsinput input").attr("placeholder", "Tags");
+    }
+});
 
 var datepickerSelector = $('#start-bill');
 datepickerSelector.datepicker({
@@ -126,7 +147,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
             <div class="no-padding" contenteditable="true" placeholder="Enter text here...">
-              <div class="tagsinput-primary">
+              <div class="tagsinput-primary" id="billtag">
                 <input name="tagsinput" class="billtag" placeholder="Tags" />
               </div>
             </div>
@@ -208,7 +229,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <div class="tagsinput-primary">
+            <div class="tagsinput-primary" id="budgettag">
               <input name="tagsinput" class="budgettag" placeholder="Tags" />
             </div>
             <textarea class="form-control sav-form flat" placeholder="Description"/>
@@ -267,7 +288,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <div class="tagsinput-primary">
+            <div class="tagsinput-primary" id="goaltag">
               <input name="tagsinput" class="goaltag" placeholder="Tags" />
             </div>
             <textarea class="form-control sav-form flat" placeholder="Description"  />
@@ -341,7 +362,7 @@ datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelecto
           </div>
 
           <div class="savery-modal-info-r col-md-6 col-xs-12">
-            <div class="tagsinput-primary">
+            <div class="tagsinput-primary" id="wishtag">
               <input name="tagsinput" class="wishtag" placeholder="Tags" />
             </div>
             <textarea class="form-control sav-form flat" placeholder="Description" />
