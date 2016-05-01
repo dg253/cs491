@@ -173,7 +173,8 @@
     <script src="assets/libs/angular/angular.js"></script>
 
     <!--Clipboard-->
-    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
+    <script src="assets/libs/ngclipboard/dist/ngclipboard.min.js"></script>
 
     <!--UI-Router-->
     <script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
@@ -347,7 +348,11 @@
 
                   <div class="form-group">
                     <label for="linkShare">Link</label>
-                    <input type="text" class="form-control" value="sharethislink.saverly.com">
+                    <input id="linkurl" type="text" class="form-control" value="sharethislink.saverly.com">
+                    <!-- Trigger -->
+                    <button class="btn-xs" ngclipboard data-clipboard-target="#linkurl">
+                        <span class="glyphicon glyphicon-copy pull-right" aria-hidden="true">Copy to clipboard</span>
+                    </button>
                   </div>
                   <hr>
                   <form name="email">
