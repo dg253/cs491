@@ -9,6 +9,10 @@
 @import "components/leftNavbar";
 @import "components/rightNavbar";
 @import "components/wishlist";
+@import "components/modals";
+@import "components/topmenu";
+@import "components/prefmodal";
+
 
 //Common modules shared across app
 @import "components/common/sv-cal";
@@ -55,12 +59,17 @@ body {
 
 // Global steezy
 .container-fluid {
-  padding: 0;
+  //padding: 0;
   height: 90%;
 
   &.fullscreen {
     height: 100%;
   }
+}
+
+.navbar-embossed>.navbar-collapse {
+  border-radius: 0px;
+
 }
 
 .sv-ellipsis {
@@ -146,4 +155,8 @@ body {
       border: none !important;
     }
   }
+}
+
+.dropdown-right-option {
+  cursor: pointer;
 }
