@@ -46,34 +46,31 @@
               <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
               <div class="profile-area bottom-half">
                   <span class="user-fullname">George Watsky</span>
+                  <div class="side-nav area">
+                      <ul class="nav nav-list">
+                          <li class="nav-header">Menu</li>
+                          <li><a ui-sref="overview">Overview</a></li>
+                          <li><a ui-sref="expenses">Expenses</a></li>
+                          <li><a ui-sref="savings">Savings</a></li>
+                          <li><a ui-sref="transactions">Transactions</a></li>
+                          <li><a ui-sref="wishlist">Wishlist</a></li>
+                      </ul>
 
-              </div>
-          </div>
-          <div class="side-nav area">
-              <ul class="nav nav-list">
-                  <li class="nav-header">Menu</li>
-                  <li><a ui-sref="overview">Overview</a></li>
-                  <li><a ui-sref="expenses">Expenses</a></li>
-                  <li><a ui-sref="savings">Savings</a></li>
-                  <li><a ui-sref="transactions">Transactions</a></li>
-                  <li><a ui-sref="wishlist">Wishlist</a></li>
-              </ul>
+                      <div class="nav-search input-group">
+                          <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                          <span class="input-group-btn">
+                          <button type="submit" class="btn"><span class="fui-search"></span></button>
+                          </span>
+                      </div>
 
-              <div class="nav-search input-group">
-                  <input type="text" class="form-control" placeholder="Search" id="search-query-3">
-                  <span class="input-group-btn">
-                  <button type="submit" class="btn"><span class="fui-search"></span></button>
-                  </span>
+                      <div class="nav-button-group">
+                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                          <button class="btn btn-embossed create-budget">Create a Budget</button>
+                          <button class="btn btn-embossed add-bill">Add a Bill</button>
+                          <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                      </div>
+                  </div>
               </div>
-
-              <div class="nav-button-group">
-                  <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                  <button class="btn btn-embossed create-budget">Create a Budget</button>
-                  <button class="btn btn-embossed add-bill">Add a Bill</button>
-                  <button class="btn btn-inverse btn-embossed">Make a Wish</button>
-              </div>
-          </div>
-      </div>
     </nav><!-- / left mobile nav -->
 
     <!-- right mobile nav -->
@@ -780,6 +777,54 @@
         </div>
       </div>
     </div><!-- / account modal -->
+    </div>
+
+  <!-- support modal -->
+  <div id="supportModal" class="modal scale fade" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+                  <h4 class="modal-title"><span class="fui-mail"></span> Support</h3>
+              </div>
+
+              <div class="modal-body">
+                  <div class="container-fluid">
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Message subject">
+                          </div>
+                      </form>
+                      <hr>
+                      <div class="form-group">
+                          <select id="reasonDropdown" class="select select-inverse mbl">
+                              <option value="0">Reason</option>
+                              <option value="1"></option>
+                              <option value="2">My Friends</option>
+                              <option value="3">My Friends</option>
+                          </select>
+
+                          <select id="moodDropdown" class="select select-inverse mbl">
+                              <option value="0">Mood</option>
+                              <option value="1">Excited!</option>
+                              <option value="2">Confused</option>
+                              <option value="3">Frustrated</option>
+                              <option value="4">Angry</option>
+                              <option value="5">Worried</option>
+                              <option value="6">Panicked</option>
+                          </select>
+
+                          <textarea class="form-control" placeholder="Message"></textarea>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="modal-footer">
+              <a data-dismiss="modal" class="btn btn-default btn-wide">Send Message</a>
+          </div>
+      </div>
+  </div>
 
 
 
@@ -823,6 +868,15 @@
 
     <!--Main JS file-->
     <script src="main.js"></script>
+
+
+
+
+
+  <script>
+      $('#reasonDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
+      $('#moodDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
+  </script>
 
 </body>
 </html>
