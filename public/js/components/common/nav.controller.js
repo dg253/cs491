@@ -239,7 +239,7 @@ function changeCard() {
   setTimeout(function() {
     $("main").find(".list").css({
       'transform': 'scale(0.95)',
-      'transition': 'all ease-in-out .45s',
+      'transition': 'all ease-in-out .25s',
       'opacity': '0',
       '-webkit-filter': 'blur(10px)'
     });
@@ -247,7 +247,7 @@ function changeCard() {
   setTimeout(function() {
     $("main").find(".list").css({
       'transform': 'scale(1)',
-      'transition': 'all ease-in-out .45s',
+      'transition': 'all ease-in-out .25s',
       'opacity': '1',
       '-webkit-filter': 'blur(0)'
     });
@@ -276,13 +276,13 @@ $(".wallet").on("click", ".card", function() {
   changeCard();
   setTimeout(function() {
     close();
-  }, 600);
+  }, 300);
   $(this).css({
     'background': '#EF3E5C',
-    'transition': 'all ease .45s'
+    'transition': 'all ease .25s'
   }).siblings().css({
     'background': 'rgba(0, 0, 0, 0.2)',
-    'transition': 'all ease .45s'
+    'transition': 'all ease .25s'
   })
 });
 
@@ -331,7 +331,7 @@ $("input[type='submit']").click(function() {
     $(".wallet").find(".holder").css({
       'opacity': '0',
       'padding-top': '100px',
-      'transition': 'all ease .45s',
+      'transition': 'all ease .25s',
     });
   }, 0);
   setTimeout(function() {
@@ -343,7 +343,7 @@ $("input[type='submit']").click(function() {
     $(".wallet").find(".holder").css({
       'opacity': '1',
       'padding-top': '0',
-      'transition': 'all ease .75s',
+      'transition': 'all ease .25s',
     });
   }, 1000);
   setTimeout(function() {
