@@ -32,11 +32,15 @@
   .flex-body{
     margin: -5px auto;
     color: rgba(255,255,255,0.8);
-    .flex-count{
+    .flex-count {
       font-size:40px;
-      padding-right:5px;
+      padding-right: 10px;
       color: rgba(255,255,255,1);
     }
+  }
+
+  .flex-percent {
+    font-weight: bold;
   }
 
   .flex-footer{
@@ -67,6 +71,22 @@
   .only-right;
 }
 //Pair Two End
+
+.flex-wrapper.allocate {
+  margin-top: 15px;
+}
+
+.allocated-flex, .unallocated-flex, .savings-flex {
+  margin-top: 5px;
+  width: 33%;
+  margin: 0;
+  font-size: 12px;
+
+  @media (max-width: 745px) {
+    width: 100%;
+    display: block;
+  }
+}
 
 //Pair Three Start
 .allocated-flex{

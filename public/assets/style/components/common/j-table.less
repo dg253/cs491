@@ -1,6 +1,12 @@
 // Recent Transaction Table Start
 
-.recent-transactions{
+.recent-transactions {
+
+  &.card {
+    -webkit-box-shadow: 0px 0px 8px gray;
+    -moz-box-shadow: 0px 0px 8px gray;
+    box-shadow: 0px 0px 8px gray;
+  }
   @tableRed: #af4034;
   @tableGreen: #2ecc71;
   @tableBlue: #1f96ef;
@@ -24,7 +30,7 @@
 
   .recent-transactions-body{
     .recent-transactions-row{
-        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         display:flex;
         align-items: center;
         padding: 10px 0;
