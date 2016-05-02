@@ -7,10 +7,11 @@
               <h4 style="font-size: 24px;" class="balances-header col-xs-6 col-sm-3">Balances</h4>
               <div class="btn-group col-xs-6 visible-xs balance-heading">
                 <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
-                  Past 6 Months <span class="caret"></span>
+                  {{budgetDropText}} <span class="caret"></span>
                 </button>
                 <ul style="font-size: 11px" class="dropdown-menu" role="menu">
                   <li><a href="#" ng-click="balanceTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(6)">Past 6 Months</a></li>
                   <li><a href="#" ng-click="balanceTimeline(12)">Past Year</a></li>
                   <li><a href="#" ng-click="balanceTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
@@ -24,10 +25,11 @@
               </div>
               <div class="btn-group col-xs-3 visible-sm visible-md visible-lg pad">
                 <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
-                  Past 6 Months <span class="caret"></span>
+                  {{budgetDropText}} <span class="caret"></span>
                 </button>
                 <ul style="font-size: 11px" class="dropdown-menu" role="menu">
                   <li><a href="#" ng-click="balanceTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="balanceTimeline(6)">Past 6 Months</a></li>
                   <li><a href="#" ng-click="balanceTimeline(12)">Past Year</a></li>
                   <li><a href="#" ng-click="balanceTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
@@ -99,10 +101,11 @@
               <h4 style="font-size: 24px;" class="balances-header col-xs-6 col-sm-3">Net Worth</h4>
               <div class="btn-group col-xs-6 visible-xs balance-heading">
                 <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
-                  Past 6 Months <span class="caret"></span>
+                  {{networthDropText}} <span class="caret"></span>
                 </button>
                 <ul style="font-size: 11px" class="dropdown-menu" role="menu">
                   <li><a href="#" ng-click="networthTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="networthTimeline(6)">Past 6 Months</a></li>
                   <li><a href="#" ng-click="networthTimeline(12)">Past Year</a></li>
                   <li><a href="#" ng-click="networthTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
@@ -116,10 +119,11 @@
               </div>
               <div class="btn-group col-xs-3 visible-sm visible-md visible-lg pad">
                 <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
-                  Past 6 Months <span class="caret"></span>
+                  {{networthDropText}} <span class="caret"></span>
                 </button>
                 <ul style="font-size: 11px" class="dropdown-menu" role="menu">
                   <li><a href="#" ng-click="networthTimeline(3)">Past 3 Months</a></li>
+                  <li><a href="#" ng-click="networthTimeline(6)">Past 6 Months</a></li>
                   <li><a href="#" ng-click="networthTimeline(12)">Past Year</a></li>
                   <li><a href="#" ng-click="networthTimeline(24)">Past 2 Years</a></li>
                   <li class="divider"></li>
@@ -138,7 +142,7 @@
           <div class="right col-xs-12" style="padding-right: 20px; padding-left: 0px;">
             <div class="col-md-4 col-xs-12 networthItem">
               <span class="balance-heading-item col-xs-6 col-sm-6 col-md-12 col-lg-6 " style="padding-left: 10px; padding-right: 0px"><span class="icon fui-checkbox-unchecked dark-blue"></span><span>Net Worth</span></span>
-              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px;">
+              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px; padding-right: 7px;">
                 <span>1.32k</span> &nbsp;
                 <b class="negative" style="color: #FE7A09;"><span class="negative">18.7%</span></b>
                 <span class="glyphicon glyphicon-arrow-down" style="color: #FE7A09;"></span>
@@ -150,10 +154,13 @@
               </span>
             </div>
             <div class="col-md-4 col-xs-12 networthItem">
-              <span class="balance-heading-item col-xs-6 col-sm-6 col-md-12 col-lg-6 " style="padding-left: 10px; padding-right: 0px">
+              <span class="balance-heading-item col-lg-6 visible-lg" style="border-left-style: ridge; padding-left: 10px; padding-right: 0px">
                 <span class="icon fui-checkbox-unchecked light-blue"></span><span>Assets</span>
               </span>
-              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px;">
+            <span class="balance-heading-item col-xs-6 col-sm-6 col-md-12 col-lg-6 visible-xs visible-sm visible-md" style=" padding-left: 10px; padding-right: 0px">
+                <span class="icon fui-checkbox-unchecked light-blue"></span><span>Assets</span>
+              </span>
+              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px; padding-right: 7px;">
                 <span>1.32k</span> &nbsp;&nbsp;
                 <b class="negative" style="color: #3FC529;"><span class="negative">5.3%</span></b>
                 <span class="glyphicon glyphicon-arrow-up" style="color: #3FC529;"></span>
@@ -165,10 +172,13 @@
               </span>
             </div>
             <div class="col-md-4 col-xs-12 networthItem">
-              <span class="balance-heading-item col-xs-6 col-sm-6 col-md-12 col-lg-6 " style="padding-left: 10px; padding-right: 0px">
+              <span class="balance-heading-item col-lg-6 visible-lg" style="border-left-style: ridge; padding-left: 10px; padding-right: 0px">
                 <span class="icon fui-checkbox-unchecked red"></span><span>Liablities</span>
               </span>
-              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px;">
+              <span class="balance-heading-item col-xs-6 col-sm-6 col-md-12 col-lg-6 visible-xs visible-sm visible-md" style=" padding-left: 10px; padding-right: 0px">
+                <span class="icon fui-checkbox-unchecked red"></span><span>Liablities</span>
+              </span>
+              <span class="pull-right visible-xs visible-sm visible-lg" style="padding-top: 2px; padding-right: 7px;">
                 <span>1.32k</span> &nbsp;&nbsp;
                 <b class="negative" style="color: #3FC529;"><span class="negative">5.3%</span></b>
                 <span class="glyphicon glyphicon-arrow-up" style="color: #3FC529;"></span>
