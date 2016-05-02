@@ -283,7 +283,7 @@ $(".wallet").on("click", ".card", function() {
     close();
   }, 300);
   $(this).css({
-    'background': '#EF3E5C',
+    'background': '#2ECC71',
     'transition': 'all ease .25s'
   }).siblings().css({
     'background': 'rgba(0, 0, 0, 0.2)',
