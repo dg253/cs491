@@ -52,11 +52,11 @@
               <div class="btn-group hidden-xs hidden-sm">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
-                  <li><a data-toggle="modal" data-target="#accountModal"><span class="fui-user"> </span> Accounts</a></li>
-                  <li><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
-                  <li><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
-                  <li><a ui-sref="login"><span class="fui-exit"> </span> Logout</a></li>
+                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
+                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#accountModal"><span class="fui-user"> </span> Accounts</a></li>
+                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
+                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
+                  <li class="dropdown-right-option" ng-click="logout()"><a><span class="fui-exit"> </span> Logout</a></li>
                 </ul>
               </div>
             </ul>
@@ -759,7 +759,7 @@
           </div>
 
           <div class="modal-footer">
-              <a data-dismiss="modal" class="btn btn-default btn-wide">Done</a>
+              <a data-dismiss="modal" class="btn btn-default btn-wide">Send Message</a>
           </div>
       </div>
   </div>

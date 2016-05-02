@@ -5,11 +5,11 @@
         .controller('walletController', walletController)
         .controller('addCardController', addCardController);
 
-    navCtrl.$inject = ['$scope', '$rootScope', '$location'];
+    navCtrl.$inject = ['$scope', '$rootScope', '$location', '$state'];
     walletController.$inject = ['$scope', '$rootScope', '$timeout'];
     addCardController.$inject = ['$scope', '$rootScope', '$timeout'];
 
-    function navCtrl ($scope, $rootScope, $location) {
+    function navCtrl ($scope, $rootScope, $location, $state) {
         $rootScope.loggedIn = localStorage.getItem('loggedIn');
         console.log($rootScope.loggedIn);
 
@@ -82,6 +82,11 @@
                 localStorage.removeItem('reloaded');
             }
         });
+
+        $scope.logout = function () {
+            localStorage.removeItem('loggedIn');
+            location.reload();
+        }
 
         $scope.displayNewFeed = function(newFeed){
           if(newFeed.length <= 1){
