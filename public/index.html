@@ -715,6 +715,54 @@
         </div>
       </div>
     </div><!-- / account modal -->
+    </div>
+
+  <!-- support modal -->
+  <div id="supportModal" class="modal scale fade" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+                  <h4 class="modal-title"><span class="fui-mail"></span> Support</h3>
+              </div>
+
+              <div class="modal-body">
+                  <div class="container-fluid">
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Message subject">
+                          </div>
+                      </form>
+                      <hr>
+                      <div class="form-group">
+                          <select id="reasonDropdown" class="select select-inverse mbl">
+                              <option value="0">Reason</option>
+                              <option value="1"></option>
+                              <option value="2">My Friends</option>
+                              <option value="3">My Friends</option>
+                          </select>
+
+                          <select id="moodDropdown" class="select select-inverse mbl">
+                              <option value="0">Mood</option>
+                              <option value="1">Excited!</option>
+                              <option value="2">Confused</option>
+                              <option value="3">Frustrated</option>
+                              <option value="4">Angry</option>
+                              <option value="5">Worried</option>
+                              <option value="6">Panicked</option>
+                          </select>
+
+                          <textarea class="form-control" placeholder="Message"></textarea>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="modal-footer">
+              <a data-dismiss="modal" class="btn btn-default btn-wide">Done</a>
+          </div>
+      </div>
+  </div>
 
     <!--Bootstrap-->
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -755,6 +803,15 @@
 
     <!--Main JS file-->
     <script src="main.js"></script>
+
+
+
+
+
+  <script>
+      $('#reasonDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
+      $('#moodDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
+  </script>
 
 </body>
 </html>
