@@ -5,33 +5,32 @@
   .spending-chart {
 
     .spending-chart-header {
-      background-color: @card-header;
-      padding: 12px;
+      margin-left: 25px;
+      padding: 10px 0;
       border-bottom: solid 1px white;
       font-weight: bold;
+      font-size: 16px;
+      text-align: left;
 
       .time-dropdown {
-        padding: 6px 12px;
+        padding-bottom: 5px;
+        margin-top: -2px;
+        margin-right: 10px;
+        padding: 3px 10px;
       }
     }
 
     .spending-chart-body {
       padding-top: 15px;
-
-      .spending-dist.chart {
-
-      }
+      padding-bottom: 14px;
 
       .spending-legend {
 
         .row {
-          margin: 0 15px;
-          margin-bottom: 15px;
 
           .spend-percent {
             display: block;
             font-size: 14px;
-            margin-left: 17px;
           }
 
           .spend-name {
@@ -73,4 +72,71 @@
       }
     }
   }
-  }
+}
+
+
+.row-flex, .row-flex > div[class*='col-'] {
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+flex:1 1 auto;
+}
+
+.row-flex-wrap {
+-webkit-flex-flow: row wrap;
+align-content: flex-start;
+flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+width:100%;
+}
+
+
+.flex-col {
+display: flex;
+display: -webkit-flex;
+flex: 1 100%;
+flex-flow: column nowrap;
+}
+
+.flex-grow {
+display: flex;
+-webkit-flex: 2;
+flex: 2;
+}
+
+.chart-container canvas{
+  width: 100% !important;
+}
+
+.funding-header {
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.fundeditems {
+  padding-top: 10px
+
+
+}
+
+.fundeditems hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.fundedDivider {
+  margin-bottom: 13px;
+}
+
+.row .custom {
+  margin-right: 0px 0;
+  margin-left: 0px 0;
+}
