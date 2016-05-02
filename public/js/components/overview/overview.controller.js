@@ -7,14 +7,114 @@
 
     function overview ($scope) {
 
+      $scope.budgetDropText = "Past 6 Months";
+      $scope.networthDropText = "Past 6 Months";
+
 
       $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
       $scope.series = ['Series A', 'Series B'];
       $scope.data = [
         [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90],
-        [59, 0, 13, 89, 11, 74, 4]
+        [28, 48, 40, 42, 86, 27, 90],
+        [10, 0, 9, 19, 11, 74, 60]
       ];
+
+      $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July"];
+      $scope.series = ['Series A', 'Series B'];
+      $scope.networthData = [
+        [90, 75, 80, 81, 74, 69, 67],
+        [55, 60, 65, 59, 80, 81, 56],
+        [10, 0, 35, 19, 11, 74, 60]
+      ];
+
+      $scope.balanceTimeline = function(timeframe){
+        if(timeframe == 3){
+          $scope.budgetDropText = "Past 3 Months";
+          $scope.labels = ["May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [ 56, 55, 40],
+            [86, 27, 90],
+            [11, 74, 60]
+          ];
+        }
+        else if (timeframe == 6){
+          $scope.budgetDropText = "Past 6 Months";
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 12){
+          $scope.budgetDropText = "Past Year";
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40, 28, 48, 40, 42, 86, 27, 90],
+            [28, 48, 40, 42, 86, 27, 90, 10, 0, 9, 19, 11, 74, 60],
+            [10, 0, 9, 19, 11, 74, 60, 65, 59, 80, 81, 56, 55, 40]
+          ];
+        }
+        else if (timeframe == 24){
+          $scope.budgetDropText = "Past 2 Years";
+          $scope.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.data = [
+            [65, 59, 80, 81, 80, 70, 80, 65, 59, 80, 81, 70, 60, 40, 50, 59, 80, 81, 56, 55, 60, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 30, 27, 30, 28, 48, 40, 42, 86, 60, 90, 28, 48, 40, 42, 0, 27, 60, 28, 48, 40, 42, 20, 27, 90],
+            [10, 0, 9, 19, 11, 20, 20, 10, 0, 9, 19, 11, 39, 60, 10, 0, 9, 19, 11, 0, 60, 10, 0, 9, 19, 11, 0, 60]
+          ];
+        }
+        else{
+
+        }
+      }
+
+      $scope.networthTimeline = function(timeframe){
+        if(timeframe == 3){
+          $scope.networthLabels = ["May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [ 56, 55, 40],
+            [86, 27, 90],
+            [11, 74, 60]
+          ];
+        }
+        else if (timeframe == 6){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [90, 75, 80, 81, 74, 69, 67],
+            [55, 60, 65, 59, 80, 81, 56],
+            [10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 12){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [90, 75, 80, 81, 74, 69, 67, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else if (timeframe == 24){
+          $scope.networthLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          $scope.series = ['Series A', 'Series B'];
+          $scope.networthData = [
+            [80, 81, 70, 60, 40, 50, 59, 80, 81, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90, 28, 48, 40, 42, 86, 27, 90],
+            [10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60, 10, 0, 9, 19, 11, 74, 60]
+          ];
+        }
+        else{
+
+        }
+      }
+
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
       };
@@ -46,13 +146,13 @@
                     },
                     {
                         label: "Monthly Expenses",
-                        fillColor: "#32297D",
-                        strokeColor: "#32297D",
-                        pointColor: "#32297D",
+                        fillColor: "#ffa52f",
+                        strokeColor: "#ffa52f",
+                        pointColor: "#ffa52f",
                         pointStrokeColor: "#fff",
                         pointHighlightFill: "#fff",
                         pointHighlightStroke: "rgba(151,187,205,1)",
-                        data: [600, 750, 910, 800, 600, 600, 470, 890, 590, 695, 694, 800]
+                        data: [200, 750, 910, 800, 600, 600, 470, 890, 590, 695, 694, 800]
                     }
                 ]
             },

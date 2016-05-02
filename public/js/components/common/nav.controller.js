@@ -31,7 +31,7 @@
           },
           {
             date: "Apr 9th",
-            actionType: "Account Expense",
+            actionType: "Expense",
             category: "Restaurants",
             description: "Mc Donalds",
             actionAmt: "$13",
@@ -39,7 +39,7 @@
           },
           {
             date: "Mar 30th",
-            actionType: "Account Expense",
+            actionType: "Expense",
             category: "Bar",
             description: "Gyps Tevern",
             actionAmt: "$53",
@@ -55,7 +55,39 @@
           },
           {
             date: "Mar 12th",
-            actionType: "Account Expense",
+            actionType: "Expense",
+            category: "Shops",
+            description: "Chindo",
+            actionAmt: "$43.24",
+            txCode: "neg"
+          },
+          {
+            date: "Apr 9th",
+            actionType: "Expense",
+            category: "Restaurants",
+            description: "Mc Donalds",
+            actionAmt: "$13",
+            txCode: "neg"
+          },
+          {
+            date: "Mar 30th",
+            actionType: "Expense",
+            category: "Bar",
+            description: "Gyps Tevern",
+            actionAmt: "$53",
+            txCode: "neg"
+          },
+          {
+            date: "Mar 29th",
+            actionType: "Account Credit",
+            category: "Deposit",
+            description: "",
+            actionAmt: "$459.97",
+            txCode: "pos"
+          },
+          {
+            date: "Mar 12th",
+            actionType: "Expense",
             category: "Shops",
             description: "Chindo",
             actionAmt: "$43.24",
@@ -80,18 +112,14 @@
         });
 
         $scope.displayNewFeed = function(newFeed){
-          if(newFeed.length <= 1){
-            $scope.activityFeed = $scope.recentActivities;
-          }else{
             $scope.activityFeed = newFeed;
-          }
         }
 
         $scope.displayNewFeed($scope.recentActivities)
 
         $scope.isFilteredActivities = function(){
           var feed = $scope.activityFeed;
-          if(feed[feed.length - 1] == "filter"){
+          if(feed[feed.length - 1].filter){
             return true;
           }else{
             return false;

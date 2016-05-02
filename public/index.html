@@ -92,33 +92,40 @@
             <!--End Middle Section-->
 
             <!--Right Section-->
-            <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
+            <div class="right-nav no-padding col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
                 <div class="activity-feed-container">
+                  <div class="activity-header nav-header">
                     <span ng-hide="isFilteredActivities()">Recent Activity</span>
                     <span ng-show="isFilteredActivities()">Activity on {{activityFeed[0].date}}
-                      <span class="glyphicon glyphicon-remove" style="cursor: pointer;" ng-click="displayNewFeed([])"></span>
+                      <span class="glyphicon glyphicon-remove pull-right closer" ng-click="displayNewFeed(recentActivities)"></span>
                     </span>
-                    <ol class="activity-feed">
-                        <li class="feed-item" ng-hide="activity[0] == 'filter'" ng-repeat="activity in activityFeed">
-                          <span ng-if="activity[0] != 'filter'">
-                            <time class="date" datetime="9-25">{{activity.date}}</time>
-                            <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
-                            <span class="pull-right"
-                            ng-class="{
-                              'label label-success': activity.txCode == 'pos',
-                              'label label-danger': activity.txCode == 'neg',
-                              'label label-info': activity.txCode == 'mv'
-                            }">{{activity.actionAmt}}</span>
-                            <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
-                          </span>
-                        </li>
-                    </ol>
+                  </div>
+                  <ol class="activity-feed">
+                      <li class="feed-item" ng-hide="activity.filter" ng-repeat="activity in activityFeed">
+                        <span ng-if="!activity.filter">
+                          <time class="date" datetime="9-25">{{activity.date}}</time>
+                          <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
+                          <span class="pull-right"
+                          ng-class="{
+                            'label label-success': activity.txCode == 'pos',
+                            'label label-danger': activity.txCode == 'neg',
+                            'label label-info': activity.txCode == 'mv'
+                          }">{{activity.actionAmt}}</span>
+                          <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
+                        </span>
+                      </li>
+
+                      <span ng-show="activityFeed[0].filter">No activities on this date.</span>
+                  </ol>
                 </div>
-              <calendar class="col-xs-12 no-padding" callback="displayNewFeed" selected="day"></calendar>
+              <div class="cal">
+                <calendar class="cal-inner col-xs-12 no-padding" callback="displayNewFeed" selected="day"></calendar>
+              </div>
             </div>
             <!--End Right Section-->
         </div>
     </div>
+
 
     <!--Bootstrap-->
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
