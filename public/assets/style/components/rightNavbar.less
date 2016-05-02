@@ -65,11 +65,10 @@
 }
 
 /* right desktop & mobile menu */
-
 .st-pusher {
 	position: relative;
 	left: 0;
-	z-index: 99;
+	z-index: 99999;
 	height: 100%;
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
@@ -100,13 +99,19 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 100;
+	z-index: 99999;
 	visibility: hidden;
 	width: 300px;
 	height: 100%;
 	background: #48a770;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+
+  &.left {
+    left : 0;
+    background: whitesmoke;
+    z-index: 13794;
+  }
 }
 
 .st-menu::after {
@@ -171,54 +176,10 @@
 	color: #fff;
 }
 
-/* Effect 3: Push*/
-.st-effect-right.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(-300px, 0, 0);
-	transform: translate3d(-300px, 0, 0);
-}
-
-.st-effect-right.st-menu {
-	-webkit-transform: translate3d(100%, 0, 0);
-	transform: translate3d(100%, 0, 0);
-}
-
-.st-effect-right.st-menu-open .st-effect-right.st-menu {
-	visibility: visible;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-}
-
-.st-effect-right.st-menu::after {
-	display: none;
-}
-
-
-/* Left nav: Left Push*/
-.st-effect-left.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(300px, 0, 0);
-	transform: translate3d(300px, 0, 0);
-}
-
-.st-effect-left.st-menu {
-	-webkit-transform: translate3d(-100%, 0, 0);
-	transform: translate3d(-100%, 0, 0);
-}
-
-.st-effect-left.st-menu-open .st-effect-left.st-menu {
-	visibility: visible;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-}
-
-.st-effect-left.st-menu::after {
-	display: none;
-}
-
-
 /* Effect 2: Reveal */
 .st-effect-2.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(300px, 0, 0);
-	transform: translate3d(300px, 0, 0);
+	-webkit-transform: translate3d(-300px, 0, 0);
+	transform: translate3d(-300px, 0, 0);
 }
 
 .st-effect-2.st-menu {
@@ -234,6 +195,27 @@
 .st-effect-2.st-menu::after {
 	display: none;
 }
+
+/* Effect 2: Left Reveal */
+.st-effect-2-left.st-menu-open .st-pusher {
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
+}
+
+.st-effect-2-left.st-menu {
+	z-index: 1;
+}
+
+.st-effect-2-left.st-menu-open .st-effect-2-left.st-menu {
+	visibility: visible;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.st-effect-2-left.st-menu::after {
+	display: none;
+}
+
 
 
 @media (max-width: 990px) {

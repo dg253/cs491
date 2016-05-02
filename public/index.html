@@ -36,87 +36,130 @@
 
   <div id="st-container" class="container-fluid" ng-class="{ fullscreen: !$root.loggedIn }">
 
-          <!-- st-pusher -->
-          <div class="st-pusher">
+    <!-- left mobile nav -->
+    <nav class="st-menu left st-effect-2-left" id="leftmobilemenu">
+      <div class="left-nav col-md-2 side-navs" ng-if="$root.loggedIn">
+          <div class="profile-area">
+              <div class="profile-area top-half">
+                  <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
+              </div>
+              <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
+              <div class="profile-area bottom-half">
+                  <span class="user-fullname">George Watsky</span>
 
-            <!-- right mobile nav -->
-            <nav class="st-menu st-effect-right" id="rightmobilemenu">
-              <h2 class="icon icon-lab">Saverly</h2>
-              <ul>
-                <li><a data-toggle="modal" data-target="#prefModal" class="fui-gear"> Preferences</a></li>
-                <li><a data-toggle="modal" data-target="#accountsModal" class="fui-user"> Accounts</a></li>
-                <li><a data-toggle="modal" data-target="#supportModal" class="fui-eye"> Support</a></li>
-                <li><a data-toggle="modal" data-target="#shareModal" class="fui-mail"> Share</a></li>
-                <li><a href="logout" class="fui-exit"> Logout</a></li>
+              </div>
+          </div>
+          <div class="side-nav area">
+              <ul class="nav nav-list">
+                  <li class="nav-header">Menu</li>
+                  <li><a ui-sref="overview">Overview</a></li>
+                  <li><a ui-sref="expenses">Expenses</a></li>
+                  <li><a ui-sref="savings">Savings</a></li>
+                  <li><a ui-sref="transactions">Transactions</a></li>
+                  <li><a ui-sref="wishlist">Wishlist</a></li>
               </ul>
-            </nav><!-- / right mobile nav -->
 
+              <div class="nav-search input-group">
+                  <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                  <span class="input-group-btn">
+                  <button type="submit" class="btn"><span class="fui-search"></span></button>
+                  </span>
+              </div>
 
+              <div class="nav-button-group">
+                  <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                  <button class="btn btn-embossed create-budget">Create a Budget</button>
+                  <button class="btn btn-embossed add-bill">Add a Bill</button>
+                  <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+              </div>
+          </div>
+      </div>
+    </nav><!-- / left mobile nav -->
 
-                <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
-                  <div id="st-trigger-effects" class="navbar-header">
-                    <button data-effect="st-effect-right" class="navbar-toggle" >
-                      <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
-                    </button>
-                    <a href="#"class="navbar-brand">
-                        <img class="logo" src="assets/img/icon1.svg" alt=""/>
-                        Saverly
-                    </a>
-                  </div>
+    <!-- right mobile nav -->
+    <nav class="st-menu st-effect-2" id="rightmobilemenu">
+      <h2 class="icon icon-lab">Saverly</h2>
+      <ul>
+        <li><a data-toggle="modal" data-target="#prefModal" class="fui-gear"> Preferences</a></li>
+        <li><a data-toggle="modal" data-target="#accountModal" class="fui-user"> Accounts</a></li>
+        <li><a data-toggle="modal" data-target="#supportModal" class="fui-eye"> Support</a></li>
+        <li><a data-toggle="modal" data-target="#shareModal" class="fui-mail"> Share</a></li>
+        <li><a href="logout" class="fui-exit"> Logout</a></li>
+      </ul>
+    </nav><!-- / right mobile nav -->
 
-                <div id="navbar-collapse-08" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                    <div class="btn-group hidden-xs hidden-sm">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
-                        <li><a data-toggle="modal" data-target="#accountsModal"><span class="fui-user"> </span> Accounts</a></li>
-                        <li><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
-                        <li><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
-                        <li><a ui-sref="login"><span class="fui-exit"> </span> Logout</a></li>
-                      </ul>
-                    </div>
-                  </ul>
-                </div>
+    <!-- st-pusher -->
+    <div class="st-pusher">
+
+      <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
+        <div id="st-trigger-effects" class="navbar-header">
+          <button data-effect="st-effect-2" class="navbar-toggle" >
+            <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true">right</span>
+          </button>
+          <button data-effect="st-effect-2-left" class="navbar-toggle" >
+            <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true">left</span>
+          </button>
+          <a href="#"class="navbar-brand">
+              <img class="logo" src="assets/img/icon1.svg" alt=""/>
+              Saverly
+          </a>
+        </div>
+
+        <div id="navbar-collapse-08" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <div class="btn-group hidden-xs hidden-sm">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
+              <ul class="dropdown-menu">
+                <li><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
+                <li><a data-toggle="modal" data-target="#accountModal"><span class="fui-user"> </span> Accounts</a></li>
+                <li><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
+                <li><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
+                <li><a ui-sref="login"><span class="fui-exit"> </span> Logout</a></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </nav>
 
             <!-- web app container -->
             <div class="row">
               <!--Left Section-->
-              <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
-                  <div class="profile-area">
-                      <div class="profile-area top-half">
-                          <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
-                      </div>
-                      <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
-                      <div class="profile-area bottom-half">
-                          <span class="user-fullname">George Watsky</span>
-                      </div>
-                  </div>
-                  <div class="side-nav area">
-                      <ul class="nav nav-list">
-                          <li class="nav-header">Menu</li>
-                          <li><a ui-sref="overview">Overview</a></li>
-                          <li><a ui-sref="expenses">Expenses</a></li>
-                          <li><a ui-sref="savings">Savings</a></li>
-                          <li><a ui-sref="transactions">Transactions</a></li>
-                          <li><a ui-sref="wishlist">Wishlist</a></li>
-                      </ul>
+                <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
+                    <div class="profile-area">
+                        <div class="profile-area top-half">
+                            <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
+                        </div>
+                        <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
+                        <div class="profile-area bottom-half">
+                            <span class="user-fullname">George Watsky</span>
 
-                      <div class="nav-search input-group">
-                          <input type="text" class="form-control" placeholder="Search" id="search-query-3">
-                          <span class="input-group-btn">
-                          <button type="submit" class="btn"><span class="fui-search"></span></button>
-                          </span>
-                      </div>
+                        </div>
+                    </div>
+                    <div class="side-nav area">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Menu</li>
+                            <li><a ui-sref="overview">Overview</a></li>
+                            <li><a ui-sref="expenses">Expenses</a></li>
+                            <li><a ui-sref="savings">Savings</a></li>
+                            <li><a ui-sref="transactions">Transactions</a></li>
+                            <li><a ui-sref="wishlist">Wishlist</a></li>
+                        </ul>
 
-                      <div class="nav-button-group">
-                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                          <button class="btn btn-embossed create-budget">Create a Budget</button>
-                          <button class="btn btn-embossed add-bill">Add a Bill</button>
-                          <button class="btn btn-inverse btn-embossed">Make a Wish</button>
-                      </div>
-                  </div>
-              </div>
+                        <div class="nav-search input-group">
+                            <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                            <span class="input-group-btn">
+                            <button type="submit" class="btn"><span class="fui-search"></span></button>
+                            </span>
+                        </div>
+
+                        <div class="nav-button-group">
+                            <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                            <button class="btn btn-embossed create-budget">Create a Budget</button>
+                            <button class="btn btn-embossed add-bill">Add a Bill</button>
+                            <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                        </div>
+                    </div>
+                </div>
               <!--End Left Section-->
 
 
