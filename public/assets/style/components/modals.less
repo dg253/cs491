@@ -48,7 +48,7 @@
 }
 
 .modal-open .modal {
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 
@@ -80,7 +80,7 @@
     box-shadow: 1px 5px 15px #CCC;
   }
   .app_inner aside {
-    background: #292C3A;
+    background: #fff;
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 220px;
         -ms-flex: 1 0 220px;
@@ -187,12 +187,14 @@
   }
   .app_inner .add_a_card > i {
     font-size: 30px;
+    color: black;
   }
   .app_inner .add_a_card > p {
     font-size: 17px;
+    color: black;
   }
   .app_inner main {
-    background: #252734;
+    background: #fff;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 480px;
         -ms-flex: 1 1 480px;
@@ -274,11 +276,12 @@
   }
   .app_inner main .list .transactions table thead th {
     padding: 0.5em 0;
-    color: #EB526B;
+    color: @green;
   }
   .app_inner main .list .transactions table td {
     border-top: 1px solid rgba(255, 255, 255, 0.015);
     padding: 0.75em 0;
+    color: black;
   }
   .app_inner main .list .transactions h1 {
     background: #F03F5D;

@@ -55,7 +55,7 @@
                       </ul>
 
                       <div class="nav-search input-group">
-                          <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                          <input type="text" class="form-control" placeholder="Search" id="search-query-9">
                           <span class="input-group-btn">
                           <button type="submit" class="btn"><span class="fui-search"></span></button>
                           </span>
@@ -77,29 +77,33 @@
     <nav class="st-menu st-effect-2" id="rightmobilemenu">
       <h2 class="icon icon-lab">Saverly</h2>
       <ul>
-        <li><a data-toggle="modal" data-target="#prefModal" class="fui-gear"> Preferences</a></li>
-        <li><a data-toggle="modal" data-target="#accountModal" class="fui-user"> Accounts</a></li>
-        <li><a data-toggle="modal" data-target="#supportModal" class="fui-eye"> Support</a></li>
-        <li><a data-toggle="modal" data-target="#shareModal" class="fui-mail"> Share</a></li>
-        <li><a ng-click="logout()" class="fui-exit"> Logout</a></li>
+        <li><a data-toggle="modal" data-target="#prefModal" class="fui-gear"> <span>Preferences</span></a></li>
+        <li><a data-toggle="modal" data-target="#accountModal" class="fui-user"> <span>Accounts</span></a></li>
+        <li><a data-toggle="modal" data-target="#supportModal" class="fui-eye"> <span>Support</span></a></li>
+        <li><a data-toggle="modal" data-target="#shareModal" class="fui-mail"> <span>Share</span></a></li>
+        <li><a ng-click="logout()" class="fui-exit"> <span>Logout</span></a></li>
       </ul>
     </nav><!-- / right mobile nav -->
 
     <!-- st-pusher -->
     <div class="st-pusher">
 
-      <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
+      <nav role="navigation" class="navbar top navbar-inverse navbar-embossed" ng-show="$root.loggedIn">
         <div id="st-trigger-effects" class="navbar-header">
-          <button data-effect="st-effect-2" class="navbar-toggle" >
+          <button data-effect="st-effect-2" class="navbar-toggle">
             <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
           </button>
-          <button data-effect="st-effect-2-left" class="navbar-toggle navbar-toggle-left" >
+         <!-- <button data-effect="st-effect-2-left" class="navbar-toggle navbar-toggle-left" >
             <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
-          </button>
-          <a href="#" data-effect="st-effect-2-left" class="navbar-brand">
+          </button>-->
+          <a class="navbar-brand hidden-sm hidden-xs">
             <img class="logo" src="assets/img/icon1.svg" alt=""/>
               Saverly
           </a>
+            <button data-effect="st-effect-2-left" class="navbar-brand main-logo hidden-md hidden-lg">
+                <img class="logo" src="assets/img/icon1.svg" alt=""/>
+                Saverly
+            </button>
         </div>
 
         <div id="navbar-collapse-08" class="collapse navbar-collapse">
@@ -724,7 +728,7 @@
                                   {{transaction.merchant}}
                                 </td>
                                 <td>
-                                  {{transaction.price | currency:"£"}}
+                                  {{transaction.price | currency:"$"}}
                                 </td>
                               </tr>
                             </table>
