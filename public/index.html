@@ -62,10 +62,10 @@
                       </div>
 
                       <div class="nav-button-group">
-                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                          <button class="btn btn-embossed create-budget">Create a Budget</button>
-                          <button class="btn btn-embossed add-bill">Add a Bill</button>
-                          <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-toggle="modal" data-target="#goal-modal">Create a Goal</button>
+                          <button class="btn btn-embossed create-budget" data-toggle="modal" data-target="#budget-modal">Create a Budget</button>
+                          <button class="btn btn-embossed add-bill" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
+                          <button class="btn btn-inverse btn-embossed" data-toggle="modal" data-target="#wish-modal">Make a Wish</button>
                       </div>
                   </div>
               </div>
@@ -153,10 +153,10 @@
                         </div>
 
                         <div class="nav-button-group">
-                            <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                            <button class="btn btn-embossed create-budget">Create a Budget</button>
-                            <button class="btn btn-embossed add-bill">Add a Bill</button>
-                            <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                            <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goal-modal">Create a Goal</button>
+                            <button class="btn btn-embossed create-budget" data-toggle="modal" data-target="#budget-modal">Create a Budget</button>
+                            <button class="btn btn-embossed add-bill" data-toggle="modal" data-target="#bill-modal">Add a Bill</button>
+                            <button class="btn btn-inverse btn-embossed" data-toggle="modal" data-target="#wish-modal">Make a Wish</button>
                         </div>
                     </div>
                 </div>
@@ -198,70 +198,282 @@
     </div><!-- /st-pusher -->
   </div><!-- /st-container -->
 
-    <!-- Create a goal modal -->
-    <div id="goalModal" class="modal fade modal-inverse" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-            <h4 class="modal-title">Create a Goal</h4>
-          </div>
+  <div id="budget-modal" class="budget-modal modal fade">
+      <div class="modal-dialog modal-lg">
+          <div class="savery-modal no-padding modal-content">
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <!-- create a goal form -->
-                <div class="col-md-8">
-                  <form>
-                    <div class="form-group">
-                      <label for="goalName">Goal Name</label>
-                      <input type="text" class="form-control input-sm" id="goalName" placeholder="Goal Name">
-                    </div>
-                    <div class="form-group">
-                      <label for="goalAmount">Goal Amount</label>
-                      <input type="number" class="form-control input-sm" id="goalAmount" placeholder="Goal Amount">
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio"> Private
-                      </label>
-                      <label>
-                        <input type="radio"> Public
-                      </label>
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form>
-                </div>
-                <!-- end create a goal form -->
+              <div class="savery-modal-header container-fluid">
+                  <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Budget </span>
+                  <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+                      <img class="exit-btn-img" src="assets\img\exit.svg">
+                  </button>
+              </div>
 
-                <!-- create a goal placeholder -->
-                <div class="col-md-4">
-                  <div class="budget-progress-card">
-                      <div class="budget-progress card-header">
-                          <span class="card-title center">Goal Name</span>
-                      </div>
-                      <div class="budget-progress body">
-                          <div progress-circle stopat="66" class="progress-circle"></div>
-                          <div class="footer">
-                              <span class="amount-spent">$200 of 300</span>
-                              <span class="amount-remaining alt-text">$10 remaining</span>
+              <div class="savery-modal-body no-padding container-fluid">
+                  <div class="no-padding col-md-3">
+                      <img class="savery-modal-img img-responsive" src="assets\img\calculator.png">
+                  </div>
+
+                  <div class="savery-modal-info no-padding col-md-9">
+
+                      <div class="savery-modal-info-l col-md-6 col-xs-12">
+                          <input type="text" class="form-control sav-form flat" placeholder="Name">
+                          <input type="text" class="form-control sav-form flat" placeholder="Amount">
+                          <div class="form-group sav-cal">
+                              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                                  <input type="text" readonly="true" class="form-control" value="Start Date" id="start-budget" />
+                              </div>
+                              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                                  <input type="text" readonly="true" class="form-control" value="End Date (Optional)" id="end-budget" />
+                              </div>
                           </div>
                       </div>
+
+                      <div class="savery-modal-info-r col-md-6 col-xs-12">
+                          <div class="tagsinput-primary" id="budgettag">
+                              <input name="tagsinput" class="budgettag" placeholder="Tags" />
+                          </div>
+                          <textarea class="form-control sav-form flat" placeholder="Description"></textarea>
+                      </div>
+
                   </div>
-                </div>
-                <!-- end create a goal placeholder -->
               </div>
-            </div>
+
+              <div class="savery-modal-footer container-fluid">
+                  <div class="switch-wrap text-center no-padding col-md-3">
+                  </div>
+
+                  <div class="col-md-9">
+                      <div class="col-md-6">
+                      </div>
+                      <div class="confirm-wrap col-md-6">
+                          <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+                              Confirm
+                          </button>
+                      </div>
+                  </div>
+
+              </div>
 
           </div>
-
-          <div class="modal-footer">
-            <a href="#" class="btn btn-default btn-wide">It’s ok</a>
-            <a href="#" class="btn btn-primary btn-wide">Turn it off now.</a>
-          </div>
-        </div>
       </div>
-    </div><!-- / Create a goal modal -->
+  </div>
+
+  <div id="bill-modal" class="bill-modal modal fade">
+      <div class="modal-dialog modal-lg">
+          <div class="savery-modal no-padding modal-content">
+
+              <div class="savery-modal-header container-fluid">
+                  <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Bill </span>
+                  <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+                      <img class="exit-btn-img" src="assets\img\exit.svg">
+                  </button>
+              </div>
+
+              <div class="savery-modal-body no-padding container-fluid">
+                  <div class="no-padding col-md-3">
+                      <img class="savery-modal-img img-responsive" src="assets\img\wallet.png">
+                  </div>
+
+                  <div class="savery-modal-info no-padding col-md-9">
+
+                      <div class="savery-modal-info-l col-md-6 col-xs-12">
+                          <input type="text" class="form-control sav-form flat" placeholder="Name">
+                          <input type="text" class="form-control sav-form flat" placeholder="Amount">
+                          <input type="text" class="form-control sav-form flat" placeholder="Merchant">
+                          <div class="form-group sav-cal">
+                              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                                  <input type="text" readonly="true" class="form-control" value="Start Date" id="start-bill" />
+                              </div>
+                              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                                  <input type="text" readonly="true" class="form-control" value="End Date (Optional)" id="end-bill" />
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="savery-modal-info-r col-md-6 col-xs-12">
+                          <div class="no-padding" contenteditable="true" placeholder="Enter text here...">
+                              <div class="tagsinput-primary" id="billtag">
+                                  <input name="tagsinput" class="billtag" placeholder="Tags" />
+                              </div>
+                          </div>
+                          <div class="freq-wrapper">
+                              <select class="form-control sav-select sav-form">
+                                  <option></option>
+                                  <option>Weekly</option>
+                                  <option>Biweekly</option>
+                                  <option>Monthly</option>
+                                  <option>Quarterly</option>
+                                  <option>Annually</option>
+                              </select>
+                          </div>
+                          <textarea class="form-control sav-form flat" placeholder="Description"></textarea>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="savery-modal-footer container-fluid">
+                  <div class="switch-wrap text-center no-padding col-md-3">
+                  </div>
+
+                  <div class="col-md-9">
+                      <div class="col-md-6">
+                      </div>
+                      <div class="confirm-wrap col-md-6">
+                          <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+                              Confirm
+                          </button>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <div id="wish-modal" class="wish-modal modal fade">
+      <div class="modal-dialog modal-lg">
+          <div class="savery-modal no-padding modal-content">
+
+              <div class="savery-modal-header container-fluid">
+                  <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Make a Wish </span>
+                  <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+                      <img class="exit-btn-img" src="assets\img\exit.svg">
+                  </button>
+              </div>
+
+              <div class="savery-modal-body no-padding container-fluid">
+                  <div class="no-padding col-md-3">
+                      <img class="savery-modal-img img-responsive" src="assets\img\laptop-store.png">
+                  </div>
+
+                  <div class="savery-modal-info no-padding col-md-9">
+
+                      <div class="savery-modal-info-l col-md-6 col-xs-12">
+                          <input type="text" class="form-control sav-form flat" placeholder="Name">
+                          <input type="text" class="form-control sav-form flat" placeholder="Merchant">
+                          <input type="text" class="form-control sav-form flat" placeholder="Purchase Link">
+                          <div class="form-group sav-cal">
+                              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn" type="button"><span class="fui-calendar"></span></button>
+                </span>
+                                  <input type="text" readonly="true" class="form-control" value="Desired Purchase Date" id="end-wish" />
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="savery-modal-info-r col-md-6 col-xs-12">
+                          <div class="tagsinput-primary" id="wishtag">
+                              <input name="tagsinput" class="wishtag" placeholder="Tags" />
+                          </div>
+                          <textarea class="form-control sav-form flat" placeholder="Description"></textarea>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="savery-modal-footer container-fluid">
+                  <div class="switch-wrap text-center no-padding col-md-3">
+                  </div>
+
+                  <div class="col-md-9">
+                      <div class="col-md-6">
+                      </div>
+                      <div class="confirm-wrap col-md-6">
+                          <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+                              Confirm
+                          </button>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <div id="goal-modal" class="goal-modal modal fade">
+      <div class="modal-dialog modal-lg">
+          <div class="savery-modal no-padding modal-content">
+
+              <div class="savery-modal-header container-fluid">
+                  <span class="savery-modal-title no-padding col-md-6 col-xs-8"> Add a Goal </span>
+                  <button class="exit-btn pull-right no-padding col-md-6 col-xs-4" data-dismiss="modal">
+                      <img class="exit-btn-img" src="assets\img\exit.svg">
+                  </button>
+              </div>
+
+              <div class="savery-modal-body no-padding container-fluid">
+                  <div class="no-padding col-md-3">
+                      <img class="savery-modal-img img-responsive" src="assets\img\rotates to progression.png">
+                  </div>
+
+                  <div class="savery-modal-info no-padding col-md-9">
+
+                      <div class="savery-modal-info-l col-md-6 col-xs-12">
+                          <input type="text" class="form-control sav-form flat" placeholder="Name">
+                          <input type="text" class="form-control sav-form flat" placeholder="Target Amount">
+                          <input type="text" class="form-control sav-form flat" placeholder="Down Payment (Optional)">
+                          <input type="text" class="form-control sav-form flat" placeholder="Target Option (Optional)">
+                      </div>
+
+                      <div class="savery-modal-info-r col-md-6 col-xs-12">
+                          <div class="tagsinput-primary" id="goaltag">
+                              <input name="tagsinput" class="goaltag" placeholder="Tags" />
+                          </div>
+                          <textarea class="form-control sav-form flat" placeholder="Description"></textarea>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="savery-modal-footer container-fluid">
+                  <div class="col-md-3">
+                  </div>
+
+                  <div class="no-padding col-md-9">
+                      <div class="pull-left switch-wrap col-md-6">
+                          <div class="switch">
+                              <label>
+                                  <span class="term-switch short">Short Term</span>
+                                  <input type="checkbox">
+                                  <span class="lever"></span>
+                                  <span class="term-switch long">Long Term</span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="confirm-wrap col-md-6">
+                          <button class="btn pull-right btn-embossed btn-primary" data-dismiss="modal">
+                              Confirm
+                          </button>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+
+
+
 
     <!-- preferences modal -->
     <div id="prefModal" class="modal fade" role="dialog">
@@ -620,10 +832,6 @@
                   <div class="form-group">
                     <label for="linkShare">Invite via Link</label>
                     <input id="linkurl" type="text" class="form-control" value="sharethislink.saverly.com">
-                    <!-- Trigger -->
-                    <button class="btn-xs" ngclipboard data-clipboard-target="#linkurl">
-                        <span class="glyphicon glyphicon-copy pull-right" aria-hidden="true">Copy to clipboard</span>
-                    </button>
                   </div>
                   <hr>
                   <form name="email">
@@ -688,7 +896,7 @@
                         </div>
                         <div class='add_a_card'>
                           <i class='fa fa-plus'></i>
-                          <p>Add a card</p>
+                          <p>Add an account</p>
                         </div>
                       </div>
                     </aside>
@@ -791,19 +999,20 @@
                   <div class="container-fluid">
                       <form>
                           <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Message subject">
+                              <input type="text" class="form-control" placeholder="Subject">
                           </div>
                       </form>
                       <hr>
                       <div class="form-group">
-                          <select id="reasonDropdown" class="select select-inverse mbl">
+                          <select id="reasonDropdown" class="select select-primary mbl">
                               <option value="0">Reason</option>
-                              <option value="1"></option>
-                              <option value="2">My Friends</option>
-                              <option value="3">My Friends</option>
+                              <option value="1">Can't add an account</option>
+                              <option value="2">Sync issues</option>
+                              <option value="3">Account security</option>
+                              <option value="4">Other</option>
                           </select>
 
-                          <select id="moodDropdown" class="select select-inverse mbl">
+                          <select id="moodDropdown" class="select select-primary mbl">
                               <option value="0">Mood</option>
                               <option value="1">Excited!</option>
                               <option value="2">Confused</option>
@@ -824,6 +1033,14 @@
           </div>
       </div>
   </div>
+
+
+
+
+
+
+
+
 
 
     <!--Bootstrap-->
@@ -869,6 +1086,111 @@
   <script>
       $('#reasonDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
       $('#moodDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
+  </script>
+
+  <script>
+      $(".billtag").tagsinput({});
+      $(".budgettag").tagsinput({});
+      $(".goaltag").tagsinput({});
+      $(".wishtag").tagsinput({});
+
+      $('select').select2({ dropdownCssClass: 'dropdown-inverse', placeholder: "Choose a frequency" });
+      var counter = {};
+      $('input').on('itemAdded', function(event) {
+          var id = $(event.target.parentNode).attr("id");
+          if(!counter[id]){
+              counter[id] = 1;
+          }else{
+              counter[id] = counter[id] + 1;
+          }
+
+          $("#" + id + " .bootstrap-tagsinput input").attr("placeholder", "");
+      });
+
+      $('input').on('itemRemoved', function (event) {
+          var id = $(event.target.parentNode).attr("id");
+          if(counter[id] > 0) counter[id] = counter[id] - 1;
+
+          if(counter[id] <= 0){
+              $("#" + id + " .bootstrap-tagsinput input").attr("placeholder", "Tags");
+          }
+      });
+
+      var datepickerSelector = $('#start-bill');
+      datepickerSelector.datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'd MM, yy',
+          yearRange: '-1:+1'
+      }).prev('.input-group-btn').on('click', function (e) {
+          e && e.preventDefault();
+          datepickerSelector.focus();
+      });
+
+      $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+      // Now let's align datepicker with the prepend button
+      datepickerSelector.datepicker('widget').css({ 'margin-left': -datepickerSelector.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+      var datepickerSelector2 = $('#end-bill');
+      datepickerSelector2.datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'd MM, yy',
+          yearRange: '-1:+1'
+      }).prev('.input-group-btn').on('click', function (e) {
+          e && e.preventDefault();
+          datepickerSelector2.focus();
+      });
+      $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+      // Now let's align datepicker with the prepend button
+      datepickerSelector2.datepicker('widget').css({ 'margin-left': -datepickerSelector2.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+      var datepickerSelector3 = $('#start-budget');
+      datepickerSelector3.datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'd MM, yy',
+          yearRange: '-1:+1'
+      }).prev('.input-group-btn').on('click', function (e) {
+          e && e.preventDefault();
+          datepickerSelector3.focus();
+      });
+      $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+      // Now let's align datepicker with the prepend button
+      datepickerSelector3.datepicker('widget').css({ 'margin-left': -datepickerSelector3.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+      var datepickerSelector4 = $('#end-budget');
+      datepickerSelector4.datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'd MM, yy',
+          yearRange: '-1:+1'
+      }).prev('.input-group-btn').on('click', function (e) {
+          e && e.preventDefault();
+          datepickerSelector4.focus();
+      });
+      $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+      // Now let's align datepicker with the prepend button
+      datepickerSelector4.datepicker('widget').css({ 'margin-left': -datepickerSelector4.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
+
+      var datepickerSelector5 = $('#end-wish');
+      datepickerSelector5.datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          dateFormat: 'd MM, yy',
+          yearRange: '-1:+1'
+      }).prev('.input-group-btn').on('click', function (e) {
+          e && e.preventDefault();
+          datepickerSelector5.focus();
+      });
+      $.extend($.datepicker, { _checkOffset: function (inst,offset,isFixed) { return offset; } });
+
+      // Now let's align datepicker with the prepend button
+      datepickerSelector5.datepicker('widget').css({ 'margin-left': -datepickerSelector5.prev('.input-group-btn').find('.btn').outerWidth() + 3 });
   </script>
 
 </body>
