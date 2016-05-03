@@ -4,8 +4,7 @@
 <head>
     <base href="/">
 
-
-
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Saverly</title>
@@ -34,155 +33,166 @@
 </head>
 <body ng-controller="navCtrl">
 
-  <div class="container-fluid" ng-class="{ fullscreen: !$root.loggedIn }">
-
-          <nav role="navigation" class="navbar top navbar-inverse navbar-embossed" ng-if="$root.loggedIn">
-            <div id="st-trigger-effects" class="navbar-header">
-              <button data-effect="st-effect-right" class="navbar-toggle" >
-                <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
-              </button>
-              <a href="#"class="navbar-brand">
-                  <img class="logo" src="assets/img/icon1.svg" alt=""/>
-                  Saverly
-              </a>
-            </div>
-
-          <div id="navbar-collapse-08" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <div class="btn-group hidden-xs hidden-sm">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
-                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#accountModal"><span class="fui-user"> </span> Accounts</a></li>
-                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
-                  <li class="dropdown-right-option"><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
-                  <li class="dropdown-right-option" ng-click="logout()"><a><span class="fui-exit"> </span> Logout</a></li>
-                </ul>
+  <div id="st-container" class="container-fluid" ng-class="{ fullscreen: !$root.loggedIn }">
+    <!-- left mobile nav -->
+    <nav class="st-menu left st-effect-2-left sv-mobile-nav left" id="leftmobilemenu">
+      <div class="left-nav col-md-2 side-navs" ng-if="$root.loggedIn">
+          <div class="profile-area">
+              <div class="profile-area top-half">
+                  <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
               </div>
-            </ul>
+              <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
+              <div class="profile-area bottom-half">
+                  <span class="user-fullname">George Watsky</span>
+                  <div class="side-nav area">
+                      <ul class="nav nav-list">
+                          <li class="nav-header">Menu</li>
+                          <li><a ui-sref="overview">Overview</a></li>
+                          <li><a ui-sref="expenses">Expenses</a></li>
+                          <li><a ui-sref="savings">Savings</a></li>
+                          <li><a ui-sref="transactions">Transactions</a></li>
+                          <li><a ui-sref="wishlist">Wishlist</a></li>
+                      </ul>
+
+                      <div class="nav-search input-group">
+                          <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                          <span class="input-group-btn">
+                          <button type="submit" class="btn"><span class="fui-search"></span></button>
+                          </span>
+                      </div>
+
+                      <div class="nav-button-group">
+                          <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                          <button class="btn btn-embossed create-budget">Create a Budget</button>
+                          <button class="btn btn-embossed add-bill">Add a Bill</button>
+                          <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </nav>
+      </div>
+    </nav><!-- / left mobile nav -->
 
-          <!-- web app container -->
-          <div class="row">
-            <!--Left Section-->
-            <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
-                <div class="profile-area">
-                    <div class="profile-area top-half">
-                        <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
-                    </div>
-                    <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
-                    <div class="profile-area bottom-half">
-                        <span class="user-fullname">George Watsky</span>
-                    </div>
-                </div>
-                <div class="side-nav area">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">Menu</li>
-                        <li><a ui-sref="overview">Overview</a></li>
-                        <li><a ui-sref="expenses">Expenses</a></li>
-                        <li><a ui-sref="savings">Savings</a></li>
-                        <li><a ui-sref="transactions">Transactions</a></li>
-                        <li><a ui-sref="wishlist">Wishlist</a></li>
-                    </ul>
+    <!-- right mobile nav -->
+    <nav class="st-menu st-effect-2" id="rightmobilemenu">
+      <h2 class="icon icon-lab">Saverly</h2>
+      <ul>
+        <li><a data-toggle="modal" data-target="#prefModal" class="fui-gear"> Preferences</a></li>
+        <li><a data-toggle="modal" data-target="#accountModal" class="fui-user"> Accounts</a></li>
+        <li><a data-toggle="modal" data-target="#supportModal" class="fui-eye"> Support</a></li>
+        <li><a data-toggle="modal" data-target="#shareModal" class="fui-mail"> Share</a></li>
+        <li><a ng-click="logout()" class="fui-exit"> Logout</a></li>
+      </ul>
+    </nav><!-- / right mobile nav -->
 
-                    <div class="nav-search input-group">
-                        <input type="text" class="form-control" placeholder="Search" id="search-query-3">
-                        <span class="input-group-btn">
-                        <button type="submit" class="btn"><span class="fui-search"></span></button>
-                        </span>
-                    </div>
+    <!-- st-pusher -->
+    <div class="st-pusher">
 
-                    <div class="nav-button-group">
-                        <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
-                        <button class="btn btn-embossed create-budget">Create a Budget</button>
-                        <button class="btn btn-embossed add-bill">Add a Bill</button>
-                        <button class="btn btn-inverse btn-embossed">Make a Wish</button>
-                    </div>
-                </div>
+      <nav role="navigation" class="navbar top navbar-inverse navbar-embossed">
+        <div id="st-trigger-effects" class="navbar-header">
+          <button data-effect="st-effect-2" class="navbar-toggle" >
+            <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
+          </button>
+          <button data-effect="st-effect-2-left" class="navbar-toggle navbar-toggle-left" >
+            <span class="glyphicon glyphicon-option-vertical transparent" aria-hidden="true"></span>
+          </button>
+          <a href="#" data-effect="st-effect-2-left" class="navbar-brand">
+            <img class="logo" src="assets/img/icon1.svg" alt=""/>
+              Saverly
+          </a>
+        </div>
+
+        <div id="navbar-collapse-08" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <div class="btn-group hidden-xs hidden-sm">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical black" aria-hidden="true"></span></a>
+              <ul class="dropdown-menu right-nav-dropdown">
+                <li><a data-toggle="modal" data-target="#prefModal"><span class="fui-gear"> </span> Preferences</a></li>
+                <li><a data-toggle="modal" data-target="#accountModal"><span class="fui-user"> </span> Accounts</a></li>
+                <li><a data-toggle="modal" data-target="#supportModal"><span class="fui-eye"> </span> Support</a></li>
+                <li><a data-toggle="modal" data-target="#shareModal"><span class="fui-mail"> </span> Share</a></li>
+                <li><a ng-click="logout()"><span class="fui-exit"> </span> Logout</a></li>
+              </ul>
             </div>
-            <!--End Left Section-->
+          </ul>
+        </div>
+      </nav>
+            <!-- web app container -->
+            <div class="row no-padding">
+              <!--Left Section-->
+                <div class="left-nav col-md-2  hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
+                    <div class="profile-area">
+                        <div class="profile-area top-half">
+                            <img class="profile-background-img" src="assets/img/nyc-skyline.jpg" alt="city skyline"/>
+                        </div>
+                        <img class="profile-picture" src="assets/img/georgeWatsky.png" alt="profile picture"/>
+                        <div class="profile-area bottom-half">
+                            <span class="user-fullname">George Watsky</span>
 
+                        </div>
+                    </div>
+                    <div class="side-nav area">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Menu</li>
+                            <li><a ui-sref="overview">Overview</a></li>
+                            <li><a ui-sref="expenses">Expenses</a></li>
+                            <li><a ui-sref="savings">Savings</a></li>
+                            <li><a ui-sref="transactions">Transactions</a></li>
+                            <li><a ui-sref="wishlist">Wishlist</a></li>
+                        </ul>
 
-            <!--Middle Section-->
-            <div ui-view class="col-md-8 main" ng-class="{ fullscreen: !$root.loggedIn }">
+                        <div class="nav-search input-group">
+                            <input type="text" class="form-control" placeholder="Search" id="search-query-3">
+                            <span class="input-group-btn">
+                            <button type="submit" class="btn"><span class="fui-search"></span></button>
+                            </span>
+                        </div>
+
+                        <div class="nav-button-group">
+                            <button class="btn btn-embossed create-goal" data-toggle="modal" data-target="#goalModal">Create a Goal</button>
+                            <button class="btn btn-embossed create-budget">Create a Budget</button>
+                            <button class="btn btn-embossed add-bill">Add a Bill</button>
+                            <button class="btn btn-inverse btn-embossed">Make a Wish</button>
+                        </div>
+                    </div>
+                </div>
+              <!--End Left Section-->
+
+                <!--Middle Section-->
+                <div ui-view class="col-md-8 main" ng-class="{ fullscreen: !$root.loggedIn }">
              <!-- <div ui-view></div>-->
             </div>
-            <!--End Middle Section-->
+                <!--End Middle Section-->
 
-            <!--Right Section-->
-            <div class="right-nav no-padding col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
-                <div class="activity-feed-container">
-                  <div class="activity-header nav-header">
-                    <span ng-hide="isFilteredActivities()">Recent Activity</span>
-                    <span ng-show="isFilteredActivities()">Activity on {{activityFeed[0].date}}
-                      <span class="glyphicon glyphicon-remove pull-right closer" ng-click="displayNewFeed(recentActivities)"></span>
-                    </span>
-                  </div>
-                  <ol class="activity-feed">
-                      <li class="feed-item" ng-hide="activity.filter" ng-repeat="activity in activityFeed">
-                        <span ng-if="!activity.filter">
-                          <time class="date" datetime="9-25">{{activity.date}}</time>
-                          <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
-                          <span class="pull-right"
-                          ng-class="{
-                            'label label-success': activity.txCode == 'pos',
-                            'label label-danger': activity.txCode == 'neg',
-                            'label label-info': activity.txCode == 'mv'
-                          }">{{activity.actionAmt}}</span>
-                          <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
-                        </span>
-                      </li>
-
-                      <span ng-show="activityFeed[0].filter">No activities on this date.</span>
-                  </ol>
+                <!--Right Section-->
+                <div class="right-nav col-md-2 hidden-sm hidden-xs side-navs" ng-if="$root.loggedIn">
+                    <div class="activity-feed-container">
+                        <span ng-hide="isFilteredActivities()">Recent Activity</span>
+                      <span ng-show="isFilteredActivities()">Activity on {{activityFeed[0].date}}
+                        <span class="glyphicon glyphicon-remove" style="cursor: pointer;" ng-click="displayNewFeed([])"></span>
+                      </span>
+                        <ol class="activity-feed">
+                            <li class="feed-item" ng-hide="activity[0] == 'filter'" ng-repeat="activity in activityFeed">
+                            <span ng-if="activity[0] != 'filter'">
+                              <time class="date" datetime="9-25">{{activity.date}}</time>
+                              <span ng-show="activity.txCode == 'new'" class="label label-warning pull-right"><span class="glyphicon glyphicon-piggy-bank"></span></span>
+                              <span class="pull-right"
+                                    ng-class="{
+                                'label label-success': activity.txCode == 'pos',
+                                'label label-danger': activity.txCode == 'neg',
+                                'label label-info': activity.txCode == 'mv'
+                              }">{{activity.actionAmt}}</span>
+                              <span class="text">{{activity.actionType}}<a href="">{{activity.category}}</a></span>
+                            </span>
+                            </li>
+                        </ol>
+                    </div>
+                    <calendar class="col-xs-12 no-padding" callback="displayNewFeed" selected="day"></calendar>
                 </div>
-              <div class="cal">
-                <calendar class="cal-inner col-xs-12 no-padding" callback="displayNewFeed" selected="day"></calendar>
-              </div>
+                <!--End Right Section-->
             </div>
-            <!--End Right Section-->
-        </div>
-    </div>
-
-
-    <!--Bootstrap-->
-    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!--jQuery-->
-    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-
-    <!--SweetAlert-->
-    <script src="assets/libs/bootstrap-sweetalert/lib/sweet-alert.js"></script>
-
-    <!--flat-ui-->
-    <script src="assets/flat-ui/HTML/UI/flat-ui-pro/dist/js/flat-ui-pro.min.js"></script>
-
-    <!--Angular-->
-    <script src="assets/libs/angular/angular.js"></script>
-
-    <!--Angular Animate-->
-    <script src="assets/libs/angular-animate/angular-animate.js"></script>
-
-    <!--UI-Router-->
-    <script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
-
-    <!--ChartJS-->
-    <script src="assets/libs/Chart.js/Chart.js"></script>
-    <script src="assets/libs/Chart.HorizontalBar.js"></script>
-
-    <!--Angular-ChartJS-->
-    <script src="assets/libs/angular-chart.js/dist/angular-chart.js"></script>
-
-    <!--ProgressBar JS-->
-    <script src="assets/libs/progressbar.js/dist/progressbar.js"></script>
-
-    <!--Moment JS-->
-    <script src="assets/libs/moment/moment.js"></script>
-
-    <!--Main JS file-->
-    <script src="main.js"></script>
-
+    </div><!-- /st-pusher -->
+  </div><!-- /st-container -->
 
     <!-- Create a goal modal -->
     <div id="goalModal" class="modal fade modal-inverse" role="dialog">
@@ -190,7 +200,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-            <h4 class="modal-title">Create a Goal</h3>
+            <h4 class="modal-title">Create a Goal</h4>
           </div>
 
           <div class="modal-body">
@@ -261,7 +271,7 @@
           <!-- modal header-->
           <div class="modal-header">
             <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-            <h4 class="modal-title"><span class="fui-gear"></span> Preferences</h3>
+            <h4 class="modal-title"><span class="fui-gear"></span> Preferences</h4>
           </div><!-- / modal header-->
 
           <!-- modal body-->
@@ -592,11 +602,13 @@
 
     <!-- share modal -->
     <div id="shareModal" class="modal scale fade" role="dialog">
+
       <div class="modal-dialog">
+
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-            <h4 class="modal-title"><span class="fui-mail"></span> Share</h3>
+            <h4 class="modal-title"><span class="fui-mail"></span> Share</h4>
           </div>
 
           <div class="modal-body">
@@ -627,13 +639,15 @@
                 </form>
               </div>
             </div>
-          </div>
+
 
           <div class="modal-footer">
             <a data-dismiss="modal" class="btn btn-default btn-wide">Done</a>
           </div>
         </div>
+
       </div>
+    </div>
 
     <!-- account modal -->
     <div id="accountModal" class="modal scale fade" role="dialog">
@@ -641,7 +655,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-            <h4 class="modal-title"><span class="fui-user"></span> Accounts</h3>
+            <h4 class="modal-title"><span class="fui-user"></span> Accounts</h4>
           </div>
 
           <!-- modal body  -->
@@ -748,6 +762,7 @@
 
                 </div><!-- / account codepen  -->
 
+              </div><!-- / row   -->
 
           </div><!-- / modal body  -->
 
@@ -758,7 +773,6 @@
         </div>
       </div>
     </div><!-- / account modal -->
-    </div>
 
   <!-- support modal -->
   <div id="supportModal" class="modal scale fade" role="dialog">
@@ -766,7 +780,7 @@
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-                  <h4 class="modal-title"><span class="fui-mail"></span> Support</h3>
+                  <h4 class="modal-title"><span class="fui-eye"></span> Support</h4>
               </div>
 
               <div class="modal-body">
@@ -799,13 +813,14 @@
                       </div>
                   </div>
               </div>
-          </div>
 
-          <div class="modal-footer">
-              <a data-dismiss="modal" class="btn btn-default btn-wide">Send Message</a>
+              <div class="modal-footer">
+                <a data-dismiss="modal" class="btn btn-default btn-wide">Send Message</a>
+              </div>
           </div>
       </div>
   </div>
+
 
     <!--Bootstrap-->
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -833,7 +848,7 @@
     <script src="assets/libs/Chart.HorizontalBar.js"></script>
 
     <!--sidebarpush js-->
-    <script src="assets/libs/sidebarpush.js"></script>
+    <script src="js/sidebarpush.js"></script>
 
     <!--Angular-ChartJS-->
     <script src="assets/libs/angular-chart.js/dist/angular-chart.js"></script>
@@ -846,10 +861,6 @@
 
     <!--Main JS file-->
     <script src="main.js"></script>
-
-
-
-
 
   <script>
       $('#reasonDropdown').select2({ dropdownCssClass: 'dropdown-inverse' });
