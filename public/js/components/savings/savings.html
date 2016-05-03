@@ -24,6 +24,98 @@
         </div>
     </div>
 
+    <div class="spending-chart card">
+
+        <div class="spending-chart-header card-header">
+            <span class="card-title">Spending Distribution</span>
+            <div class="time-dropdown dropdown-toggle btn-group pull-right">
+                <button class="time-dropdown btn btn-default dropdown-toggle pull-right" type="button" data-toggle="dropdown" aria-expanded="true">
+                    This Month <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">This Month</a></li>
+                    <li><a href="#">This Week</a></li>
+                    <li><a href="#">Last Month</a></li>
+                    <li><a href="#">Next Month</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- spending chart body -->
+        <div class="spending-chart-body">
+            <!--  fluid container -->
+            <div class="container-fluid">
+                <!--  row -->
+                <div class="row">
+
+                    <!-- spend chart content  -->
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <!--  spend chart fluid container -->
+                        <div class="container-fluid">
+                            <!--  spend chart row -->
+                            <div class="row row-flex row-flex-wrap ">
+
+                                <!-- chart container chart body -->
+                                <div class="chart-container col-md-4 col-sm-4 col-xs-12">
+                                    <canvas class="spending-dist chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="chartOptions"></canvas>
+                                </div><!-- / chart container chart body -->
+
+                                <div class="spending-legend col-md-4 col-sm-4 col-xs-6">
+                                    <div class="container-fluid">
+                                        <div class="row custom items">
+                                            <span class="app-doughnut bills"></span>
+                                            <span class="spend-name">Condo</span>
+                                            <span class="spend-cost pull-right">$775</span>
+                                            <span class="spend-percent alt-text">37%</span>
+                                            <br>
+                                            <span class="app-doughnut clothes"></span>
+                                            <span class="spend-name">Motorcycle</span>
+                                            <span class="spend-cost pull-right">$293</span>
+                                            <span class="spend-percent alt-text">14%</span>
+                                            <br>
+                                            <span class="app-doughnut transportation"></span>
+                                            <span class="spend-name">PlayStation 4</span>
+                                            <span class="spend-cost pull-right">$230</span>
+                                            <span class="spend-percent alt-text">11%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spending-legend col-md-4 col-sm-4 col-xs-6  spending-legend-right">
+                                    <div class="container-fluid">
+                                        <div class="row custom items">
+                                            <span class="app-doughnut entertainment"></span>
+                                            <span class="spend-name">Retirement</span>
+                                            <span class="spend-cost pull-right">$335</span>
+                                            <span class="spend-percent alt-text">16%</span>
+                                            <br>
+                                            <span class="app-doughnut gasoline"></span>
+                                            <span class="spend-name">Vacation</span>
+                                            <span class="spend-cost pull-right">$104</span>
+                                            <span class="spend-percent alt-text">5%</span>
+                                            <br>
+                                            <span class="app-doughnut other"></span>
+                                            <span class="spend-name">Other</span>
+                                            <span class="spend-cost pull-right">$356</span>
+                                            <span class="spend-percent alt-text">17%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- / spend chart row  -->
+
+                        </div> <!-- / spend chart fluid container -->
+
+                    </div><!-- / spend chart  content  -->
+
+                </div> <!-- / row  -->
+
+            </div> <!-- / fluid container -->
+
+        </div> <!-- / spending chart body -->
+
+    </div>
+
 
     <div class="sv-piechart-card-container">
         <div class="card card-body">

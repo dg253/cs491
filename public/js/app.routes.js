@@ -21,7 +21,8 @@
 
             .state('savings', {
                 url: '/savings',
-                templateUrl: 'js/components/savings/savings.html'
+                templateUrl: 'js/components/savings/savings.html',
+                controller: 'savingsCtrl'
 
             })
 
