@@ -22,7 +22,7 @@
             $state1.html('Authenticating');
             setTimeout(function() {
                 $this.addClass('ok');
-                $state1.html('Welcome back!');
+                $state1.html('Welcome!');
                 setTimeout(function() {
                     $this.removeClass('ok loading');
                     working = false;
