@@ -25,9 +25,11 @@
 
     .spending-chart-body {
       padding-top: 15px;
-      padding-bottom: 14px;
+      padding-bottom: 12px;
 
       .spending-legend {
+        padding-left: 0;
+        padding-right: 0;
 
         .row {
 
@@ -113,6 +115,10 @@ display: flex;
 flex: 2;
 }
 
+.chart-container {
+  margin-bottom: 10px;
+}
+
 .chart-container canvas{
   width: 100% !important;
 }
@@ -143,13 +149,6 @@ flex: 2;
   margin: 5px 40px 25px 2px;
 }
 
-@media (min-width: 400px) {
-  .row .custom {
-    padding-left: 26px
-
-  }
-}
-
 @media (min-width: 480px) {
   .items {
     padding-right: 20px;
@@ -174,24 +173,6 @@ flex: 2;
   }
 }
 
-@media (min-width: 800px) {
-  .spendinggraph {
-    padding-right: 40px
-  }
-
-  .spending-legend.col-md-3.col-sm-3.col-xs-6 {
-    margin-left: -100px;
-  }
-
-  .chart-container.col-md-6.col-sm-6.col-xs-12 {
-    margin-left: -70px
-    }
-
-  .spending-legend.col-md-3.col-sm-3.col-xs-6 {
-    padding-right: 40px;
-  }
-}
-
 .navbar-toggle-left {
   position: relative;
   float: left;
@@ -203,5 +184,4 @@ flex: 2;
 
  .spending-legend-right {
    margin-left: 5px;
-   padding-left: 50px;
  }
