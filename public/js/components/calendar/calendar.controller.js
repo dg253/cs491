@@ -96,6 +96,54 @@ app.directive("calendar", function() {
                 description: "Chindo",
                 actionAmt: "$43.24",
                 txCode: "neg"
+              },
+              {
+                date: "May 4th",
+                actionType: "Credit",
+                category: "Deposit",
+                description: "",
+                actionAmt: "$459.97",
+                txCode: "pos"
+              },
+              {
+                date: "May 6th",
+                actionType: "Expense",
+                category: "Shops",
+                description: "Chindo",
+                actionAmt: "$43.24",
+                txCode: "neg"
+              },
+              {
+                date: "May 7th",
+                actionType: "Credit",
+                category: "Deposit",
+                description: "",
+                actionAmt: "$459.97",
+                txCode: "pos"
+              },
+              {
+                date: "May 11th",
+                actionType: "Expense",
+                category: "Shops",
+                description: "Chindo",
+                actionAmt: "$43.24",
+                txCode: "neg"
+              },
+              {
+                date: "May 14th",
+                actionType: "Credit",
+                category: "Deposit",
+                description: "",
+                actionAmt: "$459.97",
+                txCode: "pos"
+              },
+              {
+                date: "May 24th",
+                actionType: "Expense",
+                category: "Shops",
+                description: "Chindo",
+                actionAmt: "$43.24",
+                txCode: "neg"
               }
             ];
 
