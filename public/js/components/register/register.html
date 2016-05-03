@@ -1,3 +1,4 @@
+<!--
 <div class="signup-modal">
     <form class="interactive-form">
         <input id="input-1" type="text" placeholder="John Doe" autofocus required/>
@@ -21,11 +22,25 @@
             <span class="label-text">Confirm Password</span>
             <span class="nav-dot"></span>
         </label>
-<!--
+&lt;!&ndash;
         <button ng-click="register()">Continue</button>
--->
-<!--
+&ndash;&gt;
+&lt;!&ndash;
         <div class="signup-button">Register</div>
--->
+&ndash;&gt;
+    </form>
+</div>-->
+<div class="login-wrapper" ng-submit="register($event)">
+    <form class="login">
+        <p class="title">Saverly</p>
+        <input type="text" placeholder="Full Name" autofocus/>
+        <input type="email" placeholder="Email" autofocus/>
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <p class="signup">Already have an account? <a ui-sref="login">Login</a></p>
+        <button type="submit">
+            <i class="spinner"></i>
+            <span class="state">Sign Up</span>
+        </button>
     </form>
 </div>
