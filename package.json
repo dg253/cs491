@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "postinstall": "node_modules/bower/bin/bower install",
+    "postinstall": "node.exe node_modules/bower/bin/bower install",
     "makeit": "node_modules/gulp/bin/gulp.js"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "bower": "^1.7.7",
     "express": "^4.13.4",
+    "gulp-git": "^1.7.1",
     "stream-combiner2": "^1.1.1"
   }
 }
