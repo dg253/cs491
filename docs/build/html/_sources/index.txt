@@ -6,11 +6,14 @@
 Welcome to Saverly App's documentation!
 =======================================
 
-Contents:
+Contents
+^^^^^^^^
 
 .. toctree::
    :maxdepth: 2
-
+   
+   Login
+   Overview
 
 
 Indices and tables
