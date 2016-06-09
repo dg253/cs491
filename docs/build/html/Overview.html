@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Saverly App 0.0.1 documentation" href="index.html" />
     <link rel="next" title="Savings" href="Savings.html" />
-    <link rel="prev" title="Login" href="Login.html" />
+    <link rel="prev" title="Intro" href="Intro.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -44,6 +44,75 @@
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div>Description: &#8220;Retrieve Balance Graph Info&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;GET&#8221;,
+Response: {</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {account_balance: [integer]</p>
+<blockquote>
+<div><blockquote>
+<div>account_savings: [integer]
+total: [integer]}</div></blockquote>
+<p>OR</p>
+<p>Code: “404&#8221;,</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Content: {error:&#8221;Information not found&#8221;}</dt>
+<dd>}</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div>Description: &#8220;Retrieve Net Worth Graph Info&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;GET&#8221;,
+Response: {</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {Net_Worth: [integer]</p>
+<blockquote>
+<div><blockquote>
+<div>Assets: [integer]
+Liabilities: [integer]}</div></blockquote>
+<p>OR</p>
+<p>Code: “404&#8221;,</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Content: {error:&#8221;Information not found&#8221;}</dt>
+<dd>}</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+<p>Description: &#8220;Flex Card Info&#8221; - Reuse retrieve budget function, if Flex spending is treated as such</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div>Description: &#8220;Retrieve Overview Data Card Info&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;GET&#8221;,
+Response: {</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {  Assets: [integer]</p>
+<blockquote>
+<div><blockquote>
+<div>Liabilities: [integer]}</div></blockquote>
+<p>OR</p>
+<p>Code: “404&#8221;,</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Content: {error:&#8221;Information not found&#8221;}</dt>
+<dd>}</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
 </div>
 </div>
 
@@ -64,7 +133,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Login.html" title="previous chapter">Login</a></li>
+      <li>Previous: <a href="Intro.html" title="previous chapter">Intro</a></li>
       <li>Next: <a href="Savings.html" title="next chapter">Savings</a></li>
   </ul></li>
 </ul>

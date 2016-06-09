@@ -44,6 +44,100 @@
 <h1>Savings<a class="headerlink" href="#savings" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Description: Get all savings
+Url: /user/{savings}
+Method: GET
+Params:</p>
+<blockquote>
+<div>savings_tags - filter by tag
+savings_date - filter by date
+savings_term - filter by short/long term</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<p>}</p>
+<p>Description: Get an individual savings
+Url: /user/savings/saving
+Method: GET
+Params:</p>
+<blockquote>
+<div>savings_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Add a savings
+Url: /user/savings/saving
+Method: POST
+Params:</p>
+<blockquote>
+<div>savings_id
+savings_name
+savings_amount
+savings_downpay
+savings_term
+savings_tags
+savings_description</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 201 (Created)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Edit a savings
+Url: /user/savings/saving
+Method: PUT
+Params:</p>
+<blockquote>
+<div>savings_id
+savings_name
+savings_amount
+savings_downpay
+savings_term
+savings_tags
+savings_description</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Delete a savings
+Url: /user/savings/saving
+Method: DELETE
+Params:</p>
+<blockquote>
+<div>savings_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 204 (No Content)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
 </div>
 </div>
 

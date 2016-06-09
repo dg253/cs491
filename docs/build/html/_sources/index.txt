@@ -12,7 +12,7 @@ Contents
 .. toctree::
    :maxdepth: 1
    
-   Login
+   Intro
    Overview
    Savings
    Expenses

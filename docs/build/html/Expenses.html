@@ -44,6 +44,222 @@
 <h1>Expenses<a class="headerlink" href="#expenses" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Description: Get all budgets
+Url: /user/{budgets}
+Method: GET
+Params:</p>
+<blockquote>
+<div>budget_tags - filter by tag
+budget_startdate - # of first budget to return
+budget_enddate - # of last budget to return</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<p>}</p>
+<p>Description: Get an individual budget
+Url: /user/budgets/budget
+Method: GET
+Params:</p>
+<blockquote>
+<div>budget_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Add a budget
+Url: /user/budgets/budget
+Method: POST
+Params:</p>
+<blockquote>
+<div>budget_id
+budget_name
+budget_amount
+budget_startdate
+budget_enddate
+budget_tags
+budget_desc</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 201 (Created)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Edit a budget
+Url: /user/budgets/budget
+Method: PUT
+Params:</p>
+<blockquote>
+<div>budget_id
+budget_name
+budget_amount
+budget_startdate
+budget_enddate
+budget_tags
+budget_desc</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Delete a budget
+Url: /user/budgets/budget
+Method: DELETE
+Params:</p>
+<blockquote>
+<div>budget_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 204 (No Content)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Get all bills
+Url: /user/{bills}
+Method: GET
+Params:</p>
+<blockquote>
+<div><p>bill_tags - filter by tag
+bill_startdate - # of first budget to return
+bill_enddate - # of last budget to return
+page</p>
+<blockquote>
+<div>description: page to show
+type: [integer]</div></blockquote>
+<dl class="docutils">
+<dt>page_limit</dt>
+<dd>description: amount of max results
+typer: [integer]</dd>
+</dl>
+</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<p>}</p>
+<p>Description: Get an individual bill
+Url: /user/bills/bill
+Method: GET
+Params:</p>
+<blockquote>
+<div>bill_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Add a Bill
+Url: /user/bills/bill
+Method: POST
+Params:</p>
+<blockquote>
+<div>bill_id
+bill_name
+bill_amount
+bill_startdate
+bill_enddate
+bill_tags
+bill_freq
+bill_desc</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 201 (Created)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Edit a Bill
+Url: /user/bills/bill
+Method: PUT
+Params:</p>
+<blockquote>
+<div>bill_id
+bill_name
+bill_amount
+bill_startdate
+bill_enddate
+bill_tags
+bill_freq
+bill_desc</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Delete a Bill
+Url: /user/bills/bill
+Method: DELETE
+Params:</p>
+<blockquote>
+<div>bill_id</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 204 (No Content)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
+<p>Description: Search a Bill
+Url: /user/bills/bill
+Method: GET
+Params:</p>
+<blockquote>
+<div>bill_tags</div></blockquote>
+<p>Success Response:
+{</p>
+<blockquote>
+<div>Code: 200 (OK)</div></blockquote>
+<p>}
+Error Response:
+{</p>
+<blockquote>
+<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<p>}</p>
 </div>
 </div>
 

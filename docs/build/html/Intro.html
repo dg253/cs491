@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Intro &mdash; Saverly App 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Saverly App 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Overview" href="Overview.html" />
+    <link rel="prev" title="Welcome to Saverly App’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="intro">
+<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Description:&#8221; Get all users&#8221;,
+Url:&#8221;/users&#8221;,
+Method: &#8220;GET&#8221;,
+Params:{</p>
+<blockquote>
+<div>Page: {Type: [integer],
+Description: &#8220;# Results per page&#8221;,
+Required: &#8220;true&#8221;},
+Limit: {Type: [integer],
+Description: &#8220;Amount of results (max:50)&#8221;,
+Required: &#8220;true&#8221;}
+}</div></blockquote>
+<dl class="docutils">
+<dt>Response: {</dt>
+<dd><p class="first">Code: “200&#8221;,
+Content: {</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>ID:&#8221;126&#8221;,</dt>
+<dd><a href="#id3"><span class="problematic" id="id4">First_</span></a> name:&#8221;John&#8221;,
+Last_name: “Doe&#8221;,
+Email:Johndoe&#64;yahoo.com }</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h3>}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div>Description: &#8220;Get a specific user&#8221;,
+Url: &#8220;/Users/id&#8221;, //id of specific user
+Method:&#8221;GET&#8221;,
+Response: {</div></blockquote>
+<p>Code: &#8220;200&#8221;,
+Content: {</p>
+<blockquote class="last">
+<div>Id:“126&#8221;,
+<a href="#id5"><span class="problematic" id="id6">First_</span></a> name:&#8221;John&#8221;,
+Last_name: &#8220;Doe&#8221;,
+Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;}</div></blockquote>
+</dd>
+<dt>OR</dt>
+<dd>Code: &#8220;404&#8221;,
+Content: {error: &#8220;User does not exist&#8221;}</dd>
+</dl>
+</div>
+<div class="section" id="id2">
+<h3>}<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div><p>Description: &#8220;Add a new user&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;POST&#8221;,
+Params: {</p>
+<blockquote>
+<div>First_name: [string], reuired,
+Last_name: [String], required,
+Email: [String], required,
+Password: [Alphanumeric],required
+Confirm_password [Alphanumeric], required</div></blockquote>
+<p>},
+(example) request: {</p>
+<blockquote>
+<div>First_name: &#8220;John&#8221;,
+Last_name: &#8220;doe&#8221;,
+Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,
+Password:&#8221;JD12345&#8221;,
+Confirm_password:&#8221;JD12345&#8221;</div></blockquote>
+<p>},</p>
+<p>Response: {</p>
+</div></blockquote>
+<p>Code:&#8221;201&#8221;,
+Content: {</p>
+<blockquote class="last">
+<div><blockquote>
+<div><a href="#id7"><span class="problematic" id="id8">First_</span></a> name:&#8221;John&#8221;,
+Last_name: &#8220;Doe&#8221;,
+Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,
+Note: &#8220;New user has been added&#8221;
+}</div></blockquote>
+<p>//Error codes probably necessary
+}</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div><p>Description: &#8220;Modify an existing user&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;PUT&#8221;,
+Params: {</p>
+<blockquote>
+<div>First_name: [string], reuired,
+Last_name: [String], required,
+Email: [String], required,</div></blockquote>
+<p>},
+request: {</p>
+<blockquote>
+<div>ID: &#8220;126&#8221;
+First_name: &#8220;John&#8221;,
+Last_name: &#8220;doe&#8221;,
+Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;</div></blockquote>
+<p>},</p>
+<p>Response: {</p>
+</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {</p>
+<blockquote>
+<div><blockquote>
+<div><a href="#id9"><span class="problematic" id="id10">First_</span></a> name:&#8221;John&#8221;,
+Last_name: &#8220;Doe&#8221;,
+Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;
+Note: &#8220;user has been updated&#8221;},</div></blockquote>
+<p>}</p>
+<p>OR</p>
+<p>Code: “401&#8221;,</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Content: {error:&#8221;Duplicate information found&#8221;}</dt>
+<dd>}</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div><p>Description: &#8220;Delete user from database&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;DELETE&#8221;,
+Params: {</p>
+<blockquote>
+<div><blockquote>
+<div>Email: [string], required,
+Password: [Alphanumeric], required</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>Response: {</p>
+</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {Id:&#8221;126&#8221;}</p>
+<blockquote class="last">
+<div>}</div></blockquote>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><blockquote class="first">
+<div><p>Description: &#8220;Authenticate user&#8221;,
+Url: &#8220;/Users/id&#8221;,
+Method:&#8221;POST&#8221;,
+Params: {</p>
+<blockquote>
+<div><blockquote>
+<div>Email: [string], required,
+Password: [Alphanumeric], required</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>Response: {</p>
+</div></blockquote>
+<p>Code: “200&#8221;,
+Content: {note:&#8221;Email was sent&#8221;}</p>
+<blockquote>
+<div><p>OR</p>
+<p>Code: “401&#8221;,</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Content: {error:&#8221;invalid email or password &#8220;}</dt>
+<dd>}</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Intro</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#id1">}</a></li>
+<li><a class="reference internal" href="#id2">}</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Saverly App&#8217;s documentation!</a></li>
+      <li>Next: <a href="Overview.html" title="next chapter">Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Intro.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Daniel Engelberth, Eddie Hwang, Nick Devlin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/Intro.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
