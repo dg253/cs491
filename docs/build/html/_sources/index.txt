@@ -10,10 +10,15 @@ Contents
 ^^^^^^^^
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    Login
    Overview
+   Savings
+   Expenses
+   Transactions
+   Wishlist
+   Sidebars
 
 
 Indices and tables
