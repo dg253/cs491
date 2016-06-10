@@ -44,44 +44,44 @@
 <h1>Savings<a class="headerlink" href="#savings" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>Description: Get all savings
-Url: /user/{savings}
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get all savings
+<strong>Url</strong>: /user/{savings}
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>savings_tags - filter by tag
 savings_date - filter by date
 savings_term - filter by short/long term</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
 <p>}</p>
-<p>Description: Get an individual savings
-Url: /user/savings/saving
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get an individual savings
+<strong>Url</strong>: /user/savings/saving
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>savings_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Add a savings
-Url: /user/savings/saving
-Method: POST
-Params:</p>
+<p><strong>Description</strong>: Add a savings
+<strong>Url</strong>: /user/savings/saving
+<strong>Method</strong>: POST
+<strong>Params</strong>:</p>
 <blockquote>
 <div>savings_id
 savings_name
@@ -89,21 +89,21 @@ savings_amount
 savings_downpay
 savings_term
 savings_tags
-savings_description</div></blockquote>
-<p>Success Response:
+savings_**Description**</div></blockquote>
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 201 (Created)</div></blockquote>
+<div><em>Code</em>: 201 (Created)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Edit a savings
-Url: /user/savings/saving
-Method: PUT
-Params:</p>
+<p><strong>Description</strong>: Edit a savings
+<strong>Url</strong>: /user/savings/saving
+<strong>Method</strong>: PUT
+<strong>Params</strong>:</p>
 <blockquote>
 <div>savings_id
 savings_name
@@ -111,32 +111,32 @@ savings_amount
 savings_downpay
 savings_term
 savings_tags
-savings_description</div></blockquote>
-<p>Success Response:
+savings_**Description**</div></blockquote>
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Delete a savings
-Url: /user/savings/saving
-Method: DELETE
-Params:</p>
+<p><strong>Description</strong>: Delete a savings
+<strong>Url</strong>: /user/savings/saving
+<strong>Method</strong>: DELETE
+<strong>Params</strong>:</p>
 <blockquote>
 <div>savings_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 204 (No Content)</div></blockquote>
+<div><em>Code</em>: 204 (No Content)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
 </div>
 </div>

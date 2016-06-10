@@ -44,10 +44,10 @@
 <h1>Wishlist<a class="headerlink" href="#wishlist" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>Description: Get all wishes
-Url: /user/{wishlist}
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get all wishes
+<strong>Url</strong>: /user/{wishlist}
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div><p>wish_tags - filter by tag
 wish_date - filter by date
@@ -61,36 +61,36 @@ type: [integer]</div></blockquote>
 typer: [integer]</dd>
 </dl>
 </div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
 <p>}</p>
-<p>Description: Get an individual wish
-Url: /user/wishlist/wish
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get an individual wish
+<strong>Url</strong>: /user/wishlist/wish
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>wish_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Add a wish
-Url: /user/wishlist/wish
-Method: POST
-Params:</p>
+<p><strong>Description</strong>: Add a wish
+<strong>Url</strong>: /user/wishlist/wish
+<strong>Method</strong>: POST
+<strong>Params</strong>:</p>
 <blockquote>
 <div>wish_id
 wish_name
@@ -99,20 +99,20 @@ wish_purchaselink
 wish_date
 wish_tags
 wish_desc</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 201 (Created)</div></blockquote>
+<div><em>Code</em>: 201 (Created)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Edit a wish
-Url: /user/wishlist/wish
-Method: PUT
-Params:</p>
+<p><strong>Description</strong>: Edit a wish
+<strong>Url</strong>: /user/wishlist/wish
+<strong>Method</strong>: PUT
+<strong>Params</strong>:</p>
 <blockquote>
 <div>wish_id
 wish_name
@@ -121,47 +121,47 @@ wish_purchaselink
 wish_date
 wish_tags
 wish_desc</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Delete a wish
-Url: /user/wishlist/wish
-Method: DELETE
-Params:</p>
+<p><strong>Description</strong>: Delete a wish
+<strong>Url</strong>: /user/wishlist/wish
+<strong>Method</strong>: DELETE
+<strong>Params</strong>:</p>
 <blockquote>
 <div>wish_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 204 (No Content)</div></blockquote>
+<div><em>Code</em>: 204 (No Content)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Search a Bill
-Url: /user/wishlist/wish
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Search a Bill
+<strong>Url</strong>: /user/wishlist/wish
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>wish_tags</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
 </div>
 </div>

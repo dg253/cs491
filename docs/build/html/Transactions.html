@@ -44,53 +44,53 @@
 <h1>Transactions<a class="headerlink" href="#transactions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>Description: Get all transactions
-Url: /user/{transactions}
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get all transactions
+<strong>Url</strong>: /user/{transactions}
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div><p>transactions_tags - filter by tag
 transactions_date - filter by date
 page</p>
 <blockquote>
-<div>description: page to show
+<div><strong>Description</strong>: page to show
 type: [integer]</div></blockquote>
 <dl class="docutils">
 <dt>page_limit</dt>
-<dd>description: amount of max results
+<dd><strong>Description</strong>: amount of max results
 typer: [integer]</dd>
 </dl>
 </div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
 <p>}</p>
-<p>Description: Get an individual transaction
-Url: /user/transactions/transaction
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Get an individual transaction
+<strong>Url</strong>: /user/transactions/transaction
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>transaction_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Add a transaction
-Url: /user/transactions/transaction
-Method: POST
-Params:</p>
+<p><strong>Description</strong>: Add a transaction
+<strong>Url</strong>: /user/transactions/transaction
+<strong>Method</strong>: POST
+<strong>Params</strong>:</p>
 <blockquote>
 <div>transaction_id
 transaction_name
@@ -98,20 +98,20 @@ transaction_date
 transaction_location
 transaction_amount
 transaction_tags</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 201 (Created)</div></blockquote>
+<div><em>Code</em>: 201 (Created)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Edit a transaction
-Url: /user/transactions/transaction
-Method: PUT
-Params:</p>
+<p><strong>Description</strong>: Edit a transaction
+<strong>Url</strong>: /user/transactions/transaction
+<strong>Method</strong>: PUT
+<strong>Params</strong>:</p>
 <blockquote>
 <div>transaction_id
 transaction_name
@@ -119,47 +119,47 @@ transaction_date
 transaction_location
 transaction_amount
 transaction_tags</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Delete a transaction
-Url: /user/transactions/transaction
-Method: DELETE
-Params:</p>
+<p><strong>Description</strong>: Delete a transaction
+<strong>Url</strong>: /user/transactions/transaction
+<strong>Method</strong>: DELETE
+<strong>Params</strong>:</p>
 <blockquote>
 <div>transaction_id</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 204 (No Content)</div></blockquote>
+<div><em>Code</em>: 204 (No Content)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
-<p>Description: Search a transaction
-Url: /user/transactions/transaction
-Method: GET
-Params:</p>
+<p><strong>Description</strong>: Search a transaction
+<strong>Url</strong>: /user/transactions/transaction
+<strong>Method</strong>: GET
+<strong>Params</strong>:</p>
 <blockquote>
 <div>transaction_tags</div></blockquote>
-<p>Success Response:
+<p><strong>Success Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 200 (OK)</div></blockquote>
+<div><em>Code</em>: 200 (OK)</div></blockquote>
 <p>}
-Error Response:
+<strong>Error Response</strong>:
 {</p>
 <blockquote>
-<div>Code: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
 <p>}</p>
 </div>
 </div>
