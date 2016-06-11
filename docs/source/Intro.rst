@@ -15,8 +15,8 @@ Functions
 	Description: "Amount of results (max:50)",
 	Required: "true"}
 	}
-**Response**: {
-	Code: “200",
+**Success Response**: {
+	Code: “200" (OK),
 	Content: {
 		ID:"126",
 			First_name:"John",
@@ -27,14 +27,16 @@ Functions
 **Description**: "Get a specific user", 
 **Url**: "/Users/id", //id of specific user
 **Method**:"GET",
-**Response**: {
+**Success Response**: {
 Code: "200",
 Content: {
 	Id:“126",
 	First_name:"John",
 	Last_name: "Doe",
 	Email:"Johndoe@yahoo.com"}
-OR
+}
+**Error Response**:
+{
 Code: "404",
 Content: {error: "User does not exist"}
 }
@@ -57,7 +59,7 @@ Content: {error: "User does not exist"}
   Password:"JD12345",
   Confirm_password:"JD12345" 
 },
-**Response**: {
+**Success Response**: {
 Code:"201",
 Content: {
 	First_name:"John",
@@ -65,7 +67,10 @@ Content: {
 	Email:"Johndoe@yahoo.com",
 	Note: "New user has been added"
 	}
-//Error codes probably necessary
+}
+**Error Response**: 
+{
+	*Code*: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)
 }
 
 
@@ -84,7 +89,7 @@ request: {
   Email:"Johndoe@yahoo.com"    
 },
 
-**Response**: {
+**Success Response**: {
 Code: “200",
 Content: {
 		 First_name:"John",
@@ -93,9 +98,9 @@ Content: {
 		 Note: "user has been updated"},
 		 
 }
-
-OR
-
+}
+**Error Response**:
+{
 Code: “401",
 Content: {error:"Duplicate information found"}
 }
@@ -108,7 +113,7 @@ Content: {error:"Duplicate information found"}
 	Email: [string], required, 
 	Password: [Alphanumeric], required
   },
-**Response**: {
+**Success Response**: {
 Code: “200",
 Content: {Id:"126"}
 }
@@ -121,12 +126,12 @@ Content: {Id:"126"}
 	Email: [string], required, 
 	Password: [Alphanumeric], required 
   },
-**Response**: {
+**Success Response**: {
 Code: “200",
 Content: {note:"Email was sent"}
-
-OR
-
+}
+**Error Response**:
+{
 Code: “401",
 Content: {error:"invalid email or password "}
 }
