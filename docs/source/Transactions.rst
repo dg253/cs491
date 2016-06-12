@@ -11,10 +11,10 @@ Functions
 	transactions_tags - filter by tag
 	transactions_date - filter by date
 	page
-		**Description**: page to show
+		description: page to show
 		type: [integer]
 	page_limit
-		**Description**: amount of max results
+		description: amount of max results
 		typer: [integer]
 **Success Response**: 
 {

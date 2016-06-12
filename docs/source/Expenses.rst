@@ -8,7 +8,7 @@ Functions
 **Url**: /user/{budgets}
 **Method**: GET
 **Params**:
-	budget_tags - filter by tag
+	budget_tags - filter by tag ?
 	budget_startdate - # of first budget to return
 	budget_enddate - # of last budget to return	
 **Success Response**: 

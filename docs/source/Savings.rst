@@ -45,7 +45,7 @@ Functions
 	savings_downpay
 	savings_term
 	savings_tags
-	savings_**Description**
+	savings_description
 **Success Response**: 
 {
  	*Code*: 201 (Created)
@@ -65,7 +65,7 @@ Functions
 	savings_downpay
 	savings_term
 	savings_tags
-	savings_**Description**
+	savings_description
 **Success Response**: 
 {
  	*Code*: 200 (OK)

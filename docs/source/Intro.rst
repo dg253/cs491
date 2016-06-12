@@ -16,19 +16,24 @@ Functions
 	Required: "true"}
 	}
 **Success Response**: {
-	Code: “200" (OK),
+	Code: “200" (OK)
 	Content: {
 		ID:"126",
-			First_name:"John",
-			Last_name: “Doe",
-			Email:Johndoe@yahoo.com }
+		First_name:"John",
+		Last_name: “Doe",
+		Email:Johndoe@yahoo.com }
+}
+**Error Response**:
+{
+Code: "404",
+Content: {error: "Users do not exist"}
 }
 
 **Description**: "Get a specific user", 
 **Url**: "/Users/id", //id of specific user
 **Method**:"GET",
 **Success Response**: {
-Code: "200",
+Code: "200" (OK)
 Content: {
 	Id:“126",
 	First_name:"John",
@@ -60,7 +65,7 @@ Content: {error: "User does not exist"}
   Confirm_password:"JD12345" 
 },
 **Success Response**: {
-Code:"201",
+Code:"201" (Created)
 Content: {
 	First_name:"John",
 	Last_name: "Doe",
@@ -90,7 +95,7 @@ request: {
 },
 
 **Success Response**: {
-Code: “200",
+Code: “200" (OK)
 Content: {
 		 First_name:"John",
 		 Last_name: "Doe",
@@ -101,7 +106,7 @@ Content: {
 }
 **Error Response**:
 {
-Code: “401",
+Code: “401" (Unauthorized)
 Content: {error:"Duplicate information found"}
 }
 

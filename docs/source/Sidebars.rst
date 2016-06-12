@@ -8,12 +8,15 @@ Functions
 **Url**: "/Users/id"
 **Method**: "POST"
 **Params**: {
-Term: [string], reqired 
+search_tag: [string], reqired 
 }
-**Response**: {
+**Success Response**: 
+{
 *Code*: “200",
 Content: {Id:"126"}
-OR
+}
+**Error Response**:
+{
 *Code*: “404",
 Content: {error:"No matching term found"}
 }
