@@ -4,6 +4,9 @@ Expenses
 Functions
 ^^^^^^^^^
 
+Budgets
+-------
+
 **Description**: Get all budgets
  - **Url**: /user/{budgets}
  - **Method**: GET
@@ -112,6 +115,9 @@ Functions
 	 - *Code*: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)
 	 
 }
+
+Bills
+-----
 
 **Description**: Get all bills
  - **Url**: /user/{bills}

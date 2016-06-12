@@ -64,7 +64,7 @@ Functions
    - Email: [String], required,
    - Password: [Alphanumeric], required
    - Confirm_password [Alphanumeric], required	 
-},
+}
 
  - Example request: {
 
@@ -73,15 +73,20 @@ Functions
    - Email: "Johndoe@yahoo.com",
    - Password: "JD12345",
    - Confirm_password: "JD12345" 
+   
 }
+
  - **Success Response**: {
    - Code: "201" (Created)
    - Content: {
+   
 	 - First_name: "John",
 	 - Last_name: "Doe",
 	 - Email: "Johndoe@yahoo.com",
 	 - Note: "New user has been added"
+	 
 	}
+	
 }
  - **Error Response**: 
 {
@@ -93,10 +98,13 @@ Functions
  - **Url**: "/Users/id",
  - **Method**: "PUT",
  - **Params**: {
+ 
    - First_name: [string], reuired,
    - Last_name: [String], required,
    - Email: [String], required,	
-},
+   
+}
+
  - Example request: {
 
    - ID: "126"	
@@ -104,7 +112,7 @@ Functions
    - Last_name: "doe",
    - Email: "Johndoe@yahoo.com"  
    
-},
+}
 
  - **Success Response**: {
  
@@ -117,6 +125,7 @@ Functions
 	 - Note: "user has been updated"},
 		 
 }
+
 }
 
  - **Error Response**:
@@ -136,7 +145,8 @@ Functions
    - Email: [string], required 
    - Password: [Alphanumeric], required
    
-  },
+  }
+  
  - **Success Response**: {
  
    - Code: “200",
