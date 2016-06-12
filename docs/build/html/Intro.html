@@ -44,138 +44,298 @@
 <h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>:&#8221; Get all users&#8221;,
-<strong>Url</strong>:&#8221;/users&#8221;,
-<strong>Method</strong>: &#8220;GET&#8221;,
-<strong>Params</strong>:{</p>
-<blockquote>
-<div>Page: {Type: [integer],
-Description: &#8220;# Results per page&#8221;,
-Required: &#8220;true&#8221;},
-Limit: {Type: [integer],
-Description: &#8220;Amount of results (max:50)&#8221;,
-Required: &#8220;true&#8221;}
-}</div></blockquote>
 <dl class="docutils">
-<dt><strong>Response</strong>: {</dt>
-<dd><p class="first">Code: “200&#8221;,
-Content: {</p>
-<blockquote class="last">
-<div><dl class="docutils">
-<dt>ID:&#8221;126&#8221;,</dt>
-<dd>First_name:&#8221;John&#8221;,
-Last_name: “Doe&#8221;,
-Email:Johndoe&#64;yahoo.com }</dd>
-</dl>
+<dt><strong>Description</strong>: &#8220;Get all users&#8221;,</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: &#8220;/users&#8221;</p>
+</li>
+<li><p class="first"><strong>Method</strong>: &#8220;GET&#8221;</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Page: {Type: [integer],
+Description: &#8220;# Results per page&#8221;,
+Required: &#8220;true&#8221;},</li>
+<li>Limit: {Type: [integer],
+Description: &#8220;Amount of results (max:50)&#8221;,
+Required: &#8220;true&#8221;}</li>
+</ul>
 </div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>: {</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Code: “200&#8221; (OK)</p>
+</li>
+<li><dl class="first docutils">
+<dt>Content: {</dt>
+<dd><ul class="first last simple">
+<li>ID: &#8220;126&#8221;,</li>
+<li>First_name: &#8220;John&#8221;,</li>
+<li>Last_name: “Doe&#8221;,</li>
+<li>Email:Johndoe&#64;yahoo.com }</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li>Code: &#8220;404&#8221;,</li>
+<li>Content: {error: &#8220;Users do not exist&#8221;}</li>
+</ul>
 </dd>
 </dl>
 <p>}</p>
-<p><strong>Description</strong>: &#8220;Get a specific user&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;, //id of specific user
-<strong>Method</strong>:&#8221;GET&#8221;,
-<strong>Response</strong>: {
-Code: &#8220;200&#8221;,
-Content: {</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Get a specific user&#8221;,</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: &#8220;/Users/id&#8221;</p>
+</li>
+<li><p class="first"><strong>Method</strong>: &#8220;GET&#8221;</p>
+</li>
+<li><p class="first"><strong>Success Response</strong>: {</p>
+<ul>
+<li><p class="first">Code: &#8220;200&#8221; (OK)</p>
+</li>
+<li><p class="first">Content: {</p>
 <blockquote>
-<div>Id:“126&#8221;,
-First_name:&#8221;John&#8221;,
-Last_name: &#8220;Doe&#8221;,
-Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;}</div></blockquote>
-<p>OR
-Code: &#8220;404&#8221;,
-Content: {error: &#8220;User does not exist&#8221;}
-}</p>
-<p><strong>Description</strong>: &#8220;Add a new user&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;POST&#8221;,
-<strong>Params</strong>: {</p>
+<div><ul class="simple">
+<li>Id:“126&#8221;,</li>
+<li>First_name: &#8220;John&#8221;,</li>
+<li>Last_name: &#8220;Doe&#8221;,</li>
+<li>Email: &#8220;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;}</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div>First_name: [string], reuired,
-Last_name: [String], required,
-Email: [String], required,
-Password: [Alphanumeric],required
-Confirm_password [Alphanumeric], required</div></blockquote>
-<p>},
-(example) request: {</p>
-<blockquote>
-<div>First_name: &#8220;John&#8221;,
-Last_name: &#8220;doe&#8221;,
-Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,
-Password:&#8221;JD12345&#8221;,
-Confirm_password:&#8221;JD12345&#8221;</div></blockquote>
-<p>},
-<strong>Response</strong>: {
-Code:&#8221;201&#8221;,
-Content: {</p>
-<blockquote>
-<div>First_name:&#8221;John&#8221;,
-Last_name: &#8220;Doe&#8221;,
-Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,
-Note: &#8220;New user has been added&#8221;
-}</div></blockquote>
-<p>//Error codes probably necessary
-}</p>
-<p><strong>Description</strong>: &#8220;Modify an existing user&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;PUT&#8221;,
-<strong>Params</strong>: {</p>
-<blockquote>
-<div>First_name: [string], reuired,
-Last_name: [String], required,
-Email: [String], required,</div></blockquote>
-<p>},
-request: {</p>
-<blockquote>
-<div>ID: &#8220;126&#8221;
-First_name: &#8220;John&#8221;,
-Last_name: &#8220;doe&#8221;,
-Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;</div></blockquote>
-<p>},</p>
-<p><strong>Response</strong>: {
-Code: “200&#8221;,
-Content: {</p>
-<blockquote>
-<div>First_name:&#8221;John&#8221;,
-Last_name: &#8220;Doe&#8221;,
-Email:&#8221;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;
-Note: &#8220;user has been updated&#8221;},</div></blockquote>
+<div><ul class="simple">
+<li>Code: &#8220;404&#8221;,</li>
+<li>Content: {error: &#8220;User does not exist&#8221;}</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p>OR</p>
-<p>Code: “401&#8221;,
-Content: {error:&#8221;Duplicate information found&#8221;}
-}</p>
-<p><strong>Description</strong>: &#8220;Delete user from database&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;DELETE&#8221;,
-<strong>Params</strong>: {</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Add a new user&#8221;,</dt>
+<dd><ul class="first last simple">
+<li><strong>Url</strong>: &#8220;/Users/id&#8221;,</li>
+<li><strong>Method</strong>: &#8220;POST&#8221;,</li>
+<li><strong>Params</strong>: {<ul>
+<li>First_name: [string], reuired,</li>
+<li>Last_name: [String], required,</li>
+<li>Email: [String], required,</li>
+<li>Password: [Alphanumeric], required</li>
+<li>Confirm_password [Alphanumeric], required</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>},</p>
+<blockquote>
+<div><ul class="simple">
+<li>Example request: {<ul>
+<li>First_name: &#8220;John&#8221;,</li>
+<li>Last_name: &#8220;doe&#8221;,</li>
+<li>Email: &#8220;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,</li>
+<li>Password: &#8220;JD12345&#8221;,</li>
+<li>Confirm_password: &#8220;JD12345&#8221;</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Success Response</strong>: {
+- Code: &#8220;201&#8221; (Created)
+- Content: {</p>
 <blockquote>
 <div><blockquote>
-<div>Email: [string], required,
-Password: [Alphanumeric], required</div></blockquote>
-<p>},</p>
+<div><ul class="simple">
+<li>First_name: &#8220;John&#8221;,</li>
+<li>Last_name: &#8220;Doe&#8221;,</li>
+<li>Email: &#8220;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8221;,</li>
+<li>Note: &#8220;New user has been added&#8221;</li>
+</ul>
 </div></blockquote>
-<p><strong>Response</strong>: {
-Code: “200&#8221;,
-Content: {Id:&#8221;126&#8221;}
-}</p>
-<p><strong>Description</strong>: &#8220;Authenticate user&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;POST&#8221;,
-<strong>Params</strong>: {</p>
+<p>}</p>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</li>
+</ul>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Modify an existing user&#8221;,</dt>
+<dd><ul class="first last simple">
+<li><strong>Url</strong>: &#8220;/Users/id&#8221;,</li>
+<li><strong>Method</strong>: &#8220;PUT&#8221;,</li>
+<li><strong>Params</strong>: {
+- First_name: [string], reuired,
+- Last_name: [String], required,
+- Email: [String], required,</li>
+</ul>
+</dd>
+<dt>},</dt>
+<dd><ul class="first last simple">
+<li>Example request: {<ul>
+<li>ID: &#8220;126&#8221;</li>
+<li>First_name: &#8220;John&#8221;,</li>
+<li>Last_name: &#8220;doe&#8221;,</li>
+<li>Email: &#8220;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>},</p>
 <blockquote>
-<div><blockquote>
-<div>Email: [string], required,
-Password: [Alphanumeric], required</div></blockquote>
-<p>},</p>
+<div><ul>
+<li><p class="first"><strong>Success Response</strong>: {</p>
+<ul>
+<li><p class="first">Code: “200&#8221; (OK)</p>
+</li>
+<li><p class="first">Content: {</p>
+<ul>
+<li><dl class="first docutils">
+<dt>First_name: &#8220;John&#8221;,</dt>
+<dd><ul class="first last simple">
+<li>Last_name: &#8220;Doe&#8221;,</li>
+<li>Email: &#8220;<a class="reference external" href="mailto:Johndoe&#37;&#52;&#48;yahoo&#46;com">Johndoe<span>&#64;</span>yahoo<span>&#46;</span>com</a>&#8220;</li>
+<li>Note: &#8220;user has been updated&#8221;},</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div></blockquote>
-<p><strong>Response</strong>: {
-Code: “200&#8221;,
-Content: {note:&#8221;Email was sent&#8221;}</p>
-<p>OR</p>
-<p>Code: “401&#8221;,
-Content: {error:&#8221;invalid email or password &#8220;}
-}</p>
+<div class="section" id="id1">
+<h3>}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</div></blockquote>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li>Code: “401&#8221; (Unauthorized)</li>
+<li>Content: {error: &#8220;Duplicate information found&#8221;}</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Delete user from database&#8221;,</dt>
+<dd><ul class="first simple">
+<li><strong>Url</strong>: &#8220;/Users/id&#8221;,</li>
+<li><strong>Method</strong>: &#8220;DELETE&#8221;,</li>
+<li><strong>Params</strong>: {<ul>
+<li>Email: [string], required</li>
+<li>Password: [Alphanumeric], required</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div>},</div></blockquote>
+<ul class="last simple">
+<li><strong>Success Response</strong>: {<ul>
+<li>Code: “200&#8221;,</li>
+<li>Content: {Id: &#8220;126&#8221;}</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Authenticate user&#8221;,</dt>
+<dd><ul class="first">
+<li><p class="first"><strong>Url</strong>: &#8220;/Users/id&#8221;,</p>
+</li>
+<li><p class="first"><strong>Method</strong>: &#8220;POST&#8221;,</p>
+</li>
+<li><p class="first"><strong>Params</strong>: {</p>
+<blockquote>
+<div><ul class="simple">
+<li>Email: [string], required,</li>
+<li>Password: [Alphanumeric], required</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div>},</div></blockquote>
+<ul class="last simple">
+<li><strong>Success Response</strong>: {<ul>
+<li>Code: “200&#8221;,</li>
+<li>Content: {note: &#8220;Email was sent&#8221;}</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li>Code: “401&#8221;,</li>
+<li>Content: {error: &#8220;invalid email or password &#8220;}</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+</div>
 </div>
 </div>
 
@@ -188,7 +348,10 @@ Content: {error:&#8221;invalid email or password &#8220;}
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Intro</a><ul>
-<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#id1">}</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

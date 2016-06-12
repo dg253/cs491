@@ -44,99 +44,214 @@
 <h1>Savings<a class="headerlink" href="#savings" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>: Get all savings
-<strong>Url</strong>: /user/{savings}
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get all savings</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/{savings}</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>savings_tags - filter by tag
-savings_date - filter by date
-savings_term - filter by short/long term</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>savings_tags - filter by tag</li>
+<li>savings_date - filter by date</li>
+<li>savings_term - filter by short/long term</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Get an individual savings
-<strong>Url</strong>: /user/savings/saving
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get an individual savings</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/savings/saving</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>savings_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>savings_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Add a savings
-<strong>Url</strong>: /user/savings/saving
-<strong>Method</strong>: POST
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Add a savings</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/savings/saving</p>
+</li>
+<li><p class="first"><strong>Method</strong>: POST</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>savings_id
-savings_name
-savings_amount
-savings_downpay
-savings_term
-savings_tags
-savings_**Description**</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>savings_id</li>
+<li>savings_name</li>
+<li>savings_amount</li>
+<li>savings_downpay</li>
+<li>savings_term</li>
+<li>savings_tags</li>
+<li>savings_description</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 201 (Created)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 201 (Created)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Edit a savings
-<strong>Url</strong>: /user/savings/saving
-<strong>Method</strong>: PUT
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Edit a savings</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/savings/saving</p>
+</li>
+<li><p class="first"><strong>Method</strong>: PUT</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>savings_id
-savings_name
-savings_amount
-savings_downpay
-savings_term
-savings_tags
-savings_**Description**</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>savings_id</li>
+<li>savings_name</li>
+<li>savings_amount</li>
+<li>savings_downpay</li>
+<li>savings_term</li>
+<li>savings_tags</li>
+<li>savings_description</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Delete a savings
-<strong>Url</strong>: /user/savings/saving
-<strong>Method</strong>: DELETE
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Delete a savings</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/savings/saving</p>
+</li>
+<li><p class="first"><strong>Method</strong>: DELETE</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>savings_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>savings_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 204 (No Content)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 204 (No  - Content)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
 </div>
 </div>

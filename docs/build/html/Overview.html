@@ -44,45 +44,122 @@
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>: &#8220;Retrieve Balance Graph Info&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;GET&#8221;,
-<strong>Response</strong>: {
-<em>Code</em>: “200&#8221;,
-Content: {account_balance: [integer]</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Retrieve Balance Graph Info&#8221;,</dt>
+<dd><ul class="first last simple">
+<li><strong>Url</strong>: &#8220;/Users/id&#8221;,</li>
+<li><strong>Method</strong>:&#8221;GET&#8221;,</li>
+<li><strong>Success Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div>account_savings: [integer]
-total: [integer]}</div></blockquote>
-<p>OR</p>
-<p><em>Code</em>: “404&#8221;,
-Content: {error:&#8221;Information not found&#8221;}
-}</p>
-<p><strong>Description</strong>: &#8220;Retrieve Net Worth Graph Info&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;GET&#8221;,
-<strong>Response</strong>: {
-<em>Code</em>: “200&#8221;,
-Content: {Net_Worth: [integer]</p>
+<div><ul>
+<li><p class="first"><em>Code</em>: “200&#8221;,</p>
+</li>
+<li><p class="first">Content: {</p>
+<ul>
+<li><dl class="first docutils">
+<dt>account_balance: [integer]</dt>
+<dd><ul class="first simple">
+<li>account_savings: [integer]</li>
+<li>total: [integer]</li>
+</ul>
+<p class="last">}</p>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div>Assets: [integer]
-Liabilities: [integer]}</div></blockquote>
-<p>OR</p>
-<p><em>Code</em>: “404&#8221;,
-Content: {error:&#8221;Information not found&#8221;}
-}</p>
+<div><ul class="simple">
+<li><em>Code</em>: “404&#8221;,</li>
+<li>Content: {error:&#8221;Information not found&#8221;}</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Retrieve Net Worth Graph Info&#8221;,</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: &#8220;/Users/id&#8221;,</p>
+</li>
+<li><p class="first"><strong>Method</strong>:&#8221;GET&#8221;,</p>
+</li>
+<li><p class="first"><strong>Success Response</strong>: {
+- <em>Code</em>: “200&#8221;,
+- Content: {</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Net_Worth: [integer]</p>
+</li>
+<li><p class="first">Assets: [integer]</p>
+</li>
+<li><p class="first">Liabilities: [integer]</p>
+<blockquote>
+<div><p>}</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: “404&#8221;,</li>
+<li>Content: {error:&#8221;Information not found&#8221;}</li>
+</ul>
+</div></blockquote>
+<p>}</p>
 <p><strong>Description</strong>: &#8220;Flex Card Info&#8221; - Reuse retrieve budget function, if Flex spending is treated as such</p>
-<p><strong>Description</strong>: &#8220;Retrieve Overview Data Card Info&#8221;,
-<strong>Url</strong>: &#8220;/Users/id&#8221;,
-<strong>Method</strong>:&#8221;GET&#8221;,
-<strong>Response</strong>: {
-<em>Code</em>: “200&#8221;,
-Content: {      Assets: [integer]</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: &#8220;Retrieve Overview Data Card Info&#8221;,</dt>
+<dd><ul class="first last simple">
+<li><strong>Url</strong>: &#8220;/Users/id&#8221;,</li>
+<li><strong>Method</strong>:&#8221;GET&#8221;,</li>
+<li><strong>Success Response</strong>: {</li>
+<li><em>Code</em>: “200&#8221;,</li>
+<li>Content: {
+- Assets: [integer]
+- Liabilities: [integer]}</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div>Liabilities: [integer]}</div></blockquote>
-<p>OR</p>
-<p><em>Code</em>: “404&#8221;,
-Content: {error:&#8221;Information not found&#8221;}
-}</p>
+<div><ul class="simple">
+<li><em>Code</em>: “404&#8221;,</li>
+<li>Content: {error:&#8221;Information not found&#8221;}</li>
+</ul>
+</div></blockquote>
+<p>}</p>
 </div>
 </div>
 

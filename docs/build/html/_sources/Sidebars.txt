@@ -5,17 +5,26 @@ Functions
 ^^^^^^^^^
 
 **Description**: "Search Function"
-**Url**: "/Users/id"
-**Method**: "POST"
-**Params**: {
-Term: [string], reqired 
+ - **Url**: "/Users/id"
+ - **Method**: "POST"
+ - **Params**: {
+ 
+   - search_tag: [string], reqired 
+   
 }
-**Response**: {
-*Code*: “200",
-Content: {Id:"126"}
-OR
-*Code*: “404",
-Content: {error:"No matching term found"}
+ - **Success Response**: 
+{
+
+   - *Code*: “200",
+   - Content: {Id:"126"}
+ 
+}
+ - **Error Response**:
+{
+
+   - *Code*: “404",
+   - Content: {error:"No matching term found"}
+ 
 }
 
 

@@ -44,221 +44,483 @@
 <h1>Expenses<a class="headerlink" href="#expenses" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>: Get all budgets
-<strong>Url</strong>: /user/{budgets}
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
-<blockquote>
-<div>budget_tags - filter by tag
-budget_startdate - # of first budget to return
-budget_enddate - # of last budget to return</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
-<p>}</p>
-<p><strong>Description</strong>: Get an individual budget
-<strong>Url</strong>: /user/budgets/budget
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
-<blockquote>
-<div>budget_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
-<p>}</p>
-<p><strong>Description</strong>: Add a budget
-<strong>Url</strong>: /user/budgets/budget
-<strong>Method</strong>: POST
-<strong>Params</strong>:</p>
-<blockquote>
-<div>budget_id
-budget_name
-budget_amount
-budget_startdate
-budget_enddate
-budget_tags
-budget_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 201 (Created)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
-<p>}</p>
-<p><strong>Description</strong>: Edit a budget
-<strong>Url</strong>: /user/budgets/budget
-<strong>Method</strong>: PUT
-<strong>Params</strong>:</p>
-<blockquote>
-<div>budget_id
-budget_name
-budget_amount
-budget_startdate
-budget_enddate
-budget_tags
-budget_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
-<p>}</p>
-<p><strong>Description</strong>: Delete a budget
-<strong>Url</strong>: /user/budgets/budget
-<strong>Method</strong>: DELETE
-<strong>Params</strong>:</p>
-<blockquote>
-<div>budget_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 204 (No Content)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
-<p>}</p>
-<p><strong>Description</strong>: Get all bills
-<strong>Url</strong>: /user/{bills}
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
-<blockquote>
-<div><p>bill_tags - filter by tag
-bill_startdate - # of first budget to return
-bill_enddate - # of last budget to return
-page</p>
-<blockquote>
-<div>description: page to show
-type: [integer]</div></blockquote>
 <dl class="docutils">
-<dt>page_limit</dt>
-<dd>description: amount of max results
-typer: [integer]</dd>
-</dl>
+<dt><strong>Description</strong>: Get all budgets</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/{budgets}</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>budget_tags - filter by tag ?</li>
+<li>budget_startdate - # of first budget to return</li>
+<li>budget_enddate - # of last budget to return</li>
+</ul>
 </div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Get an individual bill
-<strong>Url</strong>: /user/bills/bill
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
 <blockquote>
-<div>bill_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</div></blockquote>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Add a Bill
-<strong>Url</strong>: /user/bills/bill
-<strong>Method</strong>: POST
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get an individual budget</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/budgets/budget</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>bill_id
-bill_name
-bill_amount
-bill_startdate
-bill_enddate
-bill_tags
-bill_freq
-bill_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>budget_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 201 (Created)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Edit a Bill
-<strong>Url</strong>: /user/bills/bill
-<strong>Method</strong>: PUT
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Add a budget</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/budgets/budget</p>
+</li>
+<li><p class="first"><strong>Method</strong>: POST</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>bill_id
-bill_name
-bill_amount
-bill_startdate
-bill_enddate
-bill_tags
-bill_freq
-bill_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>budget_id</li>
+<li>budget_name</li>
+<li>budget_amount</li>
+<li>budget_startdate</li>
+<li>budget_enddate</li>
+<li>budget_tags</li>
+<li>budget_desc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 201 (Created)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Delete a Bill
-<strong>Url</strong>: /user/bills/bill
-<strong>Method</strong>: DELETE
-<strong>Params</strong>:</p>
-<blockquote>
-<div>bill_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 204 (No Content)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
-<blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<dl class="docutils">
+<dt><strong>Description</strong>: Edit a budget</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/budgets/budget</p>
+</li>
+<li><p class="first"><strong>Method</strong>: PUT</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Params</strong>:</dt>
+<dd><ul class="first last simple">
+<li>budget_id</li>
+<li>budget_name</li>
+<li>budget_amount</li>
+<li>budget_startdate</li>
+<li>budget_enddate</li>
+<li>budget_tags</li>
+<li>budget_desc</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</li>
+</ul>
+</dd>
+</dl>
 <p>}</p>
-<p><strong>Description</strong>: Search a Bill
-<strong>Url</strong>: /user/bills/bill
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Delete a budget</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/budgets/budget</p>
+</li>
+<li><p class="first"><strong>Method</strong>: DELETE</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>bill_tags</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>budget_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 204 (No Content)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get all bills</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/{bills}</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">bill_tags - filter by tag</p>
+</li>
+<li><p class="first">bill_startdate - # of first budget to return</p>
+</li>
+<li><p class="first">bill_enddate - # of last budget to return</p>
+</li>
+<li><p class="first">page</p>
+<blockquote>
+<div><ul class="simple">
+<li>description: page to show</li>
+<li>type: [integer]</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">page_limit</p>
+<blockquote>
+<div><ul class="simple">
+<li>description: amount of max results</li>
+<li>typer: [integer]</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get an individual bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/bills/bill</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>bill_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Add a Bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/bills/bill</p>
+</li>
+<li><p class="first"><strong>Method</strong>: POST</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>bill_id</li>
+<li>bill_name</li>
+<li>bill_amount</li>
+<li>bill_startdate</li>
+<li>bill_enddate</li>
+<li>bill_tags</li>
+<li>bill_freq</li>
+<li>bill_desc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 201 (Created)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Edit a Bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/bills/bill</p>
+</li>
+<li><p class="first"><strong>Method</strong>: PUT</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>bill_id</li>
+<li>bill_name</li>
+<li>bill_amount</li>
+<li>bill_startdate</li>
+<li>bill_enddate</li>
+<li>bill_tags</li>
+<li>bill_freq</li>
+<li>bill_desc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Delete a Bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/bills/bill</p>
+</li>
+<li><p class="first"><strong>Method</strong>: DELETE</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>bill_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><em>Code</em>: 204 (No Content)</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Search a Bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/bills/bill</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>bill_tags</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>{</dt>
+<dd><ul class="first last simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</dd>
+</dl>
 <p>}</p>
 </div>
 </div>

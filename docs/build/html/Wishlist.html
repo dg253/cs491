@@ -44,124 +44,270 @@
 <h1>Wishlist<a class="headerlink" href="#wishlist" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>: Get all wishes
-<strong>Url</strong>: /user/{wishlist}
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
-<blockquote>
-<div><p>wish_tags - filter by tag
-wish_date - filter by date
-page</p>
-<blockquote>
-<div>description: page to show
-type: [integer]</div></blockquote>
 <dl class="docutils">
-<dt>page_limit</dt>
-<dd>description: amount of max results
-typer: [integer]</dd>
-</dl>
+<dt><strong>Description</strong>: Get all wishes</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/{wishlist}</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">wish_tags - filter by tag</p>
+</li>
+<li><p class="first">wish_date - filter by date</p>
+</li>
+<li><p class="first">page</p>
+<blockquote>
+<div><ul class="simple">
+<li>description: page to show</li>
+<li>type: [integer]</li>
+</ul>
 </div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+</li>
+<li><p class="first">page_limit</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>description: amount of max results</li>
+<li>typer: [integer]</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Get an individual wish
-<strong>Url</strong>: /user/wishlist/wish
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get an individual wish</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/wishlist/wish</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>wish_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>wish_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Add a wish
-<strong>Url</strong>: /user/wishlist/wish
-<strong>Method</strong>: POST
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Add a wish</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/wishlist/wish</p>
+</li>
+<li><p class="first"><strong>Method</strong>: POST</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>wish_id
-wish_name
-wish_merchant
-wish_purchaselink
-wish_date
-wish_tags
-wish_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>wish_id</li>
+<li>wish_name</li>
+<li>wish_merchant</li>
+<li>wish_purchaselink</li>
+<li>wish_date</li>
+<li>wish_tags</li>
+<li>wish_desc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 201 (Created)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 201 (Created)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Edit a wish
-<strong>Url</strong>: /user/wishlist/wish
-<strong>Method</strong>: PUT
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Edit a wish</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/wishlist/wish</p>
+</li>
+<li><p class="first"><strong>Method</strong>: PUT</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>wish_id
-wish_name
-wish_merchant
-wish_purchaselink
-wish_date
-wish_tags
-wish_desc</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>wish_id</li>
+<li>wish_name</li>
+<li>wish_merchant</li>
+<li>wish_purchaselink</li>
+<li>wish_date</li>
+<li>wish_tags</li>
+<li>wish_desc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Delete a wish
-<strong>Url</strong>: /user/wishlist/wish
-<strong>Method</strong>: DELETE
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Delete a wish</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/wishlist/wish</p>
+</li>
+<li><p class="first"><strong>Method</strong>: DELETE</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>wish_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>wish_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 204 (No Content)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 204 (No  - Content)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Search a Bill
-<strong>Url</strong>: /user/wishlist/wish
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Search a Bill</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/wishlist/wish</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>wish_tags</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>wish_tags</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
 </div>
 </div>

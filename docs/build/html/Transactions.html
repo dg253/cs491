@@ -44,122 +44,268 @@
 <h1>Transactions<a class="headerlink" href="#transactions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description</strong>: Get all transactions
-<strong>Url</strong>: /user/{transactions}
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
-<blockquote>
-<div><p>transactions_tags - filter by tag
-transactions_date - filter by date
-page</p>
-<blockquote>
-<div><strong>Description</strong>: page to show
-type: [integer]</div></blockquote>
 <dl class="docutils">
-<dt>page_limit</dt>
-<dd><strong>Description</strong>: amount of max results
-typer: [integer]</dd>
-</dl>
+<dt><strong>Description</strong>: Get all transactions</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/{transactions}</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">transactions_tags - filter by tag</p>
+</li>
+<li><p class="first">transactions_date - filter by date</p>
+</li>
+<li><p class="first">page</p>
+<blockquote>
+<div><ul class="simple">
+<li>description: page to show</li>
+<li>type: [integer]</li>
+</ul>
 </div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+</li>
+<li><p class="first">page_limit</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>description: amount of max results</li>
+<li>typer: [integer]</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 401 (Unauthorized), 404 (Not Found)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Get an individual transaction
-<strong>Url</strong>: /user/transactions/transaction
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Get an individual transaction</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/transactions/transaction</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>transaction_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>transaction_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Add a transaction
-<strong>Url</strong>: /user/transactions/transaction
-<strong>Method</strong>: POST
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Add a transaction</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/transactions/transaction</p>
+</li>
+<li><p class="first"><strong>Method</strong>: POST</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>transaction_id
-transaction_name
-transaction_date
-transaction_location
-transaction_amount
-transaction_tags</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>transaction_id</li>
+<li>transaction_name</li>
+<li>transaction_date</li>
+<li>transaction_location</li>
+<li>transaction_amount</li>
+<li>transaction_tags</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 201 (Created)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 201 (Created)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Edit a transaction
-<strong>Url</strong>: /user/transactions/transaction
-<strong>Method</strong>: PUT
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Edit a transaction</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/transactions/transaction</p>
+</li>
+<li><p class="first"><strong>Method</strong>: PUT</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>transaction_id
-transaction_name
-transaction_date
-transaction_location
-transaction_amount
-transaction_tags</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>transaction_id</li>
+<li>transaction_name</li>
+<li>transaction_date</li>
+<li>transaction_location</li>
+<li>transaction_amount</li>
+<li>transaction_tags</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad Content Type), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 405 (Resource Not Allowed), 409 (Conflict), 415 (Bad  - Content Type), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Delete a transaction
-<strong>Url</strong>: /user/transactions/transaction
-<strong>Method</strong>: DELETE
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Delete a transaction</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/transactions/transaction</p>
+</li>
+<li><p class="first"><strong>Method</strong>: DELETE</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>transaction_id</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>transaction_id</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 204 (No Content)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 204 (No  - Content)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
-<p><strong>Description</strong>: Search a transaction
-<strong>Url</strong>: /user/transactions/transaction
-<strong>Method</strong>: GET
-<strong>Params</strong>:</p>
+<dl class="docutils">
+<dt><strong>Description</strong>: Search a transaction</dt>
+<dd><ul class="first last">
+<li><p class="first"><strong>Url</strong>: /user/transactions/transaction</p>
+</li>
+<li><p class="first"><strong>Method</strong>: GET</p>
+</li>
+<li><p class="first"><strong>Params</strong>:</p>
 <blockquote>
-<div>transaction_tags</div></blockquote>
-<p><strong>Success Response</strong>:
-{</p>
+<div><ul class="simple">
+<li>transaction_tags</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Success Response</strong>:</p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 200 (OK)</div></blockquote>
-<p>}
-<strong>Error Response</strong>:
-{</p>
+<div><ul class="simple">
+<li><em>Code</em>: 200 (OK)</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>}</dt>
+<dd><ul class="first last simple">
+<li><strong>Error Response</strong>:</li>
+</ul>
+</dd>
+</dl>
+<p>{</p>
 <blockquote>
-<div><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</div></blockquote>
+<div><ul class="simple">
+<li><em>Code</em>: 400 (Bad Request), 404 (Not Found), 409 (Conflict), 500 (Internal Server Error)</li>
+</ul>
+</div></blockquote>
 <p>}</p>
 </div>
 </div>
